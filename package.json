@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "@catppuccin/vitepress": "^0.1.2",
+    "sb-mdit": "^0.4.1",
     "vitepress": "^1.6.4"
   }
 }
+

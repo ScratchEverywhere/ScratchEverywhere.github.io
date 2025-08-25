@@ -6,8 +6,8 @@ hero:
   tagline: "Custom Scratch Runtime made in C++!"
   actions:
     - theme: brand
-      text: Information
-      link: /info
+      text: Introduction
+      link: /intro
     - theme: alt
       text: Installation
       link: /install

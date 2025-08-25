@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { scratchblocksPlugin } from "sb-mdit";
 
 export default defineConfig({
   title: "Scratch Everywhere!",
@@ -10,7 +11,11 @@ export default defineConfig({
     sidebar: [
       {
         items: [
-          { text: "Information", link: "/info" },
+          { text: "Introduction", link: "/intro" },
+          { text: "Roadmap", link: "/roadmap" },
+          { text: "Features", link: "/features" },
+          { text: "Limitations", link: "/limitations" },
+          { text: "Controls", link: "/controls" },
         ],
       },
     ],
@@ -29,5 +34,6 @@ export default defineConfig({
       light: "catppuccin-latte",
       dark: "catppuccin-mocha",
     },
+    config: (md) => md.use(scratchblocksPlugin),
   },
 });
