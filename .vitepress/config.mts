@@ -30,6 +30,9 @@ export default defineConfig({
       message:
         "This project is not affiliated with Scratch, the Scratch Team, or any of the supported platforms' parent companies or organizations.",
     },
+    search: {
+      provider: "local",
+    },
   },
   markdown: {
     theme: {
@@ -38,4 +41,5 @@ export default defineConfig({
     },
     config: (md) => md.use(scratchblocksPlugin),
   },
+  cleanUrls: true,
 });
