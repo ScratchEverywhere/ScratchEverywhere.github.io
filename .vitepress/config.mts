@@ -12,6 +12,8 @@ export default defineConfig({
       {
         items: [
           { text: "Introduction", link: "/intro" },
+          { text: "Installation", link: "/install" },
+          { text: "Building", link: "/build" },
           { text: "Roadmap", link: "/roadmap" },
           { text: "Features", link: "/features" },
           { text: "Limitations", link: "/limitations" },
