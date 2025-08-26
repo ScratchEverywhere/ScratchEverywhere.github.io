@@ -42,4 +42,5 @@ export default defineConfig({
     config: (md) => md.use(scratchblocksPlugin),
   },
   cleanUrls: true,
+  mpa: true,
 });
