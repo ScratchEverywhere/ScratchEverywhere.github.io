@@ -100,13 +100,17 @@ Compilation flags are used to select which features will be enabled in the
 compiled version of Scratch Everywhere!. To use a compilation flag simply add it
 to the end of the make command (e.g. `make ENABLE_BUBBLES=0`).
 
-- [3DS, GameCube, and Wii] `ENABLE_BUBBLES` (default: `1`): If set to `1`, the
-  loading screen is enabled, if set to `0` the screen is simply black during
-  that time.
-- `ENABLE_AUDIO` (default: `1`): If set to `1`, Audio will be enabled. If set to
-  `0`, it will be disabled.
-- [3DS, Wii U, and PC] `ENABLE_CLOUDVARS` (default: `0`): If set to `1`, cloud
-  variable support is enabled, if set to `0` cloud variables are treated like
-  normal variables. If your project doesn't use cloud variables, it is
-  recommended to leave this turned off. If you run into errors while building
-  try turning this off and see if that fixes the errors.
+- `ENABLE_LOADSCREEN` (default: `0` on Wii and Gamecube, `1` otherwise):
+  If set to `1`, the loading screen is enabled, if set to `0` the screen is simply black during that time.
+  This option crashes on Wii and GameCube when trying to load large projects.
+- `ENABLE_AUDIO` (default: `1`):
+  If set to `1`, Audio will be enabled.
+  If set to `0`, it will be disabled.
+- `ENABLE_CLOUDVARS` (default: `0`):
+  If set to `1`, cloud variable support is enabled,
+  if set to `0` cloud variables are treated like normal variables.
+  If your project doesn't use cloud variables, it is recommended to leave this turned off.
+  If you run into errors while building try turning this off and see if that fixes the errors.
+- **[Old 3DS]** `RAM_AMOUNT` (default: `72`):
+  the amount of RAM, in megabytes, the old 3DS should be using.
+  Can be set to `32`, `64`, `72`, `80`, or `96`.
