@@ -21,4 +21,4 @@ features:
     details: Scratch Everywhere! is extremely easy to use. Just download it from the app store, add your projects, and start playing!
 ---
 
-<img src="https://github.com/NateXS/Scratch-Everywhere/raw/main/scratchcats3ds.gif" style="border-radius: 12px; margin-top: 2rem;" />
+<img src="https://github.com/ScratchEverywhere/ScratchEverywhere/raw/main/scratchcats3ds.gif" style="border-radius: 12px; margin-top: 2rem;" />

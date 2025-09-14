@@ -50,7 +50,7 @@ libcurl (instructions in mistpp-packages repo) installed.
 - **For the 3DS**, you will need the DevkitARM toolchain and libctru.
   - If you want to compile with audio support, you will also need a 3DS compiled
     version of SDL2 and SDL2_mixer. See the
-    [Nightly Build commands](https://github.com/NateXS/Scratch-3DS/blob/main/.github/workflows/nightly-3ds.yml)
+    [Nightly Build commands](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/.github/workflows/nightly-3ds.yml)
     for a reference on how to compile SDL2 3DS for yourself.
 - **For the Wii U**, you will need the DevkitPPC toolchain, WUT, all SDL2-wiiu
   libraries, and [libromfs-wiiu.](https://github.com/yawut/libromfs-wiiu).
