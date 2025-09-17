@@ -4,3 +4,7 @@
   height: 2rem;
   translate: 0 33%;
 }
+
+.nightly-builds > a > img {
+  display: inline-block;
+}

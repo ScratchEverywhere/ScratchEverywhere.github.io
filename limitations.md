@@ -23,11 +23,11 @@ crashes, and things that will just not work.
 - **[3DS]** Some vector images will appear bigger than they should.
 - **[Vita]** Back touch will not be supported.
 
-## Unimplimented blocks
+## Unimplemented blocks
 
 <!-- deno-fmt-ignore -->
 - ::sb say ()::, ::sb think ()::, ::sb say () for () seconds::, and ::sb think () for () seconds::
-- ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for `Ghost`)
+- ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for `Ghost` and `Brightness`)
 - ::sb when [loudness v] > ()::
 - ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
 - ::sb loudness::
