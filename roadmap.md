@@ -4,9 +4,9 @@
 
 - Bug fixing and Scratch parity
 - Get all blocks working
-- Pen support ([#294](https://github.com/NateXS/Scratch-Everywhere/pull/294))
+- Pen support ([#294](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/294))
 - Support most TurboWarp extensions
-  ([#210](https://github.com/NateXS/Scratch-Everywhere/pull/210))
+  ([#210](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/210))
 
 ## Wii U
 
