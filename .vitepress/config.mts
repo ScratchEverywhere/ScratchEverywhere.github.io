@@ -29,8 +29,8 @@ export default defineConfig({
     logo:
       "https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/gfx/logo_se.png?raw=true",
     siteTitle: false,
-    sidebar: [
-      {
+    sidebar: {
+      "/": [{
         items: [
           { text: "Introduction", link: "/intro" },
           { text: "Installation", link: "/install" },
@@ -42,7 +42,41 @@ export default defineConfig({
           { text: "Controls", link: "/controls" },
           { text: "Settings", link: "/settings" },
         ],
-      },
+      }],
+      "/extensions/": [
+        {
+          items: [
+            { text: "Introduction", link: "/extensions/intro" },
+          ],
+        },
+        {
+          text: "Dev",
+          items: [
+            { text: "Introduction", link: "/extensions/dev-intro" },
+            { text: "File Format", link: "/extensions/format" },
+            {
+              text: "API",
+              items: [
+                { text: "File System", link: "/extensions/files" },
+                { text: "Network", link: "/extensions/network" },
+                { text: "Input", link: "/extensions/input" },
+                { text: "Render", link: "/extensions/render" },
+                { text: "Updates", link: "/extensions/updates" },
+                {
+                  text: "Platform Specific",
+                  link: "/extensions/platform-specific",
+                },
+                { text: "Runtime", link: "/extensions/runtime" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+
+    nav: [
+      { text: "Docs", link: "/intro" },
+      { text: "Custom Extension Docs", link: "/extensions/intro" },
     ],
 
     socialLinks: [
