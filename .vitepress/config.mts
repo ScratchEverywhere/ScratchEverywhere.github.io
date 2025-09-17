@@ -6,7 +6,7 @@ export default defineConfig({
   description: "Custom Scratch Runtime made in C++!",
   themeConfig: {
     logo:
-      "https://github.com/NateXS/Scratch-Everywhere/blob/main/gfx/logo.png?raw=true",
+      "https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/gfx/menu/logo.png?raw=true",
     siteTitle: false,
     sidebar: [
       {
@@ -23,8 +23,12 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/NateXS/Scratch-Everywhere" },
+      {
+        icon: "github",
+        link: "https://github.com/ScratchEverywhere/ScratchEverywhere",
+      },
       { icon: "discord", link: "https://discord.gg/Y2gf5vZHpJ" },
+      { icon: "reddit", link: "https://reddit.com/r/ScratchEverywhere" },
     ],
     footer: {
       message:
@@ -42,5 +46,4 @@ export default defineConfig({
     config: (md) => md.use(scratchblocksPlugin),
   },
   cleanUrls: true,
-  mpa: true,
 });
