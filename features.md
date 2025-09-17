@@ -28,10 +28,10 @@
   Sound" and will not need to load.
 - Only one "Streamed Sound" can be playing at a time, so this is good for things
   like background music.
-- **[Wii, GameCube, Vita]** "Streamed Sound" is not supported. Any sounds in "Stage"
-  will load and play like a normal sound.
-- **[3DS, Wii, GameCube]** Sounds may fail to load if the length of the sound is too
-  long, or if there's too many sounds loaded at once.
+- **[Wii, GameCube, Vita]** "Streamed Sound" is not supported. Any sounds in
+  "Stage" will load and play like a normal sound.
+- **[3DS, Wii, GameCube]** Sounds may fail to load if the length of the sound is
+  too long, or if there's too many sounds loaded at once.
 
 ## Framerate
 
@@ -46,6 +46,6 @@
 
 ## Special Custom Blocks
 
-Like TurboWarp we have special custom blocks that only work on SE!
-You can find a project containing and explaining them here:
+Like TurboWarp we have special custom blocks that only work on SE! You can find
+a project containing and explaining them here:
 https://scratchbox.grady.link/project/K26OtTN2WDJ9
