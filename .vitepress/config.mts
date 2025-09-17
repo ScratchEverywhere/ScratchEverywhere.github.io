@@ -48,6 +48,7 @@ export default defineConfig({
         link: "https://github.com/ScratchEverywhere/ScratchEverywhere",
       },
       { icon: "discord", link: "https://discord.gg/Y2gf5vZHpJ" },
+      { icon: "reddit", link: "https://reddit.com/r/ScratchEverywhere" },
     ],
     footer: {
       message:
@@ -65,5 +66,4 @@ export default defineConfig({
     config: (md) => md.use(scratchblocksPlugin),
   },
   cleanUrls: true,
-  mpa: true,
 });
