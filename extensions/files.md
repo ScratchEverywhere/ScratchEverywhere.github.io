@@ -24,27 +24,29 @@ If the local file system permission is present then the current directory is
 
 If both are present then the local file system permission takes priority.
 
+## Functions
+
 ## `files.read(path: string)`
 
 Reads the entire file at the inputed path into a string.
 
-## `files.write(path: string, content: string)`
+### `files.write(path: string, content: string)`
 
 Overwrites the specified file's content with the provided content.
 
-## `files.append(path: string, content: string)`
+### `files.append(path: string, content: string)`
 
 Appends the specified content the specified file.
 
-## `files.mkdir(path: string)`
+### `files.mkdir(path: string)`
 
 Creates a directory at the given path.
 
-## `files.ls(path: string)`
+### `files.ls(path: string)`
 
 Lists all files in a directory, including dot files.
 
-## `files.mainDirectory`
+### `files.mainDirectory`
 
 > [!NOTE]
 > This variable is only available with the root file system permission.
