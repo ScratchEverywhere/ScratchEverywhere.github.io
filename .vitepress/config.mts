@@ -68,6 +68,8 @@ export default defineConfig({
                   link: "/extensions/platform-specific",
                 },
                 { text: "Runtime", link: "/extensions/runtime" },
+                { text: "Audio", link: "/extensions/audio" },
+                { text: "Extensions", link: "/extensions/extensions" },
               ],
             },
           ],
