@@ -350,3 +350,9 @@ A table representing all broadcasts.
 ### `runtime.monitors: runtime.monitor[]`
 
 An array of all monitors, in the order of how they are layered.
+
+## Functions
+
+> [!WARNING]
+> This page is still a work in progress so runtime functions are yet to be
+> documented.
