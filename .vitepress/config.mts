@@ -95,6 +95,9 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+    outline: {
+      level: [2, 3],
+    },
   },
   markdown: {
     theme: {
