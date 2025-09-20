@@ -343,6 +343,8 @@ An array of all costumes/backdrops for the target.
 
 A table of sound's IDs and other data about the sound.
 
+## Variables
+
 ### `runtime.broadcasts: table<string, runtime.broadcast>`
 
 A table representing all broadcasts.
@@ -350,6 +352,10 @@ A table representing all broadcasts.
 ### `runtime.monitors: runtime.monitor[]`
 
 An array of all monitors, in the order of how they are layered.
+
+### `runtime.targets: runtime.target[]`
+
+An array of all targets.
 
 ## Functions
 
