@@ -1,5 +1,33 @@
 # Extensions
 
+## Types
+
+### `extensions.info: table`
+
+#### `core: boolean`
+
+Whether or not the extension is a core extension.
+
+#### `id: string`
+
+The ID of the extension.
+
+#### `name: string`
+
+The name of the extension.
+
+#### `description: string`
+
+The extension's description.
+
+#### `permissions: ("localfs" | "rootfs" | "network" | "input" | "render" | "update" | "platform-specific" | "runtime" | "audio" | "extensions")[]`
+
+A list of all the permissions the extension has.
+
+#### `platforms: ("3ds" | "wiiu" | "wii" | "gamecube" | "switch" | "vita" | "pc")[]`
+
+A list of all the platforms the extension supports.
+
 ## Variables
 
 ### `extensions.active: string[]`
@@ -35,3 +63,8 @@ specific extension.
 
 Takes in a callback that is called whenever a message is received from any
 extension.
+
+### `extensions.getInfo(id: string)`
+
+Gets info about a specific custom extension. Returns a [`extensions.info`]()
+table.
