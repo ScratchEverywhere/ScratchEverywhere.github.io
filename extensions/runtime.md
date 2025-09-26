@@ -359,6 +359,6 @@ An array of all targets.
 
 ## Functions
 
-> [!WARNING]
-> This page is still a work in progress so runtime functions are yet to be
-> documented.
+### `runtime.clone(id: string)`
+
+Creates a clone of a specific sprite.
