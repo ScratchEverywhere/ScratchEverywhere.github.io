@@ -357,6 +357,10 @@ An array of all monitors, in the order of how they are layered.
 
 An array of all targets.
 
+### `runtime.username: string`
+
+The current username.
+
 ## Functions
 
 ### `runtime.clone(id: string)`
