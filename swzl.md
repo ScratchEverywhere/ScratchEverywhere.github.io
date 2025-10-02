@@ -28,6 +28,6 @@ channels of the color.
 
 ## Pixel Data
 
-The pixel data is simply a ton of unsigned 16-bit integers correlating to colors
+The pixel data is simply a ton of unsigned 8-bit integers correlating to colors
 in the color palette. A value of `0` represents a transparent pixel. The number
 of pixels is determined by the source width multiplied by the source height.
