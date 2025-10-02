@@ -40,6 +40,12 @@ export default defineConfig({
           { text: "Controls", link: "/controls" },
         ],
       },
+      {
+        text: "Devs",
+        items: [
+          { text: "SWZL", link: "/swzl" },
+        ],
+      },
     ],
 
     socialLinks: [
