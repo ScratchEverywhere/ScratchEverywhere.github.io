@@ -14,11 +14,10 @@ null-terminated.
 These are the dimensions that the actual `.swzl` file contains, both are stored
 as unsigned 8-bit integers; width comes first, followed by height.
 
-## Output Dimensions
+## Scaling Factor
 
-These are the dimensions that the actual texture should be upscaled to when
-rendering, both are stored as unsigned 16-bit integers; width comes first,
-followed by height.
+The scaling factor is simply how much the image should be scaled up when
+rendering. It is a single unsigned 8-bit integer.
 
 ## Color Palette
 
