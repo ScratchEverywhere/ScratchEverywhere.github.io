@@ -4,24 +4,33 @@
 
 # SEE (Scratch Everywhere! Extension)
 
-IDK how to properly format one of these and it's a pretty simple format so...
+All strings are UTF-8.
 
-The first part of a `.see` file is the magic string `SE! EXTENSION` (not
-null-terminated.) The magic string is followed by a byte which should be `1` if
-the extension is a core extension and a `0` in all other cases. After that is a
-null-terminated string representing the ID of the extension. Then there's a
-null-terminated string representing the name of the extension. There's a
-null-terminated string representing the description of the extension after that.
-The 2 next bytes are used to figure out the permissions needed by the extension.
-After the permissions is a byte representing supported platforms. Following the
-supported platforms is any amount of bytes representing types of blocks, this
-section is null-terminated. After the types is the corresponding IDs in the same
-order, each one should be null-terminated and there should be the same amount of
-IDs as types. Followed by the Lua bytecode of the extension.
+## Magic Strings
 
-# Permissions
+All `.see` files start with the magic string `SE! EXTENSION` (not
+null-terminated.)
 
-(2 bytes treated like a 16 bit number, wait isn't that just a word :shrug:)
+## Core Extensions
+
+The core extensions flag is made up of 1 byte that is either `0` if the
+extension is not a core extension, or `1` of the extension is a core extension.
+Core extensions allow creating blocks that are not tied to the specific
+extension ID.
+
+## Extension Info
+
+The extension info section contains information about the extension. It is made
+up of 3 null-terminated strings in this order:
+
+- Extension ID
+- Extension Name
+- Extension Description
+
+## Permissions
+
+The permissions section contains the necessary permissions the extension needs,
+it is made up of a single unsigned 16-bit integer.
 
 - 1st bit represents if the extension needs local file system access. This is
   what should be used the majority of the time.
@@ -40,7 +49,29 @@ IDs as types. Followed by the Lua bytecode of the extension.
 - 10th bit represents if the extension needs access to be able to communicate
   with other extensions.
 
-# Block Types
+## Supported Platforms
+
+The platforms section is just a single byte with its bits representing the
+platforms that the extension works on. Most extensions should support all
+platforms.
+
+- 1st bit: 3DS
+- 2nd bit: Wii U
+- 3rd bit: Wii
+- 4th bit: GameCube
+- 5th bit: Switch
+- 6th bit: PC
+- 7th bit: Vita
+
+## Blocks
+
+The blocks section is actually split into two sub-sections, the block types
+section and the block IDs section.
+
+### Block Types
+
+The block types section itself is null-terminated and is simply represented by 1
+byte for each block which tells the runtime what type of block, each block is.
 
 - `0x1`: Command
 - `0x2`: Hat
@@ -48,14 +79,7 @@ IDs as types. Followed by the Lua bytecode of the extension.
 - `0x4`: Reporter
 - `0x5`: Boolean
 
-# Supported Platforms Map
+### Block IDs
 
-Just `&` these together.
-
-- `0b00000001`: 3DS
-- `0b00000010`: Wii U
-- `0b00000100`: Wii
-- `0b00001000`: GameCube
-- `0b00010000`: Switch
-- `0b00100000`: PC
-- `0b01000000`: Vita
+After the block types is the block IDs. Each ID is a null-terminated string.
+There should be the same amount of IDs as types.
