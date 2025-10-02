@@ -20,11 +20,11 @@ minor version of the API the extension was designed for.
 
 ### File Format Versions
 
-- `0`
+- `0` (testing)
 
 ### API Versions
 
-- `0.0`
+- `0.0` (testing)
 
 ## Core Extensions
 
