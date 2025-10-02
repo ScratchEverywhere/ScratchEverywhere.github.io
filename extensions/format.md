@@ -98,3 +98,7 @@ byte for each block which tells the runtime what type of block, each block is.
 
 After the block types is the block IDs. Each ID is a null-terminated string.
 There should be the same amount of IDs as types.
+
+## Lua Bytecode
+
+Following everything else is simply just some compiled Lua bytecode (`.luac`).
