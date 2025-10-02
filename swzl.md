@@ -23,8 +23,8 @@ followed by height.
 ## Color Palette
 
 The first byte of the color palette is the number of colors in the palette.
-Following that is groups of 3 bytes representing (in this order) the RGB
-channels of the color.
+Following that is a ton of unsigned 16-bit integers representing 16-bit RGB
+colors.
 
 ## Pixel Data
 
