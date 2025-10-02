@@ -18,6 +18,14 @@ first byte is the version of this file format, the second byte is the major
 version of the API the extension was designed for, and the third byte is the
 minor version of the API the extension was designed for.
 
+### File Format Versions
+
+- `0`
+
+### API Versions
+
+- `0.0`
+
 ## Core Extensions
 
 The core extensions flag is made up of 1 byte that is either `0` if the
