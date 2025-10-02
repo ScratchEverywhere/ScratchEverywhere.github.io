@@ -11,6 +11,13 @@ All strings are UTF-8.
 All `.see` files start with the magic string `SE! EXTENSION` (not
 null-terminated.)
 
+## Version Info
+
+This section contains all info about versioning. It is made up of 3 bytes. The
+first byte is the version of this file format, the second byte is the major
+version of the API the extension was designed for, and the third byte is the
+minor version of the API the extension was designed for.
+
 ## Core Extensions
 
 The core extensions flag is made up of 1 byte that is either `0` if the
