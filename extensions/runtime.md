@@ -366,3 +366,7 @@ The current username.
 ### `runtime.clone(id: string)`
 
 Creates a clone of a specific sprite.
+
+### `runtime.costumeAsDataUrl(costumeId: string)`
+
+Simply gets a costume as a data url.
