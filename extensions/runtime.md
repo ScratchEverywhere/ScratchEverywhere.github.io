@@ -366,6 +366,3 @@ The current username.
 ### `runtime.clone(id: string)`
 
 Creates a clone of a specific sprite.
-
-> [!WARNING]
-> The runtime API is currently missing some functions which will be added later.
