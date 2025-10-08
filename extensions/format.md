@@ -4,7 +4,7 @@
 
 # SEE (Scratch Everywhere! Extension)
 
-All strings are UTF-8.
+All strings are UTF-8 and all numbers are big endian.
 
 ## Magic Strings
 
