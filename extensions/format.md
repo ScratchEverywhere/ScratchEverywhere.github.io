@@ -78,6 +78,38 @@ platforms.
 - 6th bit: PC
 - 7th bit: Vita
 
+## Settings
+
+The settings section allows custom extensions to provide modifiable settings
+available in the runtime's UI.
+
+The section begins with a single byte for the number of settings available in
+the extension.
+
+The rest of the section is made up of data for each setting. The size of these
+settings is not always the same (not even the same number of data types.) All
+settings start with a single byte repsenting the type of the extension, followed
+by 2 null-terminated strings, one for the ID of the setting, and another for the
+name of the setting. The name and ID is always followed by a default value, the
+size of which varies between types. Some types also have additional data.
+
+### Toggles
+
+Toggles have the type of `0x12`. Toggles' default value is a single byte with a
+`1` representing enabled and a `0` representing disabled.
+
+### Text
+
+Text settings have the type of `0x63`. Their default value is a null-terminated
+string. They also have another null-terminated string called the prompt which is
+what will be displayed in the on-screen keyboard when editing the text setting.
+
+### Sliders
+
+Sliders have the type of `0x6E`. Their default value is a 32-bit float. Sliders
+also have an additional three 32-bit floats in this order, slider max, slider
+minimum, and slider snap.
+
 ## Blocks
 
 The blocks section is actually split into two sub-sections, the block types

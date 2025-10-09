@@ -34,6 +34,7 @@ export default defineConfig({
             {
               text: "API",
               items: [
+                { text: "General", link: "/extensions/general" },
                 { text: "JSON", link: "/extensions/json" },
                 { text: "File System", link: "/extensions/files" },
                 { text: "Network", link: "/extensions/network" },
