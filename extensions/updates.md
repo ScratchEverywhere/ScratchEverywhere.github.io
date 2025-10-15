@@ -1,19 +1,19 @@
 # Updates
 
-## Functions
+## Extension Defined Functions
 
-### `update.preUpdate(cb: fun())`
+### `update.preUpdate()`
 
 A function that is called before Scratch Everywhere! updates.
 
-### `update.postUpdate(cb: fun())`
+### `update.postUpdate()`
 
 A function that is called after Scratch Everywhere! updates.
 
-### `update.preRender(cb: fun())`
+### `update.preRender()`
 
 A function that is called before Scratch Everywhere! renders.
 
-### `update.postRender(cb: fun())`
+### `update.postRender()`
 
 A function that is called after Scratch Everywhere! renders.
