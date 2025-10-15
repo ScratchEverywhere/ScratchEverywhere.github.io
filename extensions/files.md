@@ -26,7 +26,7 @@ If both are present then the local file system permission takes priority.
 
 ## Functions
 
-## `files.read(path: string)`
+### `files.read(path: string)`
 
 Reads the entire file at the inputed path into a string.
 
