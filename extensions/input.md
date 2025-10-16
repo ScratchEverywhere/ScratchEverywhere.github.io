@@ -28,7 +28,7 @@ include controller buttons mapped to keys.
 
 Checks if a given controller button is currently pressed.
 
-### `input.mouseDown(button: ("left" | "middle" | "right")?)`
+### `input.mouseDown(button: ("left" | "middle" | "right" | "any")?)`
 
 Checks if a given mouse button is down. If no button is specified it defaults to
 `left`.
@@ -48,6 +48,8 @@ each event:
 - `buttondown`: The button that was pressed.
 - `buttonup`: The button that was released.
 - `mousemove`: `nil`
-- `mousedown`: The mouse button that was pressed, `"left" | "right" | "middle"`
-- `mouseup`: The mouse button that was released, `"left" | "right" | "middle"`
+- `mousedown`: The mouse button that was pressed,
+  `"left" | "right" | "middle" | "any"`
+- `mouseup`: The mouse button that was released,
+  `"left" | "right" | "middle" | "any"`
 - `joystickmove`: The joystick that was moved, `"left" | "right"`
