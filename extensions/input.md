@@ -48,8 +48,6 @@ each event:
 - `buttondown`: The button that was pressed.
 - `buttonup`: The button that was released.
 - `mousemove`: `nil`
-- `mousedown`: The mouse button that was pressed,
-  `"left" | "right" | "middle" | "any"`
-- `mouseup`: The mouse button that was released,
-  `"left" | "right" | "middle" | "any"`
+- `mousedown`: The mouse button that was pressed, `"left" | "right" | "middle"`
+- `mouseup`: The mouse button that was released, `"left" | "right" | "middle"`
 - `joystickmove`: The joystick that was moved, `"left" | "right"`
