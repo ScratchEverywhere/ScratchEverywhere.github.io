@@ -14,6 +14,10 @@ The mouse's X position.
 
 The mouse's Y position.
 
+### `input.devices: ("keyboard" | "mouse" | "controller")[]`
+
+A list of input devices connected to the device running Scratch Everrywhere!.
+
 ## Functions
 
 ### `input.keyDown(key: string)`
