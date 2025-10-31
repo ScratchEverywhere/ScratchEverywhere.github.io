@@ -34,6 +34,7 @@ export default defineConfig({
           { text: "Introduction", link: "/intro" },
           { text: "Installation", link: "/install" },
           { text: "Building", link: "/build" },
+          { text: "Building with Docker", link: "/docker" },
           { text: "Roadmap", link: "/roadmap" },
           { text: "Features", link: "/features" },
           { text: "Limitations", link: "/limitations" },
