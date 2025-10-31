@@ -1,6 +1,7 @@
 # Building a Scratch Everywhere App (Bundled with Your Scratch Project)
 
 > **Last updated:** October 29th, 2025 (during Beta Build 27)  
+> **created/edited by:** Br0tcraft
 > **Please read this guide carefully at least once before starting.**  
 > Understanding the full process first will save you time and avoid most common mistakes.  
 
