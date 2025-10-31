@@ -80,14 +80,16 @@ think of it as a small, isolated Linux system that automatically sets everything
 
 Your structure should now look like this:
 
+```
 ScratchEverywhere-main/
- └── ScratchEverywhere/
- ├── romfs/
- │       └── project/
- ├── gfx/
- ├── make/
- ├── docker/
- └── ...
+└── ScratchEverywhere/
+   ├── romfs/
+   │   └── project/
+   ├── gfx/
+   ├── make/
+   ├── docker/
+   └── ...
+```
 
 ---
 
