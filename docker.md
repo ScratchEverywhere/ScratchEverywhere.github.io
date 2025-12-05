@@ -188,19 +188,18 @@ When finished, it should look something like this:
 
 After a successful build, your exported files will appear directly in the `ScratchEverywhere` folder.
 
-| Platform | Output Location | File Types |
-|-----------|----------------|-------------|
-| **3DS** | Main folder | `.3dsx` and `.cia` |
-| **Wii U** | `build/wiiu` folder | `.rpx` and `.wuhb` |
-| **Vita** | `build/vita` folder | `.vpk` |
-| **PS4** | `build/ps4` folder | `.pkg` |
-| **Switch** | `build/switch` folder | `.nro` |
-| **PSP** | `build/psp` folder | `.zip` |
-| **DS** | `build/ds` folder | `.nds` |
-| **GameCube/Wii** | `build/gamecube` or `build/wii` folder | `.dol` |
-| **webOS** | `build/webos` folder | `.ipk` |
-| **PC** | `build/{YOUR_OS}` folder | `scratch-*` (Unix/macOS) <br>`.exe` (Windows) |
-| **Other platforms** | Typically in their respective subfolders | Various |
+| Platform | File Types |
+|-----------|-------------|
+| **3DS** | `.3dsx` and `.cia` |
+| **Wii U** | `.rpx` and `.wuhb` |
+| **Vita** | `.vpk` |
+| **PS4** | `.pkg` |
+| **Switch** | `.nro` |
+| **PSP** | `.zip` |
+| **DS** | `.nds` |
+| **GameCube/Wii** | `.dol` |
+| **webOS** | `.ipk` |
+| **PC** | `scratch-*` (Unix/macOS) <br>`.exe` (Windows) |
 
 You can now copy these files to your console and install or launch them like any other homebrew app!
 
