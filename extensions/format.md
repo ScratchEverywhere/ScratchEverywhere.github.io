@@ -66,9 +66,9 @@ it is made up of a single unsigned 16-bit integer.
 
 ## Supported Platforms
 
-The platforms section is just a single byte with its bits representing the
-platforms that the extension works on. Most extensions should support all
-platforms.
+The platforms section is a single unsigned 16-bit integer with its bits
+representing the platforms that the extension works on. Most extensions should
+support all platforms.
 
 - 1st bit: 3DS
 - 2nd bit: Wii U
@@ -77,6 +77,11 @@ platforms.
 - 5th bit: Switch
 - 6th bit: PC
 - 7th bit: Vita
+- 8th bit: NDS
+- 9th bit: PS4
+- 10th bit: PSP
+- 11th bit: webOS
+- 12th bit: WASM
 
 ## Settings
 
