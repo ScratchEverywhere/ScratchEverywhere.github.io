@@ -19,7 +19,7 @@ features:
   - title: Cross-Platform
     details: Scratch Everywhere! is designed to be a cross-platform Scratch runtime for old homebrew consoles.
   - title: Fast
-    details: Thanks to the programming language Scratch Everywhere! is written in (C++), it's extremely fast compare to normal Scratch.
+    details: Thanks to the programming language Scratch Everywhere! is written in (C++), it's extremely fast compared to normal Scratch.
   - title: Easy to Use
     details: Scratch Everywhere! is extremely easy to use. Just download it from the app store, add your projects, and start playing!
 ---
