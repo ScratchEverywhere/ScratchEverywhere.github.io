@@ -40,7 +40,7 @@ features support specific features.
 | Platform | Pen | Text to Speech | Translate |
 | -------- | --- | -------------- | --------- |
 | Windows  | ✅  | ✅             | ✅        |
-| macOS    | ✅  | ❌             | ❌        |
+| macOS    | ✅  | ✅             | ✅        |
 | Linux    | ✅  | ✅             | ✅        |
 | 3DS      | ✅  | ✅             | ✅        |
 | DS       | ✅  | ❌             | ❌        |
