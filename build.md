@@ -5,7 +5,9 @@ the source code.
 
 ## Docker
 
-The recommended way to compile Scratch Everywhere! is with Docker. It does most of the heavy lifting for you! Look at our [Building with Docker](/docker) section for more info.
+The recommended way to compile Scratch Everywhere! is with Docker. It does most
+of the heavy lifting for you! Look at our [Building with Docker](/docker)
+section for more info.
 
 If you would rather compile manually, continue reading for how to do it.
 
@@ -32,21 +34,37 @@ If you are compiling with cloud variables, you will need to have DevkitPro's
 SDKs, [Mist++](https://github.grady.link/mistpp), and a modified version of
 libcurl (instructions in mistpp-packages repo) installed.
 
--   **For the 3DS**, you will need the DevkitARM toolchain and libctru.
-    -   If you want to compile with audio support, you will also need a 3DS compiled version of SDL3 and SDL3_mixer. See the [Nightly Build commands](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/.github/workflows/nightly-3ds.yml) for a reference on how to compile SDL3 3DS for yourself.
--   **For the Wii U**, you will need the DevkitPPC toolchain, WUT, all SDL2-wiiu libraries, and [libromfs-wiiu.](https://github.com/yawut/libromfs-wiiu).
--   **For the Wii**, you need the DevkitPPC toolchain, libogc, all SDL2-wii libraries, and [libromfs-ogc.](https://github.com/NateXS/libromfs-ogc).
--   **For the GameCube**, you need the DevkitPPC toolchain, libogc, all SDL2-gamecube libraries, and [libromfs-ogc.](https://github.com/NateXS/libromfs-ogc).
--   **For the Switch**, you need the DevkitA64 toolchain, libnx, and all SDL2-switch libraries.
--   **For the Vita**, all you need is the [vitasdk](https://vitasdk.org) toolchain. It includes every SDL2 thing you might need.
--   **For the PSP**, all you need is the [PSPSDK](https://pspdev.github.io) toolchain. It includes every SDL2 thing you might need.
--   **For the PS4**, you will need the [OpenOrbis](https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain) toolchain, [PacBrew](https://github.com/PacBrew/ps4-openorbis-portlibs) portlibs which include SDL2, and our [fixed packages](https://github.com/gradylink/pacbrew-packages).
+- **For the 3DS**, you will need the DevkitARM toolchain and libctru.
+  - If you want to compile with audio support, you will also need a 3DS compiled
+    version of SDL3 and SDL3_mixer. See the
+    [Nightly Build commands](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/.github/workflows/nightly-3ds.yml)
+    for a reference on how to compile SDL3 3DS for yourself.
+- **For the Wii U**, you will need the DevkitPPC toolchain, WUT, all SDL2-wiiu
+  libraries, and [libromfs-wiiu.](https://github.com/yawut/libromfs-wiiu).
+- **For the Wii**, you need the DevkitPPC toolchain, libogc, all SDL2-wii
+  libraries, and [libromfs-ogc.](https://github.com/NateXS/libromfs-ogc).
+- **For the GameCube**, you need the DevkitPPC toolchain, libogc, all
+  SDL2-gamecube libraries, and
+  [libromfs-ogc.](https://github.com/NateXS/libromfs-ogc).
+- **For the Switch**, you need the DevkitA64 toolchain, libnx, and all
+  SDL2-switch libraries.
+- **For the Vita**, all you need is the [vitasdk](https://vitasdk.org)
+  toolchain. It includes every SDL2 thing you might need.
+- **For the PSP**, all you need is the [PSPSDK](https://pspdev.github.io)
+  toolchain. It includes every SDL2 thing you might need.
+- **For the PS4**, you will need the
+  [OpenOrbis](https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain) toolchain,
+  [PacBrew](https://github.com/PacBrew/ps4-openorbis-portlibs) portlibs which
+  include SDL2, and our
+  [fixed packages](https://github.com/gradylink/pacbrew-packages).
 
 > [!NOTE]
 > DevkitPro's install instructions are available at:
 > https://devkitpro.org/wiki/Getting_Started
 
-Download the source code from the [Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases) and unzip it.
+Download the source code from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+and unzip it.
 
 ## Embedding a Scratch project (optional)
 
@@ -61,19 +79,34 @@ project inside of that.
 
 Then you need to compile the projects into proper Homebrew packages.
 
--   **For the 3DS**, you simply need to run `make`. Then copy the `Scratch-3DS.3dsx` file like you normally would.
--   **For the Wii U**, you need to run `make PLATFORM=wiiu` and then copy the `build/wiiu/scratch-wiiu` folder into the `sdcard:/wiiu/apps` folder on your sd card.
--   **For the Wii**, you need to run `make PLATFORM=wii package`, then find the zipped file in `build/wii/scratch-wii.zip`. Unzip it and put the `apps` folder inside the root of your Wii SD card.
--   **For the GameCube**, you need to run `make PLATFORM=gamecube`, then find the `.dol` file at `build/gamecube/scratch-gamecube.dol`.
--   **For the Switch**, you need to run `cmake -DCMAKE_TOOLCHAIN_FILE=$DEVKITPRO/cmake/Switch.cmake -B build/switch && cmake --build build/switch`, then find the `.nro` file at `build/switch/scratch-nx.nro`.
--   **For the Vita**, run `make PLATFORM=vita`, then transfer the VPK at `build/vita/scratch-vita.vpk` over to your Vita.
--   **For the PSP**, run `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`, then unzip the `scratch-psp.zip` file at `build/psp` and transfer the `scratch-psp` folder over to your PSP.
--   **For the PS4**, you will need to run `make PLATFORM=ps4`, then find the `.pkg` file at `build/ps4/scratch-ps4.pkg`.
+- **For the 3DS**, you simply need to run `make`. Then copy the
+  `Scratch-3DS.3dsx` file like you normally would.
+- **For the Wii U**, you need to run `make PLATFORM=wiiu` and then copy the
+  `build/wiiu/scratch-wiiu` folder into the `sdcard:/wiiu/apps` folder on your
+  sd card.
+- **For the Wii**, you need to run `make PLATFORM=wii package`, then find the
+  zipped file in `build/wii/scratch-wii.zip`. Unzip it and put the `apps` folder
+  inside the root of your Wii SD card.
+- **For the GameCube**, you need to run `make PLATFORM=gamecube`, then find the
+  `.dol` file at `build/gamecube/scratch-gamecube.dol`.
+- **For the Switch**, you need to run
+  `cmake -DCMAKE_TOOLCHAIN_FILE=$DEVKITPRO/cmake/Switch.cmake -B build/switch && cmake --build build/switch`,
+  then find the `.nro` file at `build/switch/scratch-nx.nro`.
+- **For the Vita**, run `make PLATFORM=vita`, then transfer the VPK at
+  `build/vita/scratch-vita.vpk` over to your Vita.
+- **For the PSP**, run
+  `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`,
+  then unzip the `scratch-psp.zip` file at `build/psp` and transfer the
+  `scratch-psp` folder over to your PSP.
+- **For the PS4**, you will need to run `make PLATFORM=ps4`, then find the
+  `.pkg` file at `build/ps4/scratch-ps4.pkg`.
 
 ## Compilation Flags
 
 > [!WARNING]
-> We are currently migrating our build system from standalone Makefiles to a centralized `CMakeLists.txt` so documentation in this section might be outdated.
+> We are currently migrating our build system from standalone Makefiles to a
+> centralized `CMakeLists.txt` so documentation in this section might be
+> outdated.
 
 Compilation flags are used to select which features will be enabled in the
 compiled version of Scratch Everywhere!. To use a compilation flag simply add it
