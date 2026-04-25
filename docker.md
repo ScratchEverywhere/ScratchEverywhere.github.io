@@ -140,6 +140,7 @@ target console (e.g., `3ds/`, `wiiu/`, etc.).
 
 TODO
 
+<!-- deno-fmt-ignore -->
 > [!NOTE] Tip
 > It’s nice (but not required) to mention somewhere in your
 > description (or app/game) that it was built using **Scratch Everywhere!**.
