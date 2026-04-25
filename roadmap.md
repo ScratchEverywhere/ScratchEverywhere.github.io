@@ -1,5 +1,10 @@
 # Roadmap
 
+> [!NOTE]
+> For info about planned/unplanned platform support, please check issue
+> [#166](https://github.com/ScratchEverywhere/ScratchEverywhere/issues/166).
+> **Do not** make an issue if your platform is already there.
+
 ## Runtime
 
 - Bug fixing and Scratch parity
@@ -23,8 +28,3 @@
 
 - Download projects from the Scratch website (previously
   [#331](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/331))
-
-> [!NOTE]
-> For info about planned/unplanned platform support, please check issue
-> [#166](https://github.com/ScratchEverywhere/ScratchEverywhere/issues/166).
-> **Do not** make an issue if your platform is already there.
