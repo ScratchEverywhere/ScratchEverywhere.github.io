@@ -37,20 +37,20 @@ features support specific features.
 
 ### Extensions
 
-| Platform | Pen | Text to Speech | Translate | Notes |
-| -------- | --- | -------------- | --------- | ----- |
-| Windows  | ✅  | ✅             | ✅        |       |
-| macOS    | ✅  | ❌             | ❌        |       |
-| Linux    | ✅  | ✅             | ✅        |       |
-| 3DS      | ✅  | ✅             | ✅        |       |
-| DS       | ✅  | ❌             | ❌        |       |
-| Wii U    | ✅  | ✅             | ✅        |       |
-| Wii      | ✅  | ❌             | ❌        |       |
-| GameCube | ✅  | ❌             | ❌        |       |
-| Switch   | ✅  | ❌             | ❌        |       |
-| Vita     | ✅  | ❌             | ❌        |       |
-| PSP      | ✅  | ❌             | ❌        |       |
-| PS4      | ✅  | ❌             | ❌        |       |
+| Platform | Pen | Text to Speech | Translate |
+| -------- | --- | -------------- | --------- |
+| Windows  | ✅  | ✅             | ✅        |
+| macOS    | ✅  | ❌             | ❌        |
+| Linux    | ✅  | ✅             | ✅        |
+| 3DS      | ✅  | ✅             | ✅        |
+| DS       | ✅  | ❌             | ❌        |
+| Wii U    | ✅  | ✅             | ✅        |
+| Wii      | ✅  | ❌             | ❌        |
+| GameCube | ✅  | ❌             | ❌        |
+| Switch   | ✅  | ❌             | ❌        |
+| Vita     | ✅  | ❌             | ❌        |
+| PSP      | ✅  | ❌             | ❌        |
+| PS4      | ✅  | ❌             | ❌        |
 
 ### Misc Notes
 
