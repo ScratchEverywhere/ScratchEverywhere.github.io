@@ -186,7 +186,7 @@ The build process may take several minutes, depending on your system.
 
 When finished, it should look something like this: ![image](pictures/result.png)
 
-## Common Errors & Fixes
+### Common Errors & Fixes
 
 | Error                                                                                                                                        | Cause                                                                                              | Solution                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
