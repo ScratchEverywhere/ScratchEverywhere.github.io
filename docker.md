@@ -1,10 +1,12 @@
 # Building a Scratch Everywhere App (Bundled with Your Scratch Project)
 
-> - **Last updated:** December 5th, 2025 (during Beta Build 30.x)
-> - **Created/edited by:** **Br0tcraft**, Dogo6647
-> - **Please read this guide carefully at least once before starting.**
-> - Understanding the full process first will save you time and avoid most
->   common mistakes.
+> - **Last updated:** April 25, 2026 for Beta Version whateveritendsupbeing
+> - **Created/edited by:** **Br0tcraft**, Dogo6647, Starlii10
+
+> [!WARNING]
+> **Please read this guide carefully at least once before starting.**
+> Understanding the full process first will save you time and avoid most common
+> mistakes.
 
 If you run into issues, or if you find errors in this tutorial, please reach out
 to us on our Discord server https://discord.com/invite/Y2gf5vZHpJ
@@ -25,22 +27,39 @@ sets everything up for you.
 - A working **Docker installation**
 - The **Scratch Everywhere** source code (from GitHub)
 - Your **Scratch project (.sb3)**
-- A bit of patience, compiling can take several minutes.
+- A bit of patience. Compiling can take several minutes.
 
 ## Step 1: Install Docker
 
-1. Go to [https://docker.com](https://docker.com)
-2. Click **“Download Docker Desktop”**
+There are two main methods of installing Docker: **Docker Desktop** and the
+standalone Docker application. This guide uses Docker Desktop on Windows and
+macOS, while Linux uses the standalone Docker application.
 
-   ![image](pictures/docker.png)
+### Docker Desktop (Windows/macOS)
+
+1. Visit the [Docker website](https://docker.com)
+2. Click "Download Docker Desktop"
+
+![image](pictures/docker.png)
+
 3. Choose your operating system.
 
-   ![image](pictures/os.png)
-4. On Windows, make sure you select the correct installer for your CPU:
-   - **ARM / aarch64** → use the ARM installer
-   - **amd64 / x86** → use the amd64 installer
-5. Run the installer and follow the on-screen instructions.
-6. Once installed, **launch Docker Desktop** to make sure it’s running.
+![image](pictures/os.png)
+
+> [!NOTE]
+> Make sure to select the correct installer for your CPU:
+>
+> - ARM / aarch64 → use the **ARM** installer
+> - amd64 / x86 → use the **amd64** installer
+
+4. Download the installer, run it, and follow the on-screen instructions.
+5. Once installed, **launch Docker Desktop** to make sure it's running.
+
+### Docker CE (Linux)
+
+Follow the instructions found in the
+[Docker documentation](https://docs.docker.com/engine/install/) on how to
+install Docker CE for your Linux distribution.
 
 ## Step 2: Download Scratch Everywhere!
 
@@ -119,62 +138,36 @@ target console (e.g., `3ds/`, `wiiu/`, etc.).
 
 ## Step 6: Change App Information (Title, Description, Author)
 
-1. Go into the `make` folder.
+TODO
 
-   ![image](pictures/makefiles.png)
-2. Find the `Makefile` that matches your target platform.\
-   For example:\
-   Makefile_3ds Makefile_wiiu
-3. Open it in a text editor.
-4. Near the top, you’ll find a section where you can change:
-
-- **App Title**
-- **Description**
-- **Author Name**
-
-![image](pictures/changeName.png)
-
-> Tip: It’s nice (but not required) to mention somewhere in your description (or
-> app/game) that it was built using **Scratch Everywhere!**.
-
-Save the file after making your changes.
+> [!NOTE] Tip
+> It’s nice (but not required) to mention somewhere in your
+> description (or app/game) that it was built using **Scratch Everywhere!**.
 
 ## Step 7: Build the App Using Docker
 
 1. Make sure **Docker Desktop is running**.
 2. Go back to your main `ScratchEverywhere` folder (the one that contains
-   `romfs`, `gfx`, `make`, etc.).
-3. Click in the **address bar** at the top of the window
-
-   ![image](pictures/addressbar.png)
-
-   and type: cmd
-
-   ![image](pictures/typecmd.png)
-
-   Then press **Enter**.
-4. A Command Prompt window should open in the correct directory.\
-   Verify that the path shown matches your `ScratchEverywhere` folder.
-
-![image](pictures/cmd.png) If not, you can manually navigate to it:
+   `romfs`, `gfx`, `make`, etc.). Note the directory shown in the address bar.
+3. Open a terminal (Command Prompt on Windows) and navigate to the folder you
+   noted down:
 
 ```
-cd C:\Path\To\ScratchEverywhere-main\ScratchEverywhere
+cd /path/to/ScratchEverywhere-main
 ```
+
+![image](pictures/cmd.png)
 
 ### Build Commands
 
-Use one of the following commands depending on your target platform:
+To build the project, use this command:
 
-| Platform            | Command                                                               |
-| ------------------- | --------------------------------------------------------------------- |
-| **3DS**             | `docker build -f docker/Dockerfile.3ds --target exporter -o . .`      |
-| **Wii U**           | `docker build -f docker/Dockerfile.wiiu --target exporter -o . .`     |
-| **Wii**             | `docker build -f docker/Dockerfile.wii --target exporter -o . .`      |
-| **GameCube**        | `docker build -f docker/Dockerfile.gamecube --target exporter -o . .` |
-| **Nintendo Switch** | `docker build -f docker/Dockerfile.switch --target exporter -o . .`   |
-| **PS Vita**         | `docker build -f docker/Dockerfile.vita --target exporter -o . .`     |
-| **PS4**             | `docker build -f docker/Dockerfile.ps4 --target exporter -o . .`      |
+```
+docker build -f docker/Dockerfile.{platform} --target exporter -o . .
+```
+
+Replace `{platform}` with the platform you would like to build for, matching the
+Makefile you edited in step 6.
 
 The build process may take several minutes, depending on your system.
 
@@ -216,10 +209,10 @@ using Scratch Everywhere!
 
 If something doesn’t work:
 
-- Double-check folder names and paths (especially lowercase `project`)
+- Double-check folder names and paths
 - Make sure Docker is running and not paused
 - Re-download the latest version of Scratch Everywhere!
 
 And don’t hesitate to share your results or ask for help in our **Discord
-server**\
-we love seeing new projects from the community!
+server**.\
+We love seeing new projects from the community!
