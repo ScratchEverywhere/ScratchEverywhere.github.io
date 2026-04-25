@@ -2,50 +2,38 @@
 
 ## 3DS Screen modes
 
-- Any scratch project with an unmodified resolution setting will be displayed on
-  the top screen only.
-- If using a modded Scratch client like TurboWarp, you can go into the projects'
+- Any project with an unmodified resolution setting will be displayed on the top
+  screen only.
+- If using a modded Scratch client like TurboWarp, you can go into the project's
   Advanced Settings and change the resolution.
   - Setting it to `400x480` will enable both the top and bottom screen.
   - Setting it to `320x240` will enable only the bottom screen.
   - Setting it to `400x240` will make the project perfectly fit to the top
     screen.
-  - NOTE: make sure to click `Store Settings In Project` on TurboWarp to
-    properly apply the settings.
-
-## Wii U Screen Modes
-
-- Currently, projects display exactly the same on both the TV and the GamePad,
-  and there's no way to change screen modes.
-
-## Audio
-
-- MP3, Ogg Vorbis, and WAV audio formats are supported.
-- A sound will take time to load if playing it for the first time.
-  - Known Bug: On 3DS, if a sound has to load while other sounds are playing,
-    all sounds will stop playing until the sound is loaded.
-- If you play any sound from the "Stage", the sound will play as a "Streamed
-  Sound" and will not need to load.
-- Only one "Streamed Sound" can be playing at a time, so this is good for things
-  like background music.
-- **[Wii, GameCube, Vita]** "Streamed Sound" is not supported. Any sounds in
-  "Stage" will load and play like a normal sound.
-- **[3DS, Wii, GameCube]** Sounds may fail to load if the length of the sound is
-  too long, or if there's too many sounds loaded at once.
-
-## Framerate
-
-- When using a modded Scratch client like TurboWarp, you can enable the
-  `60 FPS (Custom FPS)` advanced option, and change the FPS to any value.
+  > [!NOTE]
+  > Make sure to click `Store Settings In Project` on TurboWarp to properly
+  > apply the settings.
 
 ## Differently Implemented Blocks
 
-- The ::sb Username:: block returns the 3DS's nickname, and the Wii U's current
-  Mii name.
-- The ::sb Stop [All v]:: block brings you back to the project menu.
+- The ::sb username:: block returns the username of the device.
+  - The username differs between platforms, but generally uses the name of the
+    currently active user (or the console's name if the platform does not have a
+    user system).
+- The ::sb stop [all v]:: block brings you back to the project menu.
+- The ::sb touching [ v]:: block has two different modes:
+  - `Accurate`: The standard behavior that matches Scratch.
+  - `Fast`: Uses (non-rotated!) rectangles for collision.
+  - You can switch between these with the Project Settings menu (see the
+    [settings page](/settings)).
 
 ## Special Custom Blocks
 
-Like TurboWarp we have special custom blocks that only work on SE! You can find
+Like TurboWarp, we have special custom blocks that only work on SE! You can find
 a project containing and explaining them here:
-https://scratchbox.grady.link/project/K26OtTN2WDJ9
+https://scratchbox.dev/project/K26OtTN2WDJ9
+
+## Project Settings
+
+Some settings related to the runtime can be changed on a per-project basis. See
+the [settings page](/settings).
