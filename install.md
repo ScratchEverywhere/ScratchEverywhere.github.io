@@ -12,6 +12,25 @@ to be modded. There are two methods to install the runtime:
 > used if you are instructed to do so in a bug report or you know exactly what
 > using nightlies implies.
 
+## PC (Windows, Mac, Linux)
+
+Download the respective executable file for your operating system:
+
+- Windows: `scratch-windows.exe`
+- Mac: `scratch-macOS`
+- Linux: `scratch-linux`
+
+[!NOTE]
+
+> If you're using Arch Linux or a distribution based on it, Scratch Everywhere!
+> is also available on the
+> [AUR](https://aur.archlinux.org/packages/scratch-everywhere), so you can just
+> install it from there and keep it updated that way!
+
+Place the executable file in a convenient location on your PC.
+
+Then it should be as simple as running the executable file!
+
 ## 3DS
 
 Download the `.cia` file or `.3dsx` in the
