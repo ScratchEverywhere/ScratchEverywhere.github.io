@@ -1,6 +1,6 @@
 # Controls
 
-![Controls](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/scratch%203ds%20controls.png?raw=true)
+![Controls](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/docs/controls/all.png?raw=true)
 
 ## Mouse
 
