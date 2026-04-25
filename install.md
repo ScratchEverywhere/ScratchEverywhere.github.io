@@ -20,8 +20,7 @@ Download the respective executable file for your operating system:
 - Mac: `scratch-macOS`
 - Linux: `scratch-linux`
 
-[!NOTE]
-
+> [!NOTE]
 > If you're using Arch Linux or a distribution based on it, Scratch Everywhere!
 > is also available on the
 > [AUR](https://aur.archlinux.org/packages/scratch-everywhere), so you can just
