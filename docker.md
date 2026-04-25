@@ -138,7 +138,19 @@ target console (e.g., `3ds/`, `wiiu/`, etc.).
 
 ## Step 6: Change App Information (Title, Description, Author)
 
-TODO
+1. Go back to your main `ScratchEverywhere-main` folder (the one that contains
+   `romfs`, `gfx`, `make`, etc.).
+2. Find the file named `CMakeLists.txt`. Open it in a text editor.
+3. Scroll down until you see these lines:
+
+```
+set(SE_APP_NAME "Scratch Everywhere!" CACHE STRING "Name of the outputed app.")
+set(SE_APP_DESCRIPTION "Play Scratch games on anything!" CACHE STRING "Description of the outputed app.")
+set(SE_APP_AUTHOR "Scratch Everywhere! Contributors" CACHE STRING "Author of the outputed app.")
+```
+
+4. Modify these values to fit your project.
+5. Save and close the file.
 
 <!-- deno-fmt-ignore -->
 > [!NOTE] Tip
@@ -148,7 +160,7 @@ TODO
 ## Step 7: Build the App Using Docker
 
 1. Make sure **Docker Desktop is running**.
-2. Go back to your main `ScratchEverywhere` folder (the one that contains
+2. Go back to your main `ScratchEverywhere-main` folder (the one that contains
    `romfs`, `gfx`, `make`, etc.). Note the directory shown in the address bar.
 3. Open a terminal (Command Prompt on Windows) and navigate to the folder you
    noted down:
