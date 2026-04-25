@@ -20,7 +20,8 @@ they must be unpacked again if the original project file changes.
 Determines whether the pen has rounded edges or flat edges. Rounded edges are
 more accurate, but cause a significant performance hit.
 
-`Fast`: The pen has flat edges. `Accurate`: The pen has round edges.
+- `Fast`: The pen has flat edges.
+- `Accurate`: The pen has round edges.
 
 Defaults to `Fast`.
 
