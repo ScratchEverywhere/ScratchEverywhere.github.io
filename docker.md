@@ -179,8 +179,7 @@ To build the project, use this command:
 docker build -f docker/Dockerfile.{platform} --target exporter -o . .
 ```
 
-Replace `{platform}` with the platform you would like to build for, matching the
-Makefile you edited in step 6.
+Replace `{platform}` with the platform you would like to build for.
 
 The build process may take several minutes, depending on your system.
 
