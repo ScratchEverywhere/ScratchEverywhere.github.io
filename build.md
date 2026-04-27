@@ -147,7 +147,8 @@ The description of the outputted app. Defaults to
 
 ### `SE_APP_TITLEID`
 
-The title ID of the outputted app (**only applies to Vita and PS4**). Defaults to `"NTXS00053"` on Vita and `"NTXS10053"` on PS4.
+The title ID of the outputted app (**only applies to Vita and PS4**). Defaults
+to `"NTXS00053"` on Vita and `"NTXS10053"` on PS4.
 
 ### `SE_APP_VERSION`
 
