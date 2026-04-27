@@ -35,5 +35,5 @@ https://scratchbox.dev/project/K26OtTN2WDJ9
 
 ## Project Settings
 
-Some settings related to the runtime can be changed on a per-project basis. See
-the [settings page](/settings).
+Some settings related to the runtime can be changed. See the
+[settings page](/settings).
