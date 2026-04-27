@@ -32,8 +32,8 @@ sets everything up for you.
 ## Step 1: Install Docker
 
 There are two main methods of installing Docker: **Docker Desktop** and the
-standalone Docker application. This guide uses Docker Desktop on Windows and
-macOS, while Linux uses the standalone Docker application.
+standalone Docker engine, known as Docker CE. This guide will use Docker Desktop
+on Windows and macOS, and Docker CE on Linux.
 
 ### Docker Desktop (Windows/macOS)
 
