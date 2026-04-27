@@ -19,6 +19,8 @@ can do so with the following compile flags (see the section below):
 - `SE_APP_NAME`: The name of the app.
 - `SE_APP_DESCRIPTION`: The description of the app.
 - `SE_APP_AUTHOR`: The author of the app.
+- `SE_APP_VERSION`: The version of the app.
+- `SE_APP_TITLEID`: The title ID of the app. **Only applies to Vita and PS4.**
 
 Images for the various banners and icons can be found in `gfx/`.
 
@@ -109,11 +111,21 @@ to the end of the `cmake` configure command (e.g.
 
 ### `SE_APP_AUTHOR`
 
-The author or developer of the outputted app. Defaults to `"Scratch Everywhere! Contributors"`.
+The author or developer of the outputted app. Defaults to
+`"Scratch Everywhere! Contributors"`.
 
 ### `SE_APP_DESCRIPTION`
 
-The description of the outputted app. Defaults to `"Play Scratch games on anything!"`.
+The description of the outputted app. Defaults to
+`"Play Scratch games on anything!"`.
+
+### `SE_APP_TITLEID`
+
+The title ID of the outputted app (**only applies to Vita and PS4**). Defaults to `"NTXS00053"` on Vita and `"NTXS10053"` on PS4.
+
+### `SE_APP_VERSION`
+
+The version of the outputted app. Defaults to the current SE! version.
 
 ### `SE_APP_NAME`
 
