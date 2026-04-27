@@ -46,7 +46,7 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
 
   > [!NOTE]
   > On Arch Linux, `lunasvg` is not in the official package repos. You'll need
-  > to use the AUR.
+  > to use the AUR or let SE! automatically download and build it from source.
 - **For the 3DS**, you will need the DevkitARM toolchain, and libctru.
   - If you want to compile with audio support, you will also need a 3DS compiled
     version of SDL3. See the
