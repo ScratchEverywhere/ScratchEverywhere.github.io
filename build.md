@@ -288,7 +288,7 @@ Defaults to `72`.
 
 ### `SE_RENDERER`
 
-The renderer backend to be used. Can be one of `sdl2`, `sdl3`, `opengl`,
+The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 `citro2d`, `gl2d`, or `headless`.
 
 #### Supported Renderers
@@ -315,12 +315,8 @@ Determines whether or not vector (SVG) images are supported. Defaults to `ON`.
 
 ### `SE_WINDOWING`
 
-The windowing backend to be used. Valid options are the same as `SE_RENDERER`
-with some changes:
-
-- `opengl` -> `glfw`
-- `citro2d` -> `3ds`
-- `gl2d` -> `nds`
+The windowing backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `glfw`,
+`3ds`, `nds`, or `headless`.
 
 #### Supported Windowing Backends
 
@@ -333,3 +329,8 @@ with some changes:
 | `citro2d`  | ❌     | ❌     | ❌     | ❌     | ✅    | ❌    | ❌         |
 | `gl2d`     | ❌     | ❌     | ❌     | ❌     | ❌    | ✅    | ❌         |
 | `headless` | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ✅         |
+
+SE! prioritizes windowing backends in the following order: `glfw`, `sdl3`,
+`sdl2`, `sdl1`, `3ds`, `nds`, and finally `headless`. It will pick the first
+backend in that order that is supported by the chosen renderer, unless the
+windowing backend is manually set.
