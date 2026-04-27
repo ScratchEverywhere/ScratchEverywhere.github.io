@@ -20,7 +20,6 @@
   - The username differs between platforms, but generally uses the name of the
     currently active user (or the console's name if the platform does not have a
     user system).
-- The ::sb stop [all v]:: block brings you back to the project menu.
 - The ::sb touching [ v]:: block has two different modes:
   - `Accurate`: The standard behavior that matches Scratch.
   - `Fast`: Uses (non-rotated!) rectangles for collision.
