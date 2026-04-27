@@ -20,20 +20,20 @@ features support specific features.
 
 ### Features
 
-| Platform | Cloud Variables | Extensions |
-| -------- | --------------- | ---------- |
-| Windows  | ✅              | ❌         |
-| macOS    | ✅              | ✅         |
-| Linux    | ✅              | ✅         |
-| 3DS      | ✅              | ❌         |
-| DS       | ❌              | ❌         |
-| Wii U    | ✅              | ❌         |
-| Wii      | ❌              | ❌         |
-| GameCube | ❌              | ❌         |
-| Switch   | ❌              | ❌         |
-| Vita     | ❌              | ❌         |
-| PSP      | ❌              | ❌         |
-| PS4      | ❌              | ❌         |
+| Platform | Cloud Variables | Native Extensions |
+| -------- | --------------- | ----------------- |
+| Windows  | ✅              | ❌                |
+| macOS    | ✅              | ✅                |
+| Linux    | ✅              | ✅                |
+| 3DS      | ✅              | ❌                |
+| DS       | ❌              | ❌                |
+| Wii U    | ✅              | ❌                |
+| Wii      | ❌              | ❌                |
+| GameCube | ❌              | ❌                |
+| Switch   | ❌              | ❌                |
+| Vita     | ❌              | ❌                |
+| PSP      | ❌              | ❌                |
+| PS4      | ❌              | ❌                |
 
 ### Extensions
 
