@@ -117,7 +117,7 @@ For example, the `icon.png` file is used as the app icon on consoles like the
 3DS.
 
 - You can **replace** these images with your own graphics.
-- ⚠️ **Do not change the file sizes, names, or extensions.**\
+- ⚠️ **Do not change the image sizes, names, or extensions.**\
   The images must keep their **exact dimensions** and **same filenames** (e.g.
   `icon.png`).
 - [GIMP](https://gimp.org) is great for these kinds of things, but you can use
