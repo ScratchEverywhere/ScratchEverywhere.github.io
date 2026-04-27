@@ -1,6 +1,6 @@
 # Building a Scratch Everywhere App (Bundled with Your Scratch Project)
 
-> - **Last updated:** April 25, 2026 for Beta Version whateveritendsupbeing
+> - **Last updated:** April 25, 2026 for Beta Version 40
 > - **Created/edited by:** **Br0tcraft**, Dogo6647, Starlii10
 
 > [!WARNING]
