@@ -45,9 +45,11 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
   and `libcurl` (`curl`) from your package manager.
 
   > [!NOTE]
-  > On Arch Linux, `lunasvg` is not in the official package repos. You'll need
+  > On Arch Linux, `lunasvg` is not in the official package repos. You will need
   > to use the AUR or let SE! automatically download and build it from source.
-- **For the 3DS**, you will need the DevkitARM toolchain, and libctru.
+- **For the 3DS**, you will need the DevkitARM toolchain, libctru,
+  [bannertool](https://github.com/carstene1ns/3ds-bannertool), and
+  [makerom](https://github.com/3DSGuy/Project_CTR).
   - If you want to compile with audio support, you will also need a 3DS compiled
     version of SDL3. See the
     [Nightly Build commands](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/.github/workflows/nightly-3ds.yml)
@@ -104,7 +106,9 @@ done with `cmake`, though the exact commands differ between platforms:
 - **For Linux**, you need to run
   `cmake -B build-linux && cmake --build build-linux`.
 - **For the 3DS**, you need to run
-  `cmake -B build-3ds && cmake --build build-3ds`.
+  `$DEVKITPRO/portlibs/3ds/bin/arm-none-eabi-cmake -B build-3ds -DSE_MAKEROM=/path/to/makerom -DSE_BANNERTOOL=/path/to/bannertool && cmake --build build-3ds`.
+  Replace `/path/to/makerom` and `/path/to/bannertool` with the actual paths to
+  the executables.
 - **For the Wii U**, you need to run
   `$DEVKITPRO/portlibs/wiiu/bin/powerpc-eabi-cmake -B build-wiiu && cmake --build build-wiiu && cmake --build build-wiiu --target package_wiiu`.
 - **For the Wii**, you need to run
