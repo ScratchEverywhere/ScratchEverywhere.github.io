@@ -107,6 +107,18 @@ compiled version of Scratch Everywhere!. To use a compilation flag simply add it
 to the end of the `cmake` configure command (e.g.
 `cmake -B build -DSE_LOADSCREEN=OFF`).
 
+### `SE_APP_AUTHOR`
+
+The author or developer of the outputted app. Defaults to `"Scratch Everywhere! Contributors"`.
+
+### `SE_APP_DESCRIPTION`
+
+The description of the outputted app. Defaults to `"Play Scratch games on anything!"`.
+
+### `SE_APP_NAME`
+
+The name of the outputted app. Defaults to `"Scratch Everywhere!"`.
+
 ### `SE_AUDIO`
 
 Whether or not audio is enabled. Defaults to `ON`.
