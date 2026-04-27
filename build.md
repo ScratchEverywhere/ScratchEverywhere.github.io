@@ -13,14 +13,12 @@ If you would rather compile manually, continue reading for how to do it.
 
 ## Change App Information
 
-If you would like to change the name of the app or any other information, the
-`CMakeLists.txt` file contains metadata for the app:
+If you would like to change the name of the app or any other information, you
+can do so with the following compile flags (see the section below):
 
-```
-set(SE_APP_NAME "Scratch Everywhere!" CACHE STRING "Name of the outputed app.")
-set(SE_APP_DESCRIPTION "Play Scratch games on anything!" CACHE STRING "Description of the outputed app.")
-set(SE_APP_AUTHOR "Scratch Everywhere! Contributors" CACHE STRING "Author of the outputed app.")
-```
+- `SE_APP_NAME`: The name of the app.
+- `SE_APP_DESCRIPTION`: The description of the app.
+- `SE_APP_AUTHOR`: The author of the app.
 
 Images for the various banners and icons can be found in `gfx/`.
 
