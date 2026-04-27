@@ -11,6 +11,11 @@ section for more info.
 
 If you would rather compile manually, continue reading for how to do it.
 
+> [!NOTE]
+> Due to how complicated the environment for building the PS4 version of SE! is,
+> we do not provide instructions for compiling it manually. Please use Docker
+> instead, it will save you many headaches.
+
 ## Change App Information
 
 If you would like to change the name of the app or any other information, you
@@ -34,6 +39,14 @@ Images for the various banners and icons can be found in `gfx/`.
 If you are compiling with cloud variables, you will need to have DevkitPro's
 SDKs and [Mist++](https://github.grady.link/mistpp) installed.
 
+- **For PC**, the only thing you need is `cmake`, as all other dependencies will
+  be automatically downloaded. However, if you'd like to manually install them,
+  you'll need `SDL2`, `SDL2_ttf`, `SDL2_gfx`, `lunasvg`, `stb_image` (`stb`),
+  and `libcurl` (`curl`) from your package manager.
+
+  > [!NOTE]
+  > On Arch Linux, `lunasvg` is not in the official package repos. You'll need
+  > to use the AUR.
 - **For the 3DS**, you will need the DevkitARM toolchain, and libctru.
   - If you want to compile with audio support, you will also need a 3DS compiled
     version of SDL3. See the
@@ -59,9 +72,8 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
   toolchain. It includes every SDL2 thing you might need.
 - **For the PSP**, all you need is the [PSPSDK](https://pspdev.github.io)
   toolchain. It includes every SDL2 thing you might need.
-- **For the PS4**, simply use the Docker image from the
-  [pacbrew-packages repository](https://github.com/ScratchEverywhere/pacbrew-packages).
-- **For webOS**, all you need is the webosbrew Native SDK installed to your home directory and ares-cli.
+- **For webOS**, all you need is the webosbrew Native SDK installed to your home
+  directory and ares-cli.
 
 > [!NOTE]
 > DevkitPro's install instructions are available at:
@@ -82,25 +94,39 @@ project inside of that.
 
 ## Compile Commands
 
-Then you need to compile the projects into proper Homebrew packages. This is done with
-`cmake`, though the exact commands differ between platforms:
+Then you need to compile the projects into proper Homebrew packages. This is
+done with `cmake`, though the exact commands differ between platforms:
 
-> [!NOTE]
-> TODO: Wii/WiiU/GC/PS4 `cmake` commands
-
-- **For the 3DS**, you need to run `cmake -B build-3ds && cmake --build build-3ds`.
-- **For the Wii U**, you need to run `make PLATFORM=wiiu`.
-- **For the Wii**, you need to run `make PLATFORM=wii package`.
-- **For the GameCube**, you need to run `make PLATFORM=gamecube`.
+- **For Windows**, you need to run
+  `cmake -B build-windows && cmake --build build-windows`.
+- **For macOS**, you need to run
+  `cmake -B build-macOS && cmake --build build-macOS`.
+- **For Linux**, you need to run
+  `cmake -B build-linux && cmake --build build-linux`.
+- **For the 3DS**, you need to run
+  `cmake -B build-3ds && cmake --build build-3ds`.
+- **For the Wii U**, you need to run
+  `$DEVKITPRO/portlibs/wiiu/bin/powerpc-eabi-cmake -B build-wiiu && cmake --build build-wiiu && cmake --build build-wiiu --target package_wiiu`.
+- **For the Wii**, you need to run
+  `$DEVKITPRO/portlibs/wii/bin/powerpc-eabi-cmake -B build-wii && cmake --build build-wii`.
+- **For the GameCube**, you need to run
+  `$DEVKITPRO/libogc2/gamecube/bin/powerpc-eabi-cmake -B build-gamecube && cmake --build build-gamecube`.
 - **For the Switch**, you need to run
   `cmake -DCMAKE_TOOLCHAIN_FILE=$DEVKITPRO/cmake/Switch.cmake -B build/switch && cmake --build build/switch`.
 - **For the Vita**, you need to run
   `cmake -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake -B build/vita && cmake --build build/vita`.
 - **For the PSP**, run
   `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`.
-- **For the PS4**, you need to run `make PLATFORM=ps4`.
 - **For webOS**, you need to run
   `cmake -B build/webos -S . -DCMAKE_TOOLCHAIN_FILE="~/arm-webos-linux-gnueabi_sdk-buildroot/share/buildroot/toolchainfile.cmake" -DSE_CLOUDVARS=OFF -DWEBOS=ON -DSE_RENDERER=sdl2 && make -C build/webos all package`.
+  > [!NOTE]
+  > webOS **requires** the `WEBOS=ON` flag. It will not compile without it.
+
+## Final Packages
+
+The final packages are found in the `build-<platform>` folder and can be
+installed in the same way as the official releases (see the
+[installation guide](/install.md)).
 
 ## Compilation Flags
 
