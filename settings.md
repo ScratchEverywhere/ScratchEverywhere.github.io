@@ -1,13 +1,17 @@
 # Settings
 
 Scratch Everywhere! has several options for configuring the behavior of the
-runtime. These are configured on a per-project basis.
+runtime.
 
-## Change Controls
+## Project Settings
+
+These settings can be changed on a per-project basis.
+
+### Change Controls
 
 Allows you to change the mapping of buttons to key presses in the project.
 
-## Unpack Project
+### Unpack Project
 
 Allows a project to be unzipped.
 
@@ -15,7 +19,13 @@ Unpacked projects allow the project and its assets to exist outside of RAM,
 while still increasing performance. They do take up slightly more space, and
 they must be unpacked again if the original project file changes.
 
-## Pen Mode
+### Bottom Screen
+
+Whether to show the project on the bottom screen instead of the top.
+
+**Exclusive to 3DS/DS.** Disabled by default.
+
+### Pen Mode
 
 Determines whether the pen has rounded edges or flat edges. Rounded edges are
 more accurate, but cause a significant performance hit.
@@ -25,7 +35,7 @@ more accurate, but cause a significant performance hit.
 
 Defaults to `Fast`.
 
-## Collision Mode
+### Collision Mode
 
 Determines the behavior of the ::sb touching [ v]:: block.
 
@@ -37,29 +47,28 @@ Determines the behavior of the ::sb touching [ v]:: block.
 
 Defaults to `Accurate`.
 
-## Show FPS
+### Show FPS
 
-Whether or not to display the current frames per second when running a project.
-Disabled by default.
+Whether or not to display FPS info when running a project. Disabled by default.
 
-## Keep Project in RAM
+### Keep Project in RAM
 
 Whether or not to store the project in RAM. This can boost performance when
 loading a new costume or sound, but may cause problems on lower-end platforms.
 Enabled by default on all platforms except for DS, GameCube, and PSP.
 
-## Warp Timer
+### Warp Timer
 
 If this is enabled, scripts will check if they've been running for a long time
 (500 ms), and run at a low framerate instead of getting stuck until the loop
 finishes.
 
 This can fix crashes/freezes related to infinite loops, but it may also cause a
-performance impact on some platforms. It is enabled by default.
+performance impact. It is enabled by default.
 
 ## Global Settings
 
-These settings can be found on the main menu.
+These settings can be found on the main menu. They apply to all projects.
 
 ### Username
 
@@ -74,7 +83,7 @@ The custom username to be displayed.
 
 Allows changing the path where Scratch Everywhere! looks for project files and
 stores settings. This is usually a path relative to the root of the default
-storage device (such as an SD card).
+storage device (such as the console's SD card).
 
 #### Change Path
 
