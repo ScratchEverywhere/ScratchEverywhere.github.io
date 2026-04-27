@@ -115,7 +115,7 @@ done with `cmake`, though the exact commands differ between platforms:
   `cmake -DCMAKE_TOOLCHAIN_FILE=$DEVKITPRO/cmake/Switch.cmake -B build/switch && cmake --build build/switch`.
 - **For the Vita**, you need to run
   `cmake -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake -B build/vita && cmake --build build/vita`.
-- **For the PSP**, run
+- **For the PSP**, you need to run
   `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`.
 - **For webOS**, you need to run
   `cmake -B build/webos -S . -DCMAKE_TOOLCHAIN_FILE="~/arm-webos-linux-gnueabi_sdk-buildroot/share/buildroot/toolchainfile.cmake" -DSE_CLOUDVARS=OFF -DWEBOS=ON -DSE_RENDERER=sdl2 && make -C build/webos all package`.
