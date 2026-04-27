@@ -39,6 +39,7 @@ export default defineConfig({
           { text: "Features", link: "/features" },
           { text: "Limitations", link: "/limitations" },
           { text: "Controls", link: "/controls" },
+          { text: "Settings", link: "/settings" },
         ],
       },
     ],

@@ -1,30 +1,30 @@
 # Roadmap
 
+> [!NOTE]
+> For info about planned/unplanned platform support, please check issue
+> [#166](https://github.com/ScratchEverywhere/ScratchEverywhere/issues/166).
+> **Do not** make an issue if your platform is already there.
+
 ## Runtime
 
 - Bug fixing and Scratch parity
 - Get all blocks working
-- Pen support
-  ([#294](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/294))
 - Support most TurboWarp extensions
-  ([#210](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/210))
+  ([#594](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/594))
 
 ## Wii U
 
-- Dual screen support
-- Improved controller support (multiple controllers)
+- Dual screen support (may not happen due to SDL2 limitations)
 
-## Wii
+## SDL2 Platforms
 
-- Cloud Variable support
+- Support for multiple controllers
 
 ## Vita
 
-- Cloud variable support (compiling with cloud variables enabled currently makes
-  the app crash on startup)
+- Cloud variable support
 
 ## Other
 
-- Download projects from the Scratch website
-- Make Vector images not/less pixelated
-- Browser extension send directly to device from editor
+- Download projects from the Scratch website (previously
+  [#331](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/331))
