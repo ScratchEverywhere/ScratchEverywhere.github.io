@@ -128,9 +128,8 @@ For example, the `icon.png` file is used as the app icon on consoles like the
   cd /path/to/gfx/vita/
   pngquant --posterize 4 path/to/your_image.png same/path/output.png
   ```
-  in the command prompt (Win + R then type "cmd" and press enter on Windows,
-  Find "Terminal" in the home menu on everything else), then rename output.png
-  to the original image's name. When asked to overwrite it, click "Yes".
+  in a terminal (Command Prompt on Windows), then rename output.png to the
+  original image's name. When asked to overwrite it, click "Yes".
   <br>**You can ignore this step for all other platforms.**
 
 To modify banners or special icons, open the subfolder with the name of your
