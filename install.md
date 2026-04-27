@@ -84,7 +84,7 @@ or
 
 Unzip the file in your `sdcard:/wiiu/apps/` folder.
 
-Place the scratch projects you want in `sdcard:/wiiu/scratch-wiiu/`.
+Place the Scratch projects you want in `sdcard:/wiiu/scratch-wiiu/`.
 
 Then it should be as simple as opening the app on the Wii U Menu or in the
 Homebrew Launcher on your Wii U!
@@ -126,12 +126,12 @@ Download the `scratch-nx.nro` file in the
 or
 [nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-switch/main/Scratch%20Everywhere!%20Switch%20Nightly.zip).
 
-Put your Scratch projects in the same place you put your `.nro` file.
-
 > [!NOTE]
 > Scratch Everywhere! is also on the
 > [Homebrew App Store](https://hb-app.store/switch/ScratchEverywhere), so you
 > can just download it there and keep it updated that way!
+
+Put your Scratch projects in the same place you put your `.nro` file.
 
 Then it should be as simple as opening the app on your Nintendo Switch!
 
@@ -182,7 +182,23 @@ or
 [nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-ps4/main/Scratch%20Everywhere!%20PS4%20Nightly.zip),
 then install it using your preferred HEN, like GoldHEN, Mira, etc.
 
-Place your Scratch projects in `/data/scratch-ps4`, if the folder doesn't exist,
+Place your Scratch projects in `/data/scratch-ps4`. If the folder doesn't exist,
 create it.
 
 Then it should be as simple as opening the app on your PS4 from the XMB!
+
+### webOS
+
+Get your TV into [dev mode](https://www.webosbrew.org/devmode/) or
+[root it](https://www.webosbrew.org/rooting/) and download the
+`scratch-webos.ipk` file from the releases tab or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-webos/main/Scratch%20Everywhere!%20webOS%20Nightly.zip),
+then install it using webosbrew's
+[webOS Dev Manager](https://github.com/webosbrew/dev-manager-desktop/releases)
+(Apps > Install).
+
+Upload your Scratch projects with Dev Manager to your TV in
+`apps/usr/palm/applications/io.github.scratcheverywhere/projects/`. If the
+folder doesn't exist, create it.
+
+Then it should be as simple as opening the app on your TV from the home menu!
