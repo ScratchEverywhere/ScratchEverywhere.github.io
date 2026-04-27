@@ -65,9 +65,9 @@ install Docker CE for your Linux distribution.
 
 1. Visit the official Scratch Everywhere repository:\
    [https://github.com/ScratchEverywhere/ScratchEverywhere](https://github.com/ScratchEverywhere/ScratchEverywhere)
-2. Click the green **“<> Code”** button.\
-   ![image](pictures/Github.png)
-3. Choose **“Download ZIP”**\
+2. Go to the Releases section:\
+   ![image](pictures/releases.png)
+3. Download **"Source code (zip)"**\
    ![image](pictures/download.png)
 4. Extract this ZIP to a convenient location, for example, near your Scratch
    project.\
@@ -97,8 +97,8 @@ install Docker CE for your Linux distribution.
 Your structure should now look like this:
 
 ```
-ScratchEverywhere-main/
-└── ScratchEverywhere/
+ScratchEverywhere-<version>/
+└── ScratchEverywhere-<version>/
    ├── romfs/
    │   └── project/
    ├── gfx/
@@ -159,13 +159,13 @@ set(SE_APP_AUTHOR "Scratch Everywhere! Contributors" CACHE STRING "Author of the
 ## Step 7: Build the App Using Docker
 
 1. Make sure **Docker Desktop is running**.
-2. Go back to your main `ScratchEverywhere-main` folder (the one that contains
+2. Go back to your main `ScratchEverywhere-<version>` folder (the one that contains
    `romfs`, `gfx`, `make`, etc.). Note the directory shown in the address bar.
 3. Open a terminal (Command Prompt on Windows) and navigate to the folder you
    noted down:
 
 ```
-cd /path/to/ScratchEverywhere-main
+cd /path/to/ScratchEverywhere-<version>
 ```
 
 ![image](pictures/cmd.png)
