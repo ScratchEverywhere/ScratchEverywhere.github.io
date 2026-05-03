@@ -202,3 +202,15 @@ Upload your Scratch projects with Dev Manager to your TV in
 folder doesn't exist, create it.
 
 Then it should be as simple as opening the app on your TV from the home menu!
+
+## Libretro (RetroArch)
+
+Download the `scratch-everywhere.so` file from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-ps4/main/Scratch%20Everywhere!%20Libretro%20Nightly.zip).
+
+Place it in the RetroArch cores directory, which you can find in Settings ->
+Directory -> Cores.
+
+Then it should be as simple as loading the core and opening a Scratch project!
