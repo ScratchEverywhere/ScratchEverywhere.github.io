@@ -34,6 +34,7 @@ features support specific features.
 | Vita     | ❌              | ❌                |
 | PSP      | ❌              | ❌                |
 | PS4      | ❌              | ❌                |
+| Libretro | ✅              | ❌                |
 
 ### Extensions
 
@@ -51,6 +52,7 @@ features support specific features.
 | Vita     | ✅  | ❌             | ✅          | ❌        |
 | PSP      | ✅  | ❌             | ✅          | ❌        |
 | PS4      | ✅  | ❌             | ✅          | ❌        |
+| Libretro | ✅  | ✅             | ✅          | ✅        |
 
 ### Misc Notes
 
