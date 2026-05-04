@@ -213,4 +213,7 @@ or
 Place it in the RetroArch cores directory, which you can find in Settings ->
 Directory -> Cores.
 
+In Settings -> Drivers -> Video, ensure your video driver is not set to `gl`.
+The `gl` driver is currently broken with the SE! core.
+
 Then it should be as simple as loading the core and opening a Scratch project!
