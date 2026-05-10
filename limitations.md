@@ -44,15 +44,19 @@ features support specific features.
 | macOS    | ✅  | ✅             | ✅          | ✅        |
 | Linux    | ✅  | ✅             | ✅          | ✅        |
 | 3DS      | ✅  | ✅             | ✅          | ✅        |
-| DS       | ✅  | ❌             | ✅          | ❌        |
+| DS       | ✅  | 🟡             | ✅          | ❌        |
 | Wii U    | ✅  | ✅             | ✅          | ✅        |
-| Wii      | ✅  | ❌             | ✅          | ❌        |
-| GameCube | ✅  | ❌             | ✅          | ❌        |
-| Switch   | ✅  | ❌             | ✅          | ❌        |
-| Vita     | ✅  | ❌             | ✅          | ❌        |
-| PSP      | ✅  | ❌             | ✅          | ❌        |
-| PS4      | ✅  | ❌             | ✅          | ❌        |
+| Wii      | ✅  | 🟡             | ✅          | ❌        |
+| GameCube | ✅  | 🟡             | ✅          | ❌        |
+| Switch   | ✅  | 🟡             | ✅          | ❌        |
+| Vita     | ✅  | 🟡             | ✅          | ❌        |
+| PSP      | ✅  | 🟡             | ✅          | ❌        |
+| PS4      | ✅  | 🟡             | ✅          | ❌        |
 | Libretro | ✅  | ✅             | ✅          | ✅        |
+
+Text-to-Speech can use either the official Scratch servers (if the platform
+supports it), or DECtalk, which runs locally but is not 100% accurate. Platforms
+marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 
 ### Misc Notes
 
