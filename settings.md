@@ -97,3 +97,13 @@ Change the path that Scratch Everywhere! uses.
 
 Whether or not to play music while in the main menu. Requires a restart to take
 effect. Enabled by default.
+
+## Pause Menu Settings
+
+These settings are found in the pause menu (accessible by holding Start for 3
+seconds).
+
+### Turbo Mode
+
+Enables Turbo Mode, which removes some script delays, causing projects to run
+much faster.
