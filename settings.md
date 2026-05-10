@@ -45,7 +45,7 @@ Determines the behavior of the ::sb touching [ v]:: block.
   costume. Increases performance at the cost of potentially breaking projects
   that use it.
 
-Defaults to `Accurate`.
+Defaults to `Accurate` on SDL2/SDL3 and `Fast` on all other renderers.
 
 ### Show FPS
 
