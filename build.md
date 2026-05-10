@@ -294,8 +294,8 @@ except Libretro.
 
 ### `SE_OUTPUT_NAME`
 
-The file name given to the final executable file. Defaults to
-`scratch-everywhere`.
+The file name given to the final executable file. The default depends on the
+target platform.
 
 ### `SE_RAM`
 
