@@ -231,10 +231,15 @@ Defaults to `ON` on all supported platforms.
 
 ### `SE_DECTALK`
 
-Whether or not to use DECtalk for text-to-speech. If set to `OFF`,
-text-to-speech will use Scratch servers if available on the target platform.
+Whether or not to allow using DECtalk for text-to-speech. If set to `OFF`,
+DECtalk options will not be available.
 
-Defaults to `OFF`.
+Defaults to `ON` on PC, Switch, Vita, and Wii U.
+
+### `SE_DECTALK_DEFAULT`
+
+Whether or not to use DECtalk for text-to-speech by default. Also turns
+`SE_DECTALK=ON`. Defaults to `ON` on Switch, Vita, and Wii U.
 
 ### `SE_DEPS`
 
