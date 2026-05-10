@@ -229,6 +229,13 @@ if it fixes the errors.
 
 Defaults to `ON` on all supported platforms.
 
+### `SE_DECTALK`
+
+Whether or not to use DECtalk for text-to-speech. If set to `OFF`,
+text-to-speech will use Scratch servers if available on the target platform.
+
+Defaults to `OFF`.
+
 ### `SE_DEPS`
 
 Determines which mode the dependency loading system will use. Can be one of the
