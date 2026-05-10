@@ -66,6 +66,10 @@ finishes.
 This can fix crashes/freezes related to infinite loops, but it may also cause a
 performance impact. It is enabled by default.
 
+### Use DECtalk
+
+Enables DECtalk for text-to-speech if the platform supports it.
+
 ## Global Settings
 
 These settings can be found on the main menu. They apply to all projects.
