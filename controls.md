@@ -13,5 +13,7 @@ tap the bottom screen to click.
 
 **PS Vita:** Use the front touchscreen.
 
+**Handheld Switch:** Use the touchscreen.
+
 **Other Controllers:** Enter Mouse Mode by holding L. Use the D-pad to move the
 mouse, and press R to click.
