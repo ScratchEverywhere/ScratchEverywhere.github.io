@@ -162,8 +162,8 @@ set(SE_APP_AUTHOR "Scratch Everywhere! Contributors" CACHE STRING "Author of the
 2. Go back to your main `ScratchEverywhere-<version>` folder (the one that
    contains `romfs`, `gfx`, `make`, etc.). Note the directory shown in the
    address bar.
-3. Open a terminal (Command Prompt on Windows) and navigate to the folder you
-   noted down:
+3. Open a terminal (Command Prompt on Windows) and move to the folder you noted
+   down:
 
 ```
 cd /path/to/ScratchEverywhere-<version>
@@ -173,13 +173,15 @@ cd /path/to/ScratchEverywhere-<version>
 
 ### Build Commands
 
-To build the project, use this command:
+After moving to the `ScratchEverywhere-<version>` folder, type this command into
+your terminal to build Scratch Everywhere!:
 
 ```
 docker build -f docker/Dockerfile.{platform} --target exporter -o . .
 ```
 
-Replace `{platform}` with the platform you would like to build for.
+Replace `{platform}` with the platform you would like to build for (`wiiu`,
+`3ds`, `pc`, etc.).
 
 The build process may take several minutes, depending on your system.
 
