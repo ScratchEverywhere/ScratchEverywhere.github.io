@@ -33,7 +33,7 @@ more accurate, but cause a significant performance hit.
 - `Fast`: The pen has flat edges.
 - `Accurate`: The pen has round edges.
 
-Defaults to `Fast`.
+Defaults to `Accurate` on SDL2/SDL3 and `Fast` on all other renderers.
 
 ### Collision Mode
 
@@ -45,7 +45,7 @@ Determines the behavior of the ::sb touching [ v]:: block.
   costume. Increases performance at the cost of potentially breaking projects
   that use it.
 
-Defaults to `Accurate` on SDL2/SDL3 and `Fast` on all other renderers.
+Defaults to `Accurate`.
 
 ### Show FPS
 
