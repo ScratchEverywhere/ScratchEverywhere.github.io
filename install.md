@@ -47,16 +47,32 @@ or
 Place the `.cia` file in the `cias/` folder of your 3DS SD card. Open the FBI
 application and navigate to the `cias/` folder and install the `.cia` file.
 
-Put your Scratch projects in `3ds/scratch-everywhere` and open the Scratch
-Everywhere application on your Home screen.
+Put your Scratch projects in `3ds/scratch-everywhere`.
+
+Then it should be as simple as opening the Scratch Everywhere application on
+your HOME Menu!
 
 ### .3dsx
 
-Place the `.3dsx` file in the `3ds/` folder of your 3DS SD card, put Scratch
+Place the `.3dsx` file in the `3ds/` folder of your 3DS SD card, and put Scratch
 projects in `3ds/scratch-everywhere`.
 
 Then it should be as simple as opening the Homebrew Launcher on your 3DS and
 running the app!
+
+### ScratchBox UniStore (optional)
+
+ScratchBox (the project distribution website for Scratch Everywhere!) allows you
+to download Scratch projects through Universal Updater instead of copying them
+to the SD card.
+
+Open Universal Updater and navigate to the settings. Tap "Select UniStore...".
+
+Tap the + at the bottom of the screen to add a new UniStore. In the list of
+UniStores, find and select "ScratchBox".
+
+You can now switch between ScratchBox and the default Universal-DB UniStore
+using this menu!
 
 ## NDS
 
