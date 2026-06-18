@@ -44,7 +44,7 @@ features support specific features.
 | macOS    | ✅  | ✅             | ✅          | ✅        |
 | Linux    | ✅  | ✅             | ✅          | ✅        |
 | 3DS      | ✅  | ✅             | ✅          | ✅        |
-| DS       | ✅  | 🟡             | ✅          | ❌        |
+| DS       | ❌  | 🟡             | ✅          | ❌        |
 | Wii U    | ✅  | ✅             | ✅          | ✅        |
 | Wii      | ✅  | 🟡             | ✅          | ❌        |
 | GameCube | ✅  | 🟡             | ✅          | ❌        |
