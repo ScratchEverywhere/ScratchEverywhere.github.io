@@ -44,7 +44,7 @@ features support specific features.
 | macOS    | ✅  | ✅             | ✅          | ✅        |
 | Linux    | ✅  | ✅             | ✅          | ✅        |
 | 3DS      | ✅  | ✅             | ✅          | ✅        |
-| DS       | ❌  | 🟡             | ✅          | ❌        |
+| DS       | ❌  | ❌             | ✅          | ❌        |
 | Wii U    | ✅  | ✅             | ✅          | ✅        |
 | Wii      | ✅  | 🟡             | ✅          | ❌        |
 | GameCube | ✅  | 🟡             | ✅          | ❌        |
@@ -69,6 +69,7 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 - **[NDS]** Dual screen mode will not be supported.
 - **[Vita]** Back touch will not be supported.
 - **[PS4]** The software keyboard isn't currently supported.
+- **[DS]** Audio is currently broken.
 
 ## Unimplemented blocks
 
