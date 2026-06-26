@@ -14,7 +14,10 @@ to be modded. There are two methods to install the runtime:
 
 ## PC (Windows, Mac, Linux)
 
-Download the respective executable file for your operating system:
+Download the respective executable file for your operating system from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-pc/main):
 
 - Windows: `scratch-windows.exe`
 - Mac: `scratch-macOS`
