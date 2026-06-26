@@ -9,8 +9,7 @@
 
 - Bug fixing and Scratch parity
 - Get all blocks working
-- Support most TurboWarp extensions
-  ([#594](https://github.com/ScratchEverywhere/ScratchEverywhere/pull/594))
+- Implement most TurboWarp extensions
 
 ## Wii U
 
