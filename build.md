@@ -174,25 +174,25 @@ Whether or not audio is enabled. Defaults to `ON`.
 
 ### `SE_AUDIO_ENGINE`
 
-The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`, or
-`headless`.
+The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`,
+`3ds`, `libretro`, or `headless`.
 
 #### Supported Audio Engines
 
-| Platform | `sdl1` | `sdl2` | `sdl3` | `nds` | `libretro` | `headless` |
-| -------- | ------ | ------ | ------ | ----- | ---------- | ---------- |
-| PC       | ✅     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| 3DS      | ❌     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| DS       | ❌     | ❌     | ❌     | ✅    | ❌         | ✅         |
-| Wii U    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Wii      | ✅     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| GameCube | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Switch   | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Vita     | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| PSP      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| PS4      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| webOS    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Libretro | ❌     | ❌     | ❌     | ❌    | ✅         | ❌         |
+| Platform | `sdl1` | `sdl2` | `sdl3` | `nds` | `3ds` | `libretro` | `headless` |
+| -------- | ------ | ------ | ------ | ----- | ----- | ---------- | ---------- |
+| PC       | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ✅         |
+| 3DS      | ❌     | ✅     | ✅     | ❌    | ✅    | ❌         | ✅         |
+| DS       | ❌     | ❌     | ❌     | ✅    | ❌    | ❌         | ✅         |
+| Wii U    | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| Wii      | ✅     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| GameCube | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| Switch   | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| Vita     | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| PSP      | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| PS4      | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| webOS    | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| Libretro | ❌     | ❌     | ❌     | ❌    | ❌    | ✅         | ✅         |
 
 The default value depends on the renderer being used (see below):
 
@@ -200,7 +200,7 @@ The default value depends on the renderer being used (see below):
 - `sdl2`: `sdl2`
 - `sdl3`: `sdl3`
 - `opengl`: `sdl2`
-- `citro2d`: `sdl3`
+- `citro2d`: `3ds`
 - `gl2d`: `nds`
 - `libretro`: `libretro`
 - `headless`: `headless`
@@ -229,6 +229,11 @@ turned off. If you run into errors while building, try turning this off and see
 if it fixes the errors.
 
 Defaults to `ON` on all supported platforms.
+
+### `SE_CUSTOM_EXTENSIONS`
+
+Whether or not to allow Lua extensions. Defaults to `ON` on all platforms that
+support it.
 
 ### `SE_DECTALK`
 
@@ -288,6 +293,14 @@ Whether or not to show the leading screen while loading a project. If set to
 This option crashes on Wii and GameCube when trying to load large projects.
 
 Defaults to `ON` on every platform except Libretro.
+
+### `SE_LUA_BACKEND`
+
+The Lua backend to be used for Lua extensions. Has no effect if
+`SE_CUSTOM_EXTENSIONS` is disabled. Can be one of `lua51`, `luajit`, or
+`fallback`.
+
+`fallback` uses `luajit` if available, and `lua51` otherwise.
 
 ### `SE_MAKEROM`
 
