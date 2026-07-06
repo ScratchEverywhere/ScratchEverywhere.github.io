@@ -40,13 +40,14 @@ If you are compiling with cloud variables, you will need to have DevkitPro's
 SDKs and [Mist++](https://github.grady.link/mistpp) installed.
 
 - **For PC**, the only thing you need is `cmake`, as all other dependencies will
-  be automatically downloaded. However, if you'd like to manually install them,
-  you'll need `SDL2`, `SDL2_ttf`, `SDL2_gfx`, `lunasvg`, `stb_image` (`stb`),
-  and `libcurl` (`curl`) from your package manager.
+  be automatically downloaded and/or compiled. However, if you'd like to
+  manually install them, you'll need `SDL2`, `SDL2_ttf`, `lunasvg`, `stb_image`
+  (`stb`), and `libcurl` (`curl`) from your package manager.
 
   > [!NOTE]
-  > On Arch Linux, `lunasvg` is not in the official package repos. You will need
-  > to use the AUR or let SE! automatically download and build it from source.
+  > On Arch Linux, the version of `lunasvg` packaged in the AUR currently does
+  > not work with Scratch Everywhere!. You'll need to either let Scratch
+  > Everywhere! build it from source or build the latest Git source manually.
 - **For the 3DS**, you will need the DevkitARM toolchain, libctru,
   [bannertool](https://github.com/carstene1ns/3ds-bannertool), and
   [makerom](https://github.com/3DSGuy/Project_CTR).
