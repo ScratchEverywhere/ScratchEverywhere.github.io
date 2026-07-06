@@ -70,29 +70,28 @@ performance impact. It is enabled by default.
 
 These settings can be found on the main menu. They apply to all projects.
 
-### Username
+### Music Volume
+
+The volume of the background music in the menu.
+
+### Enable Custom Username
 
 Whether or not to replace the default username (your user/device name) with a
 custom one when using the ::sb username:: block.
 
-#### Name
-
-The custom username to be displayed.
-
-### Custom Path
+### Enable Custom Project Path
 
 Allows changing the path where Scratch Everywhere! looks for project files and
 stores settings. This is usually a path relative to the root of the default
 storage device (such as the console's SD card).
 
-#### Change Path
+### Clear Cache
 
-Change the path that Scratch Everywhere! uses.
+Clears the data stored in the cache, such as text-to-speech files.
 
-### Menu Music
+### Language
 
-Whether or not to play music while in the main menu. Requires a restart to take
-effect. Enabled by default.
+Set the language used for the menu.
 
 ### Use DECtalk
 
