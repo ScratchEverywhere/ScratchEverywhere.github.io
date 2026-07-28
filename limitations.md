@@ -13,6 +13,25 @@ crashes, and things that will just not work.
     constraints. Try to keep projects small on these platforms.
 - Sounds may take time to load when playing them for the first time.
 
+## Unimplemented Blocks
+
+<!-- deno-fmt-ignore -->
+- ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for
+`Ghost` and `Brightness`)
+- ::sb when [loudness v] > ()::
+- ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
+- ::sb loudness::
+
+### Unimplemented Extensions
+
+- Video Sensing
+- Face Sensing
+- micro:bit
+- LEGO MINDSTORMS EV3
+- LEGO BOOST
+- LEGO Education WeDo 2.0
+- Go Direct Force & Acceleration
+
 ## Platform-Specific
 
 Some platforms may not support some features. These tables describe which
@@ -70,11 +89,3 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 - **[Vita]** Back touch will not be supported.
 - **[PS4]** The software keyboard isn't currently supported.
 - **[DS]** Audio is currently broken.
-
-## Unimplemented blocks
-
-<!-- deno-fmt-ignore -->
-- ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for `Ghost` and `Brightness`)
-- ::sb when [loudness v] > ()::
-- ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
-- ::sb loudness::
