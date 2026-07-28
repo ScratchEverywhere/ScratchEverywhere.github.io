@@ -187,7 +187,7 @@ The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`, or
 | Wii      | ✅     | ✅     | ❌     | ❌    | ❌         | ✅         |
 | GameCube | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
 | Switch   | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Vita     | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
+| Vita     | ❌     | ✅     | ✅     | ❌    | ❌         | ✅         |
 | PSP      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
 | PS4      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
 | webOS    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
@@ -323,7 +323,7 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 | Wii      | ✅     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
 | GameCube | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
 | Switch   | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| Vita     | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
+| Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌     | ❌         | ✅         |
 | PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
 | PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
 | webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
