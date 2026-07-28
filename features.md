@@ -32,6 +32,20 @@ Like TurboWarp, we have special custom blocks that only work on SE! You can find
 a project containing and explaining them here:
 https://scratchbox.dev/project/K26OtTN2WDJ9
 
+## Custom Icons
+
+Scratch Everywhere! supports adding custom icons to your projects that will
+appear in the menu!
+
+There are two ways of adding an icon:
+
+- Add an image file with the same name as your project in the
+  `scratch-everywhere` folder.
+
+- Add a backdrop named `__icon__` to your project.
+
+Icons must be perfectly square or Scratch Everywhere! will not display it.
+
 ## Project Settings
 
 Some settings related to the runtime can be changed. See the

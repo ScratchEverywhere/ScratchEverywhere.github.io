@@ -33,6 +33,26 @@ Place the executable file in a convenient location on your PC.
 
 Then it should be as simple as running the executable file!
 
+### Nightly Builds
+
+There are a lot of nightly builds available on PC.
+
+> [!NOTE]
+> For Arch Linux users, nightly builds are also packaged on the AUR as
+> [`scratch-everywhere-git`](https://aur.archlinux.org/packages/scratch-everywhere-git).
+
+For Windows users, there is simply a single build named
+`Scratch Everywhere! Windows Nightly`. Download and install it.
+
+For macOS users, you will usually want the
+`Scratch Everywhere! macOS Universal Nightly`. However, if it doesn't work, you
+should select the build that corresponds to your CPU architecture: `ARM64` for
+Apple Silicon, and `x86_64` for Intel.
+
+For Linux users, you will usually want the `Scratch Everywhere! Linux Nightly`.
+However, if you need to use a different renderer, select the build that
+corresponds to the renderer that you would like to use.
+
 ## 3DS
 
 Download the `.cia` file or `.3dsx` in the
@@ -44,6 +64,10 @@ or
 > Scratch Everywhere! for 3DS is also on
 > [Universal Updater](https://db.universal-team.net/3ds/scratch-everywhere), so
 > you can just download it there and keep it updated that way!
+
+> [!WARNING]
+> Universal Updater also allows you to download the DS version of Scratch
+> Everywhere!. However, this is most likely not what you want.
 
 ### .cia (Installable app)
 
