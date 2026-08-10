@@ -55,7 +55,7 @@ Whether or not to display FPS info when running a project. Disabled by default.
 
 Whether or not to store the project in RAM. This can boost performance when
 loading a new costume or sound, but may cause problems on lower-end platforms.
-Enabled by default on all platforms except for DS, GameCube, and PSP.
+Enabled by default on all platforms except for DS, GameCube, PS2, and PSP.
 
 ### Warp Timer
 

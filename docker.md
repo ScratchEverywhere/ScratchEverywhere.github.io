@@ -209,6 +209,7 @@ After a successful build, your exported files will appear directly in the
 | **PS4**          | `.pkg`                                        |
 | **Switch**       | `.nro`                                        |
 | **PSP**          | `.zip`                                        |
+| **PS2**          | `.elf`                                        |
 | **DS**           | `.nds`                                        |
 | **GameCube/Wii** | `.dol`                                        |
 | **webOS**        | `.ipk`                                        |
