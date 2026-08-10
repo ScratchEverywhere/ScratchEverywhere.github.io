@@ -9,7 +9,7 @@ crashes, and things that will just not work.
   you know of a block that's causing problems).
 - Performance is poor when running complex projects, specifically those with
   many clones or lots of blocks running at once.
-  - Some older platforms (NDS, GameCube, PSP) especially struggle due to memory
+  - Some older platforms (NDS, GameCube, PSP, PS2) especially struggle due to memory
     constraints. Try to keep projects small on these platforms.
 - Sounds may take time to load when playing them for the first time.
 
@@ -53,25 +53,27 @@ features support specific features.
 | Vita     | ❌              | ❌                | ✅             |
 | PSP      | ❌              | ❌                | ❌             |
 | PS4      | ❌              | ❌                | ❌             |
+| PS2      | ❌              | ❌                | ❌             |
 | Libretro | ✅              | ❌                | ❌             |
 
 ### Extensions
 
 | Platform | Pen | Text to Speech | Makey Makey | Translate |
 | -------- | --- | -------------- | ----------- | --------- |
-| Windows  | ✅  | ✅             | ✅          | ✅        |
-| macOS    | ✅  | ✅             | ✅          | ✅        |
-| Linux    | ✅  | ✅             | ✅          | ✅        |
-| 3DS      | ✅  | ✅             | ✅          | ✅        |
-| DS       | ❌  | ❌             | ✅          | ❌        |
-| Wii U    | ✅  | ✅             | ✅          | ✅        |
-| Wii      | ✅  | 🟡             | ✅          | ❌        |
-| GameCube | ✅  | 🟡             | ✅          | ❌        |
-| Switch   | ✅  | 🟡             | ✅          | ❌        |
-| Vita     | ✅  | 🟡             | ✅          | ❌        |
-| PSP      | ✅  | 🟡             | ✅          | ❌        |
-| PS4      | ✅  | 🟡             | ✅          | ❌        |
-| Libretro | ✅  | ✅             | ✅          | ✅        |
+| Windows  | ✅  | ✅            | ✅          | ✅       |
+| macOS    | ✅  | ✅            | ✅          | ✅       |
+| Linux    | ✅  | ✅            | ✅          | ✅       |
+| 3DS      | ✅  | ✅            | ✅          | ✅       |
+| DS       | ❌  | ❌            | ✅          | ❌       |
+| Wii U    | ✅  | ✅            | ✅          | ✅       |
+| Wii      | ✅  | 🟡            | ✅          | ❌       |
+| GameCube | ✅  | 🟡            | ✅          | ❌       |
+| Switch   | ✅  | 🟡            | ✅          | ❌       |
+| Vita     | ✅  | 🟡            | ✅          | ❌       |
+| PSP      | ✅  | 🟡            | ✅          | ❌       |
+| PS4      | ✅  | 🟡            | ✅          | ❌       |
+| PS2      | ✅  | 🟡            | ✅          | ❌       |
+| Libretro | ✅  | ✅            | ✅          | ✅       |
 
 Text-to-Speech can use either the official Scratch servers (if the platform
 supports it), or DECtalk, which runs locally but is not 100% accurate. Platforms
@@ -79,7 +81,7 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 
 ### Misc Notes
 
-- **[Wii, Wii U, GameCube, Switch]** The first controller connected will be the
+- **[Wii, Wii U, GameCube, PS2, Switch]** The first controller connected will be the
   only one that will work.
 - **[Wii]** If you're using a PAL Wii, you must use 50Hz.
 - **[PSP]** Images cannot be over 512x512.
