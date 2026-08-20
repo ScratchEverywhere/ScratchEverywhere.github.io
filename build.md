@@ -173,8 +173,8 @@ Whether or not audio is enabled. Defaults to `ON`.
 
 ### `SE_AUDIO_ENGINE`
 
-The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`, or
-`headless`.
+The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`,
+`libretro`, or `headless`.
 
 #### Supported Audio Engines
 
@@ -202,8 +202,9 @@ The default value depends on the renderer being used (see below):
 - `gl-core`: `sdl2`
 - `citro2d`: `sdl3`
 - `gl2d`: `nds`
-- `libretro`: `libretro`
 - `headless`: `headless`
+
+Libretro will always use the `libretro` audio engine.
 
 ### `SE_BANNERTOOL`
 
@@ -315,23 +316,23 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 
 #### Supported Renderers
 
-| Platform | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `libretro` | `headless` |
-| -------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- | ---------- |
-| PC       | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     | ✅         |            |
-| 3DS      | ❌     | ❌     | ❌     | ❌       | ❌        | ✅        | ❌     | ❌         | ✅         |
-| DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ✅     | ❌         | ✅         |
-| Wii U    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| Wii      | ✅     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| GameCube | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| Switch   | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ❌         | ✅         |
-| Libretro | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌         |
+| Platform | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `headless` |
+| -------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- |
+| PC       | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
+| 3DS      | ❌     | ❌     | ❌     | ❌       | ❌        | ✅        | ❌     | ✅         |
+| DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ✅     | ✅         |
+| Wii U    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Wii      | ✅     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| GameCube | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Switch   | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Libretro | ❌     | ❌     | ❌     | ✅       | ✅        | ❌        | ❌     | ❌         |
 
-Defaults to `citro2d` on 3DS, `gl2d` on NDS, `libretro` on Libretro, `gl-core`
-on PC, and `sdl2` on everything else.
+Defaults to `citro2d` on 3DS, `gl2d` on NDS, `gl-core` on PC and Libretro, and
+`sdl2` on everything else.
 
 ### `SE_SVG`
 
@@ -340,7 +341,7 @@ Determines whether or not vector (SVG) images are supported. Defaults to `ON`.
 ### `SE_WINDOWING`
 
 The windowing backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `glfw`,
-`3ds`, `nds`, or `headless`.
+`3ds`, `nds`, `libretro`, or `headless`.
 
 #### Supported Windowing Backends
 
@@ -354,9 +355,9 @@ The windowing backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `glfw`,
 | `citro2d`  | ❌     | ❌     | ❌     | ❌     | ✅    | ❌    | ❌         | ❌         |
 | `gl2d`     | ❌     | ❌     | ❌     | ❌     | ❌    | ✅    | ❌         | ❌         |
 | `headless` | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ✅         |
-| `libretro` | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ✅         | ❌         |
 
 SE! prioritizes windowing backends in the following order: `glfw`, `sdl3`,
 `sdl2`, `sdl1`, `3ds`, `nds`, `headless`, and finally `libretro`. It will pick
 the first backend in that order that is supported by the chosen renderer, unless
-the windowing backend is manually set.
+the windowing backend is manually set. Libretro will always use the `libretro`
+windowing backend.
