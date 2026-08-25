@@ -321,24 +321,6 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 
 #### Supported Renderers
 
-| Platform | `sdl1` | `sdl2` | `sdl3` | `opengl` | `citro2d` | `gl2d` | `libretro` | `headless` |
-| -------- | ------ | ------ | ------ | -------- | --------- | ------ | ---------- | ---------- |
-| PC       | ✅     | ✅     | ✅     | ✅       | ❌        | ❌     | ❌         | ✅         |
-| 3DS      | ❌     | ❌     | ❌     | ❌       | ✅        | ❌     | ❌         | ✅         |
-| DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ✅     | ❌         | ✅         |
-| Wii U    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| Wii      | ✅     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| GameCube | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| Switch   | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| PS2      | ❌     | ✅     | ✅     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌     | ❌         | ✅         |
-| Libretro | ❌     | ❌     | ❌     | ❌       | ❌        | ❌     | ✅         | ❌         |
-
-Defaults to `citro2d` on 3DS, `gl2d` on NDS, `libretro` on Libretro, `sdl3` on PS2, and `sdl2`
-on everything else.
 | Platform | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `headless` |
 | -------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- |
 | PC       | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
@@ -351,10 +333,11 @@ on everything else.
 | Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         |
 | PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
 | PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| PS2      | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         |
 | webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
 | Libretro | ❌     | ❌     | ❌     | ✅       | ✅        | ❌        | ❌     | ❌         |
 
-Defaults to `citro2d` on 3DS, `gl2d` on NDS, `gl-core` on PC and Libretro, and
+Defaults to `citro2d` on 3DS, `gl2d` on NDS, `sdl3` on PS2, `gl-core` on PC and Libretro, and
 `sdl2` on everything else.
 
 ### `SE_SVG`
