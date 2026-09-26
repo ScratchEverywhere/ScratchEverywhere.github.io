@@ -1,12 +1,16 @@
 # Building a Scratch Everywhere App (Bundled with Your Scratch Project)
 
-> - **Last updated:** April 25, 2026 for Beta Version 40
-> - **Created/edited by:** **Br0tcraft**, Dogo6647, Starlii10
+> - **Last updated:** September 26, 2026 for Release Version 1.1
+> - **Created/edited by:** **Br0tcraft**, Dogo6647, Starlii10, iCraft7773
 
 > [!WARNING]
 > **Please read this guide carefully at least once before starting.**
 > Understanding the full process first will save you time and avoid most common
 > mistakes.
+
+> [!NOTE]
+> Cloud Variables on the 3DS currently don't work.
+> No fix for this is expected in the near future.
 
 If you run into issues, or if you find errors in this tutorial, please reach out
 to us on our Discord server https://discord.com/invite/Y2gf5vZHpJ
