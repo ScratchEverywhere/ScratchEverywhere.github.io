@@ -54,6 +54,10 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
     version of SDL3. See the
     [Nightly Build commands](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/.github/workflows/nightly-3ds.yml)
     for a reference on how to compile SDL3 3DS for yourself.
+    > [!NOTE]
+    > Cloud Variables on the 3DS currently don't work.
+    > No fix for this is expected in the near future.
+
 - **For the Wii U**, you will need the DevkitPPC toolchain, WUT, and the
   following SDL2-wiiu libraries:
   - SDL2
