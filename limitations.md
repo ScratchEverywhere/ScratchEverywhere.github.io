@@ -43,7 +43,7 @@ features support specific features.
 | Windows  | ✅              | ❌                | ✅             |
 | macOS    | ✅              | ✅                | ✅             |
 | Linux    | ✅              | ✅                | ✅             |
-| 3DS      | ✅              | ❌                | ✅             |
+| 3DS      | 🟡              | ❌                | ✅             |
 | DS       | ❌              | ❌                | ❌             |
 | Wii U    | ✅              | ❌                | ✅             |
 | Wii      | ❌              | ❌                | ✅             |
@@ -53,6 +53,10 @@ features support specific features.
 | PSP      | ❌              | ❌                | ❌             |
 | PS4      | ❌              | ❌                | ❌             |
 | Libretro | ✅              | ❌                | ❌             |
+
+> [!NOTE]
+> Cloud Variables on the 3DS currently don't work.
+> No fix for this is expected in the near future.
 
 ### Extensions
 
