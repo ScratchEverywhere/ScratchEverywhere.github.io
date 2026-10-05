@@ -19,8 +19,6 @@ crashes, and things that will just not work.
 - ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for
 `Ghost` and `Brightness`)
   - All Looks effects are supported using the `gl-core` renderer. This renderer is used on PC and Libretro by default.
-- ::sb when [loudness v] > ()::
-- ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
 - ::sb loudness::
 
 ### Unimplemented Extensions
@@ -80,8 +78,8 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 
 ### Misc Notes
 
-- **[Wii, Wii U, GameCube, Switch]** The first controller connected will be the
-  only one that will work.
+- **[Wii, Wii U, GameCube, Switch, PS4]** The first controller connected will be
+  the only one that will work.
 - **[Wii]** If you're using a PAL Wii, you must use 50Hz.
 - **[PSP]** Images cannot be over 512x512.
 - **[3DS]** If a project has a bunch of large images, some may not load.
