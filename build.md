@@ -178,25 +178,27 @@ Can be either `miniz` or `minizip`.
 
 ### `SE_AUDIO_ENGINE`
 
-The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`,
-`libretro`, or `headless`.
+The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
+`nds`, `libretro`, or `headless`.
 
 #### Supported Audio Engines
 
-| Platform | `sdl1` | `sdl2` | `sdl3` | `nds` | `libretro` | `headless` |
-| -------- | ------ | ------ | ------ | ----- | ---------- | ---------- |
-| PC       | ✅     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| 3DS      | ❌     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| DS       | ❌     | ❌     | ❌     | ✅    | ❌         | ✅         |
-| Wii U    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Wii      | ✅     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| GameCube | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Switch   | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Vita     | ❌     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| PSP      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| PS4      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| webOS    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Libretro | ❌     | ❌     | ❌     | ❌    | ✅         | ❌         |
+| Platform  | `sdl1` | `sdl2` | `sdl3` | `libpulse` | `nds` | `libretro` | `headless` |
+| --------- | ------ | ------ | ------ | ---------- | ----- | ---------- | ---------- |
+| Windows   | ✅     | ✅     | ✅     | ❌         | ❌    | ❌         | ✅         |
+| macOS     | ✅     | ✅     | ✅     | ❌         | ❌    | ❌         | ✅         |
+| Linux/BSD | ✅     | ✅     | ✅     | ✅         | ❌    | ❌         | ✅         |
+| 3DS       | ❌     | ✅     | ✅     | ❌         | ❌    | ❌         | ✅         |
+| DS        | ❌     | ❌     | ❌     | ❌         | ✅    | ❌         | ✅         |
+| Wii U     | ❌     | ✅     | ❌     | ❌         | ❌    | ❌         | ✅         |
+| Wii       | ✅     | ✅     | ❌     | ❌         | ❌    | ❌         | ✅         |
+| GameCube  | ❌     | ✅     | ❌     | ❌         | ❌    | ❌         | ✅         |
+| Switch    | ❌     | ✅     | ❌     | ❌         | ❌    | ❌         | ✅         |
+| Vita      | ❌     | ✅     | ✅     | ❌         | ❌    | ❌         | ✅         |
+| PSP       | ❌     | ✅     | ❌     | ❌         | ❌    | ❌         | ✅         |
+| PS4       | ❌     | ✅     | ❌     | ❌         | ❌    | ❌         | ✅         |
+| webOS     | ❌     | ✅     | ❌     | ❌         | ❌    | ❌         | ✅         |
+| Libretro  | ❌     | ❌     | ❌     | ❌         | ❌    | ✅         | ❌         |
 
 The default value depends on the renderer being used (see below):
 
@@ -262,20 +264,22 @@ The allowed modes depend on the platform you are building for:
 
 #### Supported Dependency Modes
 
-| Platform | `source` | `system` | `fallback` |
-| -------- | -------- | -------- | ---------- |
-| PC       | ✅       | ✅       | ✅         |
-| 3DS      | ❌       | ✅       | ✅         |
-| DS       | ❌       | ✅       | ✅         |
-| Wii U    | ❌       | ✅       | ✅         |
-| Wii      | ✅       | ✅       | ✅         |
-| GameCube | ❌       | ✅       | ✅         |
-| Switch   | ❌       | ✅       | ✅         |
-| Vita     | ❌       | ✅       | ✅         |
-| PSP      | ❌       | ✅       | ✅         |
-| PS4      | ❌       | ✅       | ✅         |
-| webOS    | ❌       | ❌       | ✅         |
-| Libretro | ✅       | ✅       | ✅         |
+| Platform  | `source` | `system` | `fallback` |
+| --------- | -------- | -------- | ---------- |
+| Windows   | ✅       | ✅       | ✅         |
+| macOS     | ✅       | ✅       | ✅         |
+| Linux/BSD | ✅       | ✅       | ✅         |
+| 3DS       | ❌       | ✅       | ✅         |
+| DS        | ❌       | ✅       | ✅         |
+| Wii U     | ❌       | ✅       | ✅         |
+| Wii       | ✅       | ✅       | ✅         |
+| GameCube  | ❌       | ✅       | ✅         |
+| Switch    | ❌       | ✅       | ✅         |
+| Vita      | ❌       | ✅       | ✅         |
+| PSP       | ❌       | ✅       | ✅         |
+| PS4       | ❌       | ✅       | ✅         |
+| webOS     | ❌       | ❌       | ✅         |
+| Libretro  | ✅       | ✅       | ✅         |
 
 ### `SE_DOWNLOAD`
 
@@ -321,20 +325,22 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 
 #### Supported Renderers
 
-| Platform | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `headless` |
-| -------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- |
-| PC       | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
-| 3DS      | ❌     | ❌     | ❌     | ❌       | ❌        | ✅        | ❌     | ✅         |
-| DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ✅     | ✅         |
-| Wii U    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Wii      | ✅     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| GameCube | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Switch   | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Libretro | ❌     | ❌     | ❌     | ✅       | ✅        | ❌        | ❌     | ❌         |
+| Platform  | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `headless` |
+| --------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- |
+| Windows   | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
+| macOS     | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
+| Linux/BSD | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
+| 3DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ✅        | ❌     | ✅         |
+| DS        | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ✅     | ✅         |
+| Wii U     | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Wii       | ✅     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| GameCube  | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Switch    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Vita      | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| PSP       | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| PS4       | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| webOS     | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
+| Libretro  | ❌     | ❌     | ❌     | ✅       | ✅        | ❌        | ❌     | ❌         |
 
 Defaults to `citro2d` on 3DS, `gl2d` on NDS, `gl-core` on PC and Libretro, and
 `sdl2` on everything else.
