@@ -1,6 +1,6 @@
 # Building a Scratch Everywhere App (Bundled with Your Scratch Project)
 
-> - **Last updated:** April 25, 2026 for Beta Version 40
+> - **Last updated:** April 25, 2026 for Version 1.1
 > - **Created/edited by:** **Br0tcraft**, Dogo6647, Starlii10
 
 > [!WARNING]
@@ -13,10 +13,10 @@ to us on our Discord server https://discord.com/invite/Y2gf5vZHpJ
 
 ## Introduction
 
-This guide will show you how to **bundle your Scratch project** into a
-**standalone app** using **Scratch Everywhere (SE!)**.\
-Once built, your project will behave like a native app on supported platforms
-such as **3DS, Wii U, GameCube, PS4, Vita**, and more!
+This guide will show you how to bundle your Scratch project into a standalone
+app using Scratch Everywhere!. Once built, your project will behave like a
+native app on supported platforms such as 3DS, Wii U, GameCube, PS4, Vita, and
+more!
 
 To make things easier and avoid installing tons of dependencies manually, we’ll
 use **Docker**. Think of it as a small, isolated Linux system that automatically
@@ -24,7 +24,8 @@ sets everything up for you.
 
 ## What You’ll Need
 
-- A working **Docker installation**
+- A working **Docker installation**. This guide will instruct you on how to do
+  this.
 - The **Scratch Everywhere** source code (from GitHub)
 - Your **Scratch project (.sb3)**
 - A bit of patience. Compiling can take several minutes.
@@ -34,6 +35,10 @@ sets everything up for you.
 There are two main methods of installing Docker: **Docker Desktop** and the
 standalone Docker engine, known as Docker CE. This guide will use Docker Desktop
 on Windows and macOS, and Docker CE on Linux.
+
+> [!NOTE]
+> You may skip these steps if you already have Docker installed on your
+> computer.
 
 ### Docker Desktop (Windows/macOS)
 
@@ -49,8 +54,11 @@ on Windows and macOS, and Docker CE on Linux.
 > [!NOTE]
 > Make sure to select the correct installer for your CPU:
 >
-> - ARM / aarch64 → use the **ARM** installer
-> - amd64 / x86 → use the **amd64** installer
+> - ARM / aarch64 → use the **ARM64** or **Apple Silicon** installer
+> - amd64 / x86 → use the **AMD64** or **Intel Chip** installer
+>
+> If you're not sure what CPU architecture you have, it's very likely that your
+> CPU uses amd64 / x86 on Windows, and Apple Silicon on macOS.
 
 4. Download the installer, run it, and follow the on-screen instructions.
 5. Once installed, **launch Docker Desktop** to make sure it's running.
@@ -82,7 +90,7 @@ install Docker CE for your Linux distribution.
    ![image](pictures/extract.png)
 3. You should now have extracted folders that look something like this:\
    ![image](pictures/delete.png)
-4. You can delete the original `.zip` files, we don’t need them anymore.
+4. You can delete the original `.zip` files; we don’t need them anymore.
 
 ## Step 4: Set Up the Project Folder Structure
 
@@ -116,7 +124,7 @@ graphics**.\
 For example, the `icon.png` file is used as the app icon on consoles like the
 3DS.
 
-- You can **replace** these images with your own graphics.
+- You can replace these images with your own graphics.
 - ⚠️ **Do not change the image sizes, names, or extensions.**\
   The images must keep their **exact dimensions** and **same filenames** (e.g.
   `icon.png`).
@@ -148,7 +156,8 @@ set(SE_APP_DESCRIPTION "Play Scratch games on anything!" CACHE STRING "Descripti
 set(SE_APP_AUTHOR "Scratch Everywhere! Contributors" CACHE STRING "Author of the outputed app.")
 ```
 
-4. Modify these values to fit your project.
+4. Modify these values to fit your project. Modify only the leftmost value (e.g.
+   `"Scratch Everywhere!"`); the other value is the description of the option.
 5. Save and close the file.
 
 <!-- deno-fmt-ignore -->
@@ -181,7 +190,7 @@ docker build -f docker/Dockerfile.{platform} --target exporter -o . .
 ```
 
 Replace `{platform}` with the platform you would like to build for (`wiiu`,
-`3ds`, `pc`, etc.).
+`3ds`, `pc`, `nds`, etc.).
 
 The build process may take several minutes, depending on your system.
 
@@ -229,5 +238,4 @@ If something doesn’t work:
 - Re-download the latest version of Scratch Everywhere!
 
 And don’t hesitate to share your results or ask for help in our **Discord
-server**.\
-We love seeing new projects from the community!
+server**. We love seeing new projects from the community!
