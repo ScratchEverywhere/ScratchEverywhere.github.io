@@ -19,6 +19,8 @@ crashes, and things that will just not work.
 - ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for
 `Ghost` and `Brightness`)
   - All Looks effects are supported using the `gl-core` renderer. This renderer is used on PC and Libretro by default.
+- ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
+  - Unimplemented only on **NDS/3DS**
 - ::sb loudness::
 
 ### Unimplemented Extensions
