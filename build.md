@@ -183,20 +183,22 @@ The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`,
 
 #### Supported Audio Engines
 
-| Platform | `sdl1` | `sdl2` | `sdl3` | `nds` | `libretro` | `headless` |
-| -------- | ------ | ------ | ------ | ----- | ---------- | ---------- |
-| PC       | ✅     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| 3DS      | ❌     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| DS       | ❌     | ❌     | ❌     | ✅    | ❌         | ✅         |
-| Wii U    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Wii      | ✅     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| GameCube | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Switch   | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Vita     | ❌     | ✅     | ✅     | ❌    | ❌         | ✅         |
-| PSP      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| PS4      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| webOS    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅         |
-| Libretro | ❌     | ❌     | ❌     | ❌    | ✅         | ❌         |
+| Platform | `sdl1` | `sdl2` | `sdl3` | `nds` | `libretro` | `headless` | `winmm` | `libpulse` |
+| -------- | ------ | ------ | ------ | ----- | ---------- | ---------- | ---------- | ---------- |
+| Windows  | ✅     | ✅     | ✅     | ❌    | ❌         | ✅      | ✅         | ❌        |
+| macOS    | ✅     | ✅     | ✅     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| Linux    | ✅     | ✅     | ✅     | ❌    | ❌         | ✅      | ❌         | ✅        |
+| 3DS      | ❌     | ✅     | ✅     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| DS       | ❌     | ❌     | ❌     | ✅    | ❌         | ✅      | ❌         | ❌        |
+| Wii U    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| Wii      | ✅     | ✅     | ❌     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| GameCube | ❌     | ✅     | ❌     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| Switch   | ❌     | ✅     | ❌     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| Vita     | ❌     | ✅     | ✅     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| PSP      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| PS4      | ❌     | ✅     | ❌     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| webOS    | ❌     | ✅     | ❌     | ❌    | ❌         | ✅      | ❌         | ❌        |
+| Libretro | ❌     | ❌     | ❌     | ❌    | ✅         | ❌      | ❌         | ❌        |
 
 The default value depends on the renderer being used (see below):
 
@@ -205,6 +207,7 @@ The default value depends on the renderer being used (see below):
 - `sdl3`: `sdl3`
 - `opengl`: `sdl2`
 - `gl-core`: `sdl2`
+- `gdi`: `winmm`
 - `citro2d`: `sdl3`
 - `gl2d`: `nds`
 - `headless`: `headless`
@@ -321,20 +324,22 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 
 #### Supported Renderers
 
-| Platform | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `headless` |
-| -------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- |
-| PC       | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
-| 3DS      | ❌     | ❌     | ❌     | ❌       | ❌        | ✅        | ❌     | ✅         |
-| DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ✅     | ✅         |
-| Wii U    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Wii      | ✅     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| GameCube | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Switch   | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Libretro | ❌     | ❌     | ❌     | ✅       | ✅        | ❌        | ❌     | ❌         |
+| Platform | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `headless` | `gdi`      |
+| -------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- | ---------- |
+| Windows  | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            | ✅     |
+| macOS    | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            | ❌     |
+| Linux    | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            | ❌     |
+| 3DS      | ❌     | ❌     | ❌     | ❌       | ❌        | ✅        | ❌     | ✅         | ❌     |
+| DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ✅     | ✅         | ❌     |
+| Wii U    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| Wii      | ✅     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| GameCube | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| Switch   | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| Vita     | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| PSP      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| PS4      | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| webOS    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         | ❌     |
+| Libretro | ❌     | ❌     | ❌     | ✅       | ✅        | ❌        | ❌     | ❌         | ❌     |
 
 Defaults to `citro2d` on 3DS, `gl2d` on NDS, `gl-core` on PC and Libretro, and
 `sdl2` on everything else.
@@ -350,19 +355,20 @@ The windowing backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `glfw`,
 
 #### Supported Windowing Backends
 
-| Renderer   | `sdl1` | `sdl2` | `sdl3` | `glfw` | `3ds` | `nds` | `libretro` | `headless` |
-| ---------- | ------ | ------ | ------ | ------ | ----- | ----- | ---------- | ---------- |
-| `sdl1`     | ✅     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         |
-| `sdl2`     | ❌     | ✅     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         |
-| `sdl3`     | ❌     | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ❌         |
-| `opengl`   | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         |
-| `gl-core`  | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         |
-| `citro2d`  | ❌     | ❌     | ❌     | ❌     | ✅    | ❌    | ❌         | ❌         |
-| `gl2d`     | ❌     | ❌     | ❌     | ❌     | ❌    | ✅    | ❌         | ❌         |
-| `headless` | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| Renderer   | `sdl1` | `sdl2` | `sdl3` | `glfw` | `3ds` | `nds` | `libretro` | `headless` | `win32`    |
+| ---------- | ------ | ------ | ------ | ------ | ----- | ----- | ---------- | ---------- | -----------|
+| `sdl1`     | ✅     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         | ❌     |
+| `sdl2`     | ❌     | ✅     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         | ❌     |
+| `sdl3`     | ❌     | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ❌         | ❌     |
+| `opengl`   | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         | ✅     |
+| `gl-core`  | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         | ✅     |
+| `gdi`      | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         | ✅     |
+| `citro2d`  | ❌     | ❌     | ❌     | ❌     | ✅    | ❌    | ❌         | ❌         | ❌     |
+| `gl2d`     | ❌     | ❌     | ❌     | ❌     | ❌    | ✅    | ❌         | ❌         | ❌     |
+| `headless` | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ✅         | ❌     |
 
 SE! prioritizes windowing backends in the following order: `glfw`, `sdl3`,
-`sdl2`, `sdl1`, `3ds`, `nds`, `headless`, and finally `libretro`. It will pick
+`sdl2`, `sdl1`, `win32`, `3ds`, `nds`, `headless`, and finally `libretro`. It will pick
 the first backend in that order that is supported by the chosen renderer, unless
 the windowing backend is manually set. Libretro will always use the `libretro`
 windowing backend.
