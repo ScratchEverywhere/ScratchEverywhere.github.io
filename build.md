@@ -174,6 +174,11 @@ The name of the outputted app. Defaults to `"Scratch Everywhere!"`.
 
 Whether or not audio is enabled. Defaults to `ON`.
 
+### `SE_ZIP_BACKEND`
+
+The zip backend to be used for reading the contents of `.sb3` and `.sb2` files.
+Can be either `miniz` or `minizip`.
+
 ### `SE_AUDIO_ENGINE`
 
 The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `nds`,

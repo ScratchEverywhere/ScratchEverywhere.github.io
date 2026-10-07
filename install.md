@@ -26,8 +26,11 @@ or
 > [!NOTE]
 > If you're using Arch Linux or a distribution based on it, Scratch Everywhere!
 > is also available on the
-> [AUR](https://aur.archlinux.org/packages/scratch-everywhere), so you can just
-> install it from there and keep it updated that way!
+> [AUR](https://aur.archlinux.org/packages/scratch-everywhere) (There are
+> [`-git`](https://aur.archlinux.org/packages/scratch-everywhere-git) and
+> [`-bin`](https://aur.archlinux.org/packages/scratch-everywhere-bin) packages
+> available as well), so you can just install it from there and keep it updated
+> that way!
 
 Place the executable file in a convenient location on your PC.
 
