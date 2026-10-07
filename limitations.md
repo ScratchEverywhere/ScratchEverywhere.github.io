@@ -80,7 +80,7 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 
 ### Misc Notes
 
-- **[Wii, Wii U, GameCube, PS2, Switch]** The first controller connected will be the
+- **[Wii, Wii U, GameCube, PS2, Switch, PS4]** The first controller connected will be the
   only one that will work.
 - **[Wii]** If you're using a PAL Wii, you must use 50Hz.
 - **[PSP]** Images cannot be over 512x512.
