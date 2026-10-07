@@ -73,7 +73,7 @@ features support specific features.
 | Vita     | ✅  | 🟡            | ✅          | ❌       |
 | PSP      | ✅  | 🟡            | ✅          | ❌       |
 | PS4      | ✅  | 🟡            | ✅          | ❌       |
-| PS2      | ✅  | 🟡            | ✅          | ❌       |
+| PS2      | ❌  | 🟡            | ✅          | ❌       |
 | Libretro | ✅  | ✅            | ✅          | ✅       |
 
 Text-to-Speech can use either the official Scratch servers (if the platform
