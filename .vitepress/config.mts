@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { scratchblocksPlugin } from "sb-mdit";
+import { footnote } from "@mdit/plugin-footnote";
 
 export default defineConfig({
   title: "Scratch Everywhere!",
@@ -65,7 +66,10 @@ export default defineConfig({
       light: "catppuccin-latte",
       dark: "catppuccin-mocha",
     },
-    config: (md) => md.use(scratchblocksPlugin),
+    config: (md) => {
+      md.use(footnote);
+      md.use(scratchblocksPlugin);
+    },
   },
   cleanUrls: true,
   mpa: true,

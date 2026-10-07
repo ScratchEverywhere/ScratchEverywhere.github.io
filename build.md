@@ -206,7 +206,7 @@ The default value depends on the renderer being used (see below):
 - `sdl2`: `sdl2`
 - `sdl3`: `sdl3`
 - `opengl`: `sdl2`
-- `gl-core`: `sdl2`
+- `opengl_core`: `sdl2`
 - `citro2d`: `sdl3`
 - `gl2d`: `nds`
 - `headless`: `headless`
@@ -321,29 +321,29 @@ Defaults to `72`.
 ### `SE_RENDERER`
 
 The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
-`gl-core`, `citro2d`, `gl2d`, or `headless`.
+`opengl_core`, `citro2d`, `gl2d`, or `headless`.
 
 #### Supported Renderers
 
-| Platform  | `sdl1` | `sdl2` | `sdl3` | `opengl` | `gl-core` | `citro2d` | `gl2d` | `headless` |
-| --------- | ------ | ------ | ------ | -------- | --------- | --------- | ------ | ---------- |
-| Windows   | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
-| macOS     | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
-| Linux/BSD | ✅     | ✅     | ✅     | ✅       | ✅        | ❌        | ❌     |            |
-| 3DS       | ❌     | ❌     | ❌     | ❌       | ❌        | ✅        | ❌     | ✅         |
-| DS        | ❌     | ❌     | ❌     | ❌       | ❌        | ❌        | ✅     | ✅         |
-| Wii U     | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Wii       | ✅     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| GameCube  | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Switch    | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Vita      | ❌     | ✅     | ✅     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| PSP       | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| PS4       | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| webOS     | ❌     | ✅     | ❌     | ❌       | ❌        | ❌        | ❌     | ✅         |
-| Libretro  | ❌     | ❌     | ❌     | ✅       | ✅        | ❌        | ❌     | ❌         |
+| Platform  | `sdl1` | `sdl2` | `sdl3` | `opengl` | `opengl_core` | `citro2d` | `gl2d` | `headless` |
+| --------- | ------ | ------ | ------ | -------- | ------------- | --------- | ------ | ---------- |
+| Windows   | ✅     | ✅     | ✅     | ✅       | ✅            | ❌        | ❌     | ✅         |
+| macOS     | ✅     | ✅     | ✅     | ✅       | ✅            | ❌        | ❌     | ✅         |
+| Linux/BSD | ✅     | ✅     | ✅     | ✅       | ✅            | ❌        | ❌     | ✅         |
+| 3DS       | ❌     | ❌     | ❌     | ❌       | ❌            | ✅        | ❌     | ✅         |
+| DS        | ❌     | ❌     | ❌     | ❌       | ❌            | ❌        | ✅     | ✅         |
+| Wii U     | ❌     | ✅     | ❌     | ❌       | ❌            | ❌        | ❌     | ✅         |
+| Wii       | ✅     | ✅     | ❌     | ❌       | ❌            | ❌        | ❌     | ✅         |
+| GameCube  | ❌     | ✅     | ❌     | ❌       | ❌            | ❌        | ❌     | ✅         |
+| Switch    | ❌     | ✅     | ❌     | ❌       | ✅            | ❌        | ❌     | ✅         |
+| Vita      | ❌     | ✅     | ✅     | ❌       | ❌            | ❌        | ❌     | ✅         |
+| PSP       | ❌     | ✅     | ❌     | ❌       | ❌            | ❌        | ❌     | ✅         |
+| PS4       | ❌     | ✅     | ❌     | ❌       | ❌            | ❌        | ❌     | ✅         |
+| webOS     | ❌     | ✅     | ❌     | ❌       | ❌            | ❌        | ❌     | ✅         |
+| Libretro  | ❌     | ❌     | ❌     | ✅       | ✅            | ❌        | ❌     | ❌         |
 
-Defaults to `citro2d` on 3DS, `gl2d` on NDS, `gl-core` on PC and Libretro, and
-`sdl2` on everything else.
+Defaults to `citro2d` on 3DS, `gl2d` on NDS, `opengl_core` on PC and Libretro,
+and `sdl2` on everything else.
 
 ### `SE_SVG`
 
@@ -356,16 +356,19 @@ The windowing backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `glfw`,
 
 #### Supported Windowing Backends
 
-| Renderer   | `sdl1` | `sdl2` | `sdl3` | `glfw` | `3ds` | `nds` | `libretro` | `headless` |
-| ---------- | ------ | ------ | ------ | ------ | ----- | ----- | ---------- | ---------- |
-| `sdl1`     | ✅     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         |
-| `sdl2`     | ❌     | ✅     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         |
-| `sdl3`     | ❌     | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ❌         |
-| `opengl`   | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         |
-| `gl-core`  | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         |
-| `citro2d`  | ❌     | ❌     | ❌     | ❌     | ✅    | ❌    | ❌         | ❌         |
-| `gl2d`     | ❌     | ❌     | ❌     | ❌     | ❌    | ✅    | ❌         | ❌         |
-| `headless` | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ✅         |
+| Renderer          | `sdl1` | `sdl2` | `sdl3` | `glfw` | `3ds` | `nds` | `libretro` | `headless` |
+| ----------------- | ------ | ------ | ------ | ------ | ----- | ----- | ---------- | ---------- |
+| `sdl1`            | ✅     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         |
+| `sdl2`            | ❌     | ✅     | ❌     | ❌     | ❌    | ❌    | ❌         | ❌         |
+| `sdl3`            | ❌     | ❌     | ✅     | ❌     | ❌    | ❌    | ❌         | ❌         |
+| `opengl`          | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         |
+| `opengl_core`[^1] | ✅     | ✅     | ✅     | ✅     | ❌    | ❌    | ❌         | ❌         |
+| `citro2d`         | ❌     | ❌     | ❌     | ❌     | ✅    | ❌    | ❌         | ❌         |
+| `gl2d`            | ❌     | ❌     | ❌     | ❌     | ❌    | ✅    | ❌         | ❌         |
+| `headless`        | ❌     | ❌     | ❌     | ❌     | ❌    | ❌    | ❌         | ✅         |
+
+[^1]: When using the OpengGL Core renderer on Switch, only the `sdl2` windowing
+    backend is supported.
 
 SE! prioritizes windowing backends in the following order: `glfw`, `sdl3`,
 `sdl2`, `sdl1`, `3ds`, `nds`, `headless`, and finally `libretro`. It will pick
