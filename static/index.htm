@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Scratch Everywhere!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="scrollArrow">↓</div>
+    <script>
+        const arrow = document.getElementById('scrollArrow');
+        arrow.addEventListener('click', () => {
+          window.scrollBy({
+            top: window.innerHeight,
+            behavior: 'smooth'
+          });
+        });
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) {
+            arrow.classList.add('hidden');
+          } else {
+            arrow.classList.remove('hidden');
+          }
+        });
+    </script>
+
+    <div id="hero">
+        <div class="upper">
+	        <img class="logo" src="https://github.com/ScratchEverywhere/ScratchEverywhere/raw/main/gfx/menu/logo.png" />
+            <h2 class="splash">Custom Scratch Runtime made in C++!</h2>
+        </div>
+        <div class="lower">
+            <a href="/intro" target="_top"><button><img class="icon" src="/static/assets/book.svg" /> Get started</button></a>
+            <a href="/install" target="_top"><button><img class="icon" src="/static/assets/download.svg" /> Installation</button></a>
+            <a href="https://scratcheverywhere.github.io/ScratchEverywhere" target="_top"><button><img class="icon" src="/static/assets/play.svg" /> Try it out on the web!</button></a>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="cards">
+            <div>
+                <h2>Cross-Platform</h2>
+                Scratch Everywhere! is designed to be a cross-platform Scratch runtime for old homebrew consoles.
+            </div>
+            <div>
+                <h2>Fast</h2>
+                Thanks to the programming language Scratch Everywhere! is written in (C++), it's extremely fast compared to normal Scratch.
+            </div>
+            <div>
+                <h2>Easy to Use</h2>
+                Scratch Everywhere! is extremely easy to use. Just download it from the app store, add your projects, and start playing!
+            </div>
+        </div>
+        <img src="https://github.com/ScratchEverywhere/ScratchEverywhere/raw/main/docs/demo.gif" style="border-radius: 12px; margin: 2rem auto; width: 100%; filter: drop-shadow(0 0px 64px #885686);" />
+        <br>
+        <h1>Nightly builds</h1>
+        <hr>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-3ds.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-3ds.yml/badge.svg" alt="3DS Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-nds.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-nds.yml/badge.svg" alt="NDS Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-wiiu.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-wiiu.yml/badge.svg" alt="Wii U Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-wii.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-wii.yml/badge.svg" alt="Wii Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-gamecube.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-gamecube.yml/badge.svg" alt="GameCube Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-switch.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-switch.yml/badge.svg" alt="Switch Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-vita.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-vita.yml/badge.svg" alt="Vita Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-psp.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-psp.yml/badge.svg" alt="PSP Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-ps4.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-ps4.yml/badge.svg" alt="PS4 Nightly Build"></a>
+            <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-pc.yml" target="_top"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-pc.yml/badge.svg" alt="PC Nightly Build"></a>
+        </div>
+        <br>
+        <h1>Find us on...</h1>
+        <hr>
+        <div class="cards">
+            <iframe src="https://discord.com/widget?id=1408875318248345612&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <a href="https://github.com/ScratchEverywhere" class="card" target="_top" style="--card-accent: black;">
+                <h2><img class="icon" src="/static/assets/github.svg" /> GitHub  </h2>
+                ScratchEverywhere
+            </a>
+            <a href="https://reddit.com/r/ScratchEverywhere" class="card" target="_top" style="--card-accent: #ff4500;">
+                <h2><img class="icon" src="/static/assets/reddit.svg" /> Reddit</h2>
+                r/ScratchEverywhere
+            </a>
+            <a href="https://youtube.com/@NateXS" class="card" target="_top" style="--card-accent: red;">
+                <h2><img class="icon" src="/static/assets/youtube.svg" /> YouTube</h2>
+                NateXS
+            </a>
+        </div>
+        <hr>
+        This project is not affiliated with Scratch, the Scratch Team, or any of the supported platforms' parent companies or organizations.
+    </div>
+</body>
+</html>
