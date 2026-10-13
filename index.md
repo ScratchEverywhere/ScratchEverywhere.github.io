@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: blank
 
 hero:
   name: "Scratch Everywhere!"
@@ -23,10 +23,11 @@ features:
   - title: Easy to Use
     details: Scratch Everywhere! is extremely easy to use. Just download it from the app store, add your projects, and start playing!
 ---
-
 <img src="https://github.com/ScratchEverywhere/ScratchEverywhere/raw/main/docs/demo.gif" style="border-radius: 12px; margin-top: 2rem;" />
-
-<p align="center">
+<br><br>
+<h1>Nightly builds</h1>
+<hr>
+<div align="left" style="display: flex; flex-direction: column; gap: 10px;">
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-3ds.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-3ds.yml/badge.svg" alt="3DS Nightly Build"></a>
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-nds.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-nds.yml/badge.svg" alt="NDS Nightly Build"></a>
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-wiiu.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-wiiu.yml/badge.svg" alt="Wii U Nightly Build"></a>
@@ -39,5 +40,10 @@ features:
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-pc.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-pc.yml/badge.svg" alt="PC Nightly Build"></a>
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-webos.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-webos.yml/badge.svg" alt="webOS Nightly Build"></a>
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-libretro.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-libretro.yml/badge.svg" alt="Libretro Nightly Build"></a>
+</div>
+<br><br>
+<h1>Join our Discord server!</h1>
+<hr>
+<div style="display: flex; flex-direction: column; gap: 10px;">
 <a href="https://discord.gg/Y2gf5vZHpJ"><img alt="Discord" src="https://img.shields.io/discord/1408875318248345612?style=flat&logo=discord&label=Discord%20Server&link=https%3A%2F%2Fdiscord.gg%2FY2gf5vZHpJ"></a>
-</p>
+</div>
