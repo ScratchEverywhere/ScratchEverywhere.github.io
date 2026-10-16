@@ -213,8 +213,8 @@ The default value depends on the renderer being used[^1] (see below):
 - `gl2d`: `nds`
 - `headless`: `headless`
 
-[^1] Libretro will always use the `libretro` audio engine and Linux uses the
-`libpulse` audio engine by default.
+[^1]: Libretro will always use the `libretro` audio engine and Linux uses the
+    `libpulse` audio engine by default.
 
 ### `SE_BANNERTOOL`
 
