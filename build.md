@@ -207,7 +207,8 @@ The default value depends on the renderer being used[^1] (see below):
 - `sdl3`: `sdl3`
 - `opengl`: `sdl2`
 - `opengl_core`: `sdl2`
-- `win32`: `winmm`
+- `d3d9`: `winmm`
+- `gdi`: `winmm`
 - `citro2d`: `sdl3`
 - `gl2d`: `nds`
 - `headless`: `headless`
