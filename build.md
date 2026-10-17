@@ -136,6 +136,8 @@ done with `cmake`, though the exact commands differ between platforms:
   `cmake -B build/xbox -DCMAKE_TOOLCHAIN_FILE="$NXDK_DIR/share/toolchain-nxdk.cmake" -DXBOX=ON && cmake --build build/xbox`.
   > [!NOTE]
   > Original Xbox requires the `XBOX=ON` flag.
+- **For WASM**, you need to run
+  `emcmake cmake -B build/wasm && cmake --build build/wasm`
 
 ## Final Packages
 
@@ -206,6 +208,7 @@ The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
 | webOS         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
 | Libretro      | ❌     | ❌     | ❌     | ❌         | ❌      | ❌    | ✅         | ❌         |
 | Original Xbox | ❌     | ❌     | ✅     | ❌         | ❌      | ❌    | ❌         | ✅         |
+| WASM          | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
 
 The default value depends on the renderer being used[^1] (see below):
 
@@ -291,6 +294,7 @@ The allowed modes depend on the platform you are building for:
 | webOS         | ❌       | ❌       | ✅         |
 | Libretro      | ✅       | ✅       | ✅         |
 | Original Xbox | ❌       | ✅       | ✅         |
+| WASM          | ✅       | ✅       | ✅         |
 
 ### `SE_DOWNLOAD`
 
@@ -353,6 +357,7 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 | webOS         | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ✅         |
 | Libretro      | ❌     | ❌     | ❌     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌         |
 | Original Xbox | ❌     | ❌     | ✅     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ✅         |
+| WASM          | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌         |
 
 Defaults to `citro2d` on 3DS, `gl2d` on NDS, `opengl_core` on PC (except for
 Windows which defaults to `d3d9`) and Libretro, and `sdl2` on everything else.
@@ -381,8 +386,8 @@ The windowing backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `glfw`,
 | `gl2d`            | ❌     | ❌     | ❌     | ❌     | ❌      | ❌    | ✅    | ❌         | ❌         |
 | `headless`        | ❌     | ❌     | ❌     | ❌     | ❌      | ❌    | ❌    | ❌         | ✅         |
 
-[^2]: When using the OpengGL Core renderer on Switch, only the `sdl2` windowing
-    backend is supported.
+[^2]: When using the OpengGL Core renderer on Switch or WASM, only the `sdl2`
+    windowing backend is supported.
 
 SE! prioritizes windowing backends in the following order: `glfw`, `sdl3`,
 `sdl2`, `sdl1`, `win32`, `3ds`, `nds`, `headless`, and finally `libretro`. It
