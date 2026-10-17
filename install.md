@@ -243,3 +243,34 @@ Directory -> Cores.
 > The `gl` driver is currently broken with the SE! core.
 
 Then it should be as simple as loading the core and opening a Scratch project!
+
+## Original Xbox
+
+Download the `scratch-xbox.zip` file from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-ps4/main/Scratch%20Everywhere!%20Original%20Xbox%20Nightly.zip).
+
+The `.zip` file contains two formats:
+
+### XISO (`scratch-xbox.iso`)
+
+> [!IMPORTANT]
+> The XISO currently does not work on Xemu due to issues with audio. You'll need
+> to manually build it with the `headless` audio mode; see the
+> [build guide](/build.md).
+
+This file is primarily used with Xemu. Place Scratch projects in
+`E:\ScratchEverywhere` on the emulated HDD following the
+[official Xemu documentation](https://xemu.app/docs/ftp/).
+
+Then it should be as simple as opening it in Xemu!
+
+### XBE (`default.xbe`)
+
+**This is the recommended format to use.**
+
+This file is used with real modded Xboxes. Copy it wherever you'd like, and
+place Scratch projects in `E:\ScratchEverywhere`.
+
+Then it should be as simple as running `default.xbe`!

@@ -40,39 +40,41 @@ features support specific features.
 
 ### Features
 
-| Platform | Cloud Variables | Native Extensions | Lua Extensions |
-| -------- | --------------- | ----------------- | -------------- |
-| Windows  | ✅              | ❌                | ✅             |
-| macOS    | ✅              | ✅                | ✅             |
-| Linux    | ✅              | ✅                | ✅             |
-| 3DS      | ✅              | ❌                | ✅             |
-| DS       | ❌              | ❌                | ❌             |
-| Wii U    | ✅              | ❌                | ✅             |
-| Wii      | ❌              | ❌                | ✅             |
-| GameCube | ❌              | ❌                | ✅             |
-| Switch   | ❌              | ❌                | ✅             |
-| Vita     | ❌              | ❌                | ✅             |
-| PSP      | ❌              | ❌                | ❌             |
-| PS4      | ❌              | ❌                | ❌             |
-| Libretro | ✅              | ❌                | ❌             |
+| Platform      | Cloud Variables | Native Extensions | Lua Extensions |
+| ------------- | --------------- | ----------------- | -------------- |
+| Windows       | ✅              | ❌                | ✅             |
+| macOS         | ✅              | ✅                | ✅             |
+| Linux         | ✅              | ✅                | ✅             |
+| 3DS           | ✅              | ❌                | ✅             |
+| DS            | ❌              | ❌                | ❌             |
+| Wii U         | ✅              | ❌                | ✅             |
+| Wii           | ❌              | ❌                | ✅             |
+| GameCube      | ❌              | ❌                | ✅             |
+| Switch        | ❌              | ❌                | ✅             |
+| Vita          | ❌              | ❌                | ✅             |
+| PSP           | ❌              | ❌                | ❌             |
+| PS4           | ❌              | ❌                | ❌             |
+| Libretro      | ✅              | ❌                | ❌             |
+| Original Xbox | ❌              | ❌                | ✅             |
 
 ### Extensions
 
-| Platform | Pen | Text to Speech | Makey Makey | Translate |
-| -------- | --- | -------------- | ----------- | --------- |
-| Windows  | ✅  | ✅             | ✅          | ✅        |
-| macOS    | ✅  | ✅             | ✅          | ✅        |
-| Linux    | ✅  | ✅             | ✅          | ✅        |
-| 3DS      | ✅  | ✅             | ✅          | ✅        |
-| DS       | ❌  | ❌             | ✅          | ❌        |
-| Wii U    | ✅  | ✅             | ✅          | ✅        |
-| Wii      | ✅  | 🟡             | ✅          | ❌        |
-| GameCube | ✅  | 🟡             | ✅          | ❌        |
-| Switch   | ✅  | 🟡             | ✅          | ❌        |
-| Vita     | ✅  | 🟡             | ✅          | ❌        |
-| PSP      | ✅  | 🟡             | ✅          | ❌        |
-| PS4      | ✅  | 🟡             | ✅          | ❌        |
-| Libretro | ✅  | ✅             | ✅          | ✅        |
+| Platform      | Pen | Text to Speech | Makey Makey | Translate |
+| ------------- | --- | -------------- | ----------- | --------- |
+| Windows       | ✅  | ✅             | ✅          | ✅        |
+| macOS         | ✅  | ✅             | ✅          | ✅        |
+| Linux         | ✅  | ✅             | ✅          | ✅        |
+| 3DS           | ✅  | ✅             | ✅          | ✅        |
+| DS            | ❌  | ❌             | ✅          | ❌        |
+| Wii U         | ✅  | ✅             | ✅          | ✅        |
+| Wii           | ✅  | 🟡             | ✅          | ❌        |
+| GameCube      | ✅  | 🟡             | ✅          | ❌        |
+| Switch        | ✅  | 🟡             | ✅          | ❌        |
+| Vita          | ✅  | 🟡             | ✅          | ❌        |
+| PSP           | ✅  | 🟡             | ✅          | ❌        |
+| PS4           | ✅  | 🟡             | ✅          | ❌        |
+| Libretro      | ✅  | ✅             | ✅          | ✅        |
+| Original Xbox |     | 🟡             | ✅          | ❌        |
 
 Text-to-Speech can use either the official Scratch servers (if the platform
 supports it), or DECtalk, which runs locally but is not 100% accurate. Platforms
