@@ -9,7 +9,7 @@ crashes, and things that will just not work.
   you know of a block that's causing problems).
 - Performance is poor when running complex projects, specifically those with
   many clones or lots of blocks running at once.
-  - Some older platforms (NDS, GameCube, PSP) especially struggle due to memory
+  - Some older platforms (NDS, GameCube, PSP, Original Xbox) especially struggle due to memory
     constraints. Try to keep projects small on these platforms.
 - Sounds may take time to load when playing them for the first time.
 
@@ -74,7 +74,7 @@ features support specific features.
 | PSP           | ✅  | 🟡             | ✅          | ❌        |
 | PS4           | ✅  | 🟡             | ✅          | ❌        |
 | Libretro      | ✅  | ✅             | ✅          | ✅        |
-| Original Xbox |     | 🟡             | ✅          | ❌        |
+| Original Xbox | ✅  | ✅             | ✅          | ✅        |
 
 Text-to-Speech can use either the official Scratch servers (if the platform
 supports it), or DECtalk, which runs locally but is not 100% accurate. Platforms
@@ -82,7 +82,7 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 
 ### Misc Notes
 
-- **[Wii, Wii U, GameCube, Switch, PS4]** The first controller connected will be
+- **[Wii, Wii U, GameCube, Switch, PS4, Original Xbox]** The first controller connected will be
   the only one that will work.
 - **[Wii]** If you're using a PAL Wii, you must use 50Hz.
 - **[PSP]** Images cannot be over 512x512.
@@ -92,3 +92,6 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 - **[Vita]** Back touch will not be supported.
 - **[PS4]** The software keyboard isn't currently supported.
 - **[DS]** Audio is currently broken.
+- **[Original Xbox]** UI and projects might fail to load graphical assets from time to time. Rebooting your Xbox should fix this.
+- **[Original Xbox]** SE! will use aggressive memory compression methods on 64 MB boards, which may make some projects appear blocky.
+- **[Original Xbox]** It is recommended to upgrade your hard drive to run at 7200 RPM, or upgrade to an SSD.
