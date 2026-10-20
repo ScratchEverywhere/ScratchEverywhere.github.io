@@ -19,7 +19,7 @@
 
 - Support for multiple controllers
 
-## Vita
+## Vita / Original Xbox
 
 - Cloud variable support
 
