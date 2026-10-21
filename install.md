@@ -255,11 +255,6 @@ The `.zip` file contains two formats:
 
 ### XISO (`scratch-xbox.iso`)
 
-> [!IMPORTANT]
-> The XISO currently does not work on Xemu due to issues with audio. You'll need
-> to manually build it with the `headless` audio mode; see the
-> [build guide](/build.md).
-
 This file is primarily used with Xemu. Place Scratch projects in
 `E:\ScratchEverywhere` on the emulated HDD following the
 [official Xemu documentation](https://xemu.app/docs/ftp/).
