@@ -93,5 +93,4 @@ marked with a 🟡 support DECtalk only, while those with a ✅ support both.
 - **[PS4]** The software keyboard isn't currently supported.
 - **[DS]** Audio is currently broken.
 - **[Original Xbox]** UI and projects might fail to load graphical assets from time to time. Rebooting your Xbox should fix this.
-- **[Original Xbox]** SE! will use aggressive memory compression methods on 64 MB boards, which may make some projects appear blocky.
 - **[Original Xbox]** It is recommended to upgrade your hard drive to run at 7200 RPM, or upgrade to an SSD.
