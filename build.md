@@ -11,11 +11,6 @@ section for more info.
 
 If you would rather compile manually, continue reading for how to do it.
 
-> [!NOTE]
-> Due to how complicated the environment for building the PS4 version of SE! is,
-> we do not provide instructions for compiling it manually. Please use Docker
-> instead, it will save you many headaches.
-
 ## Change App Information
 
 If you would like to change the name of the app or any other information, you
@@ -72,6 +67,11 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
   - sdl2_ttf
 - **For the Vita**, all you need is the [vitasdk](https://vitasdk.org)
   toolchain. It includes every SDL2 thing you might need.
+- **For the PS4**, you'll need
+  [Pacbrew](https://github.com/ps4-homebrew-dev/pacbrew) and the
+  [OpenOrbis toolchain](https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain).
+  For the latter, you only need the headers (`include/orbis/`) copied to
+  `/opt/ps4-homebrew-sdk/target/include/orbis`.
 - **For the PSP**, all you need is the [PSPSDK](https://pspdev.github.io)
   toolchain. It includes every SDL2 thing you might need.
 - **For webOS**, all you need is the webosbrew Native SDK installed to your home
@@ -121,6 +121,8 @@ done with `cmake`, though the exact commands differ between platforms:
   `cmake -DCMAKE_TOOLCHAIN_FILE=$DEVKITPRO/cmake/Switch.cmake -B build/switch && cmake --build build/switch`.
 - **For the Vita**, you need to run
   `cmake -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake -B build/vita && cmake --build build/vita`.
+- **For the PS4**, you need to run
+  `/opt/ps4-homebrew-sdk/bin/orbis-cmake -B build-ps4 && cmake --build build-ps4`.
 - **For the PSP**, you need to run
   `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`.
 - **For webOS**, you need to run
@@ -342,22 +344,22 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 
 | Platform      | `sdl1` | `sdl2` | `sdl3` | `opengl` | `opengl_core` | `gdi` | `d3d9` | `citro2d` | `gl2d` | `xbox` | `headless` |
 | ------------- | ------ | ------ | ------ | -------- | ------------- | ----- | ------ | --------- | ------ | ------ | ---------- |
-| Windows       | ✅     | ✅     | ✅     | ✅       | ✅            | ✅    | ✅     | ❌        | ❌     | ❌    | ✅         |
-| macOS         | ✅     | ✅     | ✅     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| Linux/BSD     | ✅     | ✅     | ✅     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| 3DS           | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ✅        | ❌     | ❌    | ✅         |
-| DS            | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ✅     | ❌    | ✅         |
-| Wii U         | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| Wii           | ✅     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| GameCube      | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| Switch        | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| Vita          | ✅     | ✅     | ✅     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| PSP           | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| PS4           | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| webOS         | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌    | ✅         |
-| Libretro      | ❌     | ❌     | ❌     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌    | ❌         |
-| Original Xbox | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ✅    | ✅         |
-| WASM          | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌    | ❌         |
+| Windows       | ✅     | ✅     | ✅     | ✅       | ✅            | ✅    | ✅     | ❌        | ❌     | ❌     | ✅         |
+| macOS         | ✅     | ✅     | ✅     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| Linux/BSD     | ✅     | ✅     | ✅     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| 3DS           | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ✅        | ❌     | ❌     | ✅         |
+| DS            | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ✅     | ❌     | ✅         |
+| Wii U         | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| Wii           | ✅     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| GameCube      | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| Switch        | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| Vita          | ✅     | ✅     | ✅     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| PSP           | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| PS4           | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| webOS         | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
+| Libretro      | ❌     | ❌     | ❌     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ❌         |
+| Original Xbox | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ✅     | ✅         |
+| WASM          | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ❌         |
 
 Defaults to `citro2d` on 3DS, `gl2d` on NDS, `opengl_core` on PC (except for
 Windows which defaults to `d3d9`) and Libretro, `xbox` on the Original Xbox
