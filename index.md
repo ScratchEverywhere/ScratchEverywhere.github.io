@@ -23,6 +23,7 @@ features:
   - title: Easy to Use
     details: Scratch Everywhere! is extremely easy to use. Just download it from the app store, add your projects, and start playing!
 ---
+
 <img src="https://github.com/ScratchEverywhere/ScratchEverywhere/raw/main/docs/demo.gif" style="border-radius: 12px; margin-top: 2rem;" />
 <br><br>
 <h1>Nightly builds</h1>
