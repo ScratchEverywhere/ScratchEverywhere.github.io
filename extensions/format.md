@@ -20,11 +20,12 @@ minor version of the API the extension was designed for.
 
 ### File Format Versions
 
-- `0` (testing)
+- `0`: initial
+- `1`: added Xbox to the platforms flag
 
 ### API Versions
 
-- `0.0` (testing)
+- `0.1`: initial
 
 ## Core Extensions
 
@@ -82,7 +83,7 @@ support all platforms.
 - 10th bit: PSP
 - 11th bit: webOS
 - 12th bit: WASM
-- 13th bit: OG Xbox
+- 13th bit: Xbox
 
 ## Settings
 
