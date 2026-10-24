@@ -82,6 +82,7 @@ support all platforms.
 - 10th bit: PSP
 - 11th bit: webOS
 - 12th bit: WASM
+- 13th bit: OG Xbox
 
 ## Settings
 
