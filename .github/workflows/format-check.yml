@@ -1,0 +1,19 @@
+name: Format Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  markdown-fmt-check:
+    name: "`deno fmt` (Markdown) Check"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: latest
+      - name: Check Formatting
+        run: deno fmt --check **/*.md
