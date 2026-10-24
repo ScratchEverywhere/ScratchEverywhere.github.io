@@ -24,7 +24,7 @@ The extension's description.
 
 A list of all the permissions the extension has.
 
-#### `platforms: ("3ds" | "wiiu" | "wii" | "gamecube" | "switch" | "vita" | "pc")[]`
+#### `platforms: ("3ds" | "wiiu" | "wii" | "gamecube" | "switch" | "vita" | "pc" | "xbox" | "wasm" | "psp" | "ps4" | "nds" | "webos")[]`
 
 A list of all the platforms the extension supports.
 
