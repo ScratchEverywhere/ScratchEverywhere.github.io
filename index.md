@@ -40,6 +40,7 @@ features:
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-pc.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-pc.yml/badge.svg" alt="PC Nightly Build"></a>
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-webos.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-webos.yml/badge.svg" alt="webOS Nightly Build"></a>
 <a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-libretro.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-libretro.yml/badge.svg" alt="Libretro Nightly Build"></a>
+<a href="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-xbox.yml"><img src="https://github.com/ScratchEverywhere/ScratchEverywhere/actions/workflows/nightly-xbox.yml/badge.svg" alt="Original Xbox Nightly Build"></a>
 </div>
 <br><br>
 <h1>Join our Discord server!</h1>
