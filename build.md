@@ -150,8 +150,8 @@ installed in the same way as the official releases (see the
 ## Compilation Flags
 
 Compilation flags are used to select which features will be enabled in the
-compiled version of Scratch Everywhere!. To use a compilation flag simply add it
-to the end of the `cmake` configure command (e.g.
+compiled version of Scratch Everywhere!. To use a compilation flag, simply add
+it to the end of the `cmake` configure command (e.g.
 `cmake -B build -DSE_LOADSCREEN=OFF`).
 
 ### `SE_APP_AUTHOR`
@@ -189,7 +189,7 @@ Can be either `miniz` or `minizip`.
 ### `SE_AUDIO_ENGINE`
 
 The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
-`winmm`, `nds`, `libretro`, or `headless`.
+`winmm`, `nds`, `libretro`, `headless`, or `all`.
 
 #### Supported Audio Engines
 
@@ -212,6 +212,9 @@ The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
 | Original Xbox | ❌     | ❌     | ✅     | ❌         | ❌      | ❌    | ❌         | ✅         |
 | WASM          | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
 
+Setting `SE_AUDIO_ENGINE` to `all` will include all supported audio engines in
+the build. This is always allowed regardless of platform.
+
 The default value depends on the renderer being used[^1] (see below):
 
 - `sdl1`: `sdl1`
@@ -223,10 +226,11 @@ The default value depends on the renderer being used[^1] (see below):
 - `gdi`: `winmm`
 - `citro2d`: `sdl3`
 - `gl2d`: `nds`
+- `xbox`: `sdl3`
+- `gx2`: `sdl2`
 - `headless`: `headless`
 
-[^1]: Libretro will always use the `libretro` audio engine and Linux uses the
-    `libpulse` audio engine by default.
+[^1]: Linux uses the `libpulse` audio engine by default.
 
 ### `SE_BANNERTOOL`
 
@@ -338,32 +342,37 @@ Defaults to `72`.
 ### `SE_RENDERER`
 
 The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
-`opengl_core`, `gdi`, `d3d9`, `citro2d`, `gl2d`, `xbox`, or `headless`.
+`opengl_core`, `gdi`, `d3d9`, `citro2d`, `gl2d`, `xbox`, `gx2` `headless`, or
+`all`.
 
 #### Supported Renderers
 
-| Platform      | `sdl1` | `sdl2` | `sdl3` | `opengl` | `opengl_core` | `gdi` | `d3d9` | `citro2d` | `gl2d` | `xbox` | `headless` |
-| ------------- | ------ | ------ | ------ | -------- | ------------- | ----- | ------ | --------- | ------ | ------ | ---------- |
-| Windows       | ✅     | ✅     | ✅     | ✅       | ✅            | ✅    | ✅     | ❌        | ❌     | ❌     | ✅         |
-| macOS         | ✅     | ✅     | ✅     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| Linux/BSD     | ✅     | ✅     | ✅     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| 3DS           | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ✅        | ❌     | ❌     | ✅         |
-| DS            | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ✅     | ❌     | ✅         |
-| Wii U         | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| Wii           | ✅     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| GameCube      | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| Switch        | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| Vita          | ✅     | ✅     | ✅     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| PSP           | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| PS4           | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| webOS         | ❌     | ✅     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ❌     | ✅         |
-| Libretro      | ❌     | ❌     | ❌     | ✅       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ❌         |
-| Original Xbox | ❌     | ❌     | ❌     | ❌       | ❌            | ❌    | ❌     | ❌        | ❌     | ✅     | ✅         |
-| WASM          | ❌     | ✅     | ❌     | ❌       | ✅            | ❌    | ❌     | ❌        | ❌     | ❌     | ❌         |
+| Platform      | `d3d9` | `opengl_core` | `xbox` | `gx2` | `sdl2` | `sdl3` | `opengl` | `gdi` | `sdl1` | `citro2d` | `gl2d` | `headless` |
+| ------------- | ------ | ------------- | ------ | ----- | ------ | ------ | -------- | ----- | ------ | --------- | ------ | ---------- |
+| Windows       | ✅     | ✅            | ❌     | ❌    | ✅     | ✅     | ✅       | ✅    | ✅     | ❌        | ❌     | ✅         |
+| macOS         | ❌     | ✅            | ❌     | ❌    | ✅     | ✅     | ✅       | ❌    | ✅     | ❌        | ❌     | ✅         |
+| Linux/BSD     | ❌     | ✅            | ❌     | ❌    | ✅     | ✅     | ✅       | ❌    | ✅     | ❌        | ❌     | ✅         |
+| 3DS           | ❌     | ❌            | ❌     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ✅        | ❌     | ✅         |
+| DS            | ❌     | ❌            | ❌     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ❌        | ✅     | ✅         |
+| Wii U         | ❌     | ❌            | ❌     | ✅    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| Wii           | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
+| GameCube      | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| Switch        | ❌     | ✅            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| Vita          | ❌     | ❌            | ❌     | ❌    | ✅     | ✅     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
+| PSP           | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| PS4           | ❌     | ✅            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| webOS         | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| Libretro      | ❌     | ✅            | ❌     | ❌    | ❌     | ❌     | ✅       | ❌    | ❌     | ❌        | ❌     | ❌         |
+| Original Xbox | ❌     | ❌            | ✅     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| WASM          | ❌     | ✅            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ❌         |
 
-Defaults to `citro2d` on 3DS, `gl2d` on NDS, `opengl_core` on PC (except for
-Windows which defaults to `d3d9`) and Libretro, `xbox` on the Original Xbox
-(which is based on `sdl3`), and `sdl2` on everything else.
+SE! prioritizes renderers in the following order: `d3d9`, `opengl_core`, `xbox`,
+`gx2`, `sdl2`, `sdl3`, `opengl`, `gdi`, `sdl1`, `citro2d`, `gl2d`, and finally
+`headless`. It will pick the first renderer in that order that is supported by
+the target platform, unless the renderer is manually set.
+
+Setting `SE_RENDERER` to `all` will include all supported renderers in the
+build. This is always allowed regardless of platform, and is the default.
 
 ### `SE_SVG`
 
@@ -372,28 +381,35 @@ Determines whether or not vector (SVG) images are supported. Defaults to `ON`.
 ### `SE_WINDOWING`
 
 The windowing backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `glfw`,
-`win32`, `3ds`, `nds`, `libretro`, or `headless`.
+`win32`, `3ds`, `nds`, `wiiu`, `libretro`, `headless`, or `all`.
 
 #### Supported Windowing Backends
 
-| Renderer          | `sdl1` | `sdl2` | `sdl3` | `glfw` | `win32` | `3ds` | `nds` | `libretro` | `headless` |
-| ----------------- | ------ | ------ | ------ | ------ | ------- | ----- | ----- | ---------- | ---------- |
-| `sdl1`            | ✅     | ❌     | ❌     | ❌     | ❌      | ❌    | ❌    | ❌         | ❌         |
-| `sdl2`            | ❌     | ✅     | ❌     | ❌     | ❌      | ❌    | ❌    | ❌         | ❌         |
-| `sdl3`            | ❌     | ❌     | ✅     | ❌     | ❌      | ❌    | ❌    | ❌         | ❌         |
-| `opengl`          | ✅     | ✅     | ✅     | ✅     | ✅      | ❌    | ❌    | ❌         | ❌         |
-| `opengl_core`[^2] | ✅     | ✅     | ✅     | ✅     | ✅      | ❌    | ❌    | ❌         | ❌         |
-| `gdi`             | ❌     | ❌     | ❌     | ❌     | ✅      | ❌    | ❌    | ❌         | ❌         |
-| `d3d9`            | ❌     | ❌     | ❌     | ❌     | ✅      | ❌    | ❌    | ❌         | ❌         |
-| `citro2d`         | ❌     | ❌     | ❌     | ❌     | ❌      | ✅    | ❌    | ❌         | ❌         |
-| `gl2d`            | ❌     | ❌     | ❌     | ❌     | ❌      | ❌    | ✅    | ❌         | ❌         |
-| `headless`        | ❌     | ❌     | ❌     | ❌     | ❌      | ❌    | ❌    | ❌         | ✅         |
+| Renderer              | `glfw` | `sdl3` | `sdl2` | `sdl1` | `win32` | `3ds` | `nds` | `wiiu` | `headless` | `libretro` |
+| --------------------- | ------ | ------ | ------ | ------ | ------- | ----- | ----- | ------ | ---------- | ---------- |
+| `sdl1`                | ❌     | ❌     | ❌     | ✅     | ❌      | ❌    | ❌    | ❌     | ❌         | ❌         |
+| `sdl2`                | ❌     | ❌     | ✅     | ❌     | ❌      | ❌    | ❌    | ❌     | ❌         | ❌         |
+| `sdl3`                | ❌     | ✅     | ❌     | ❌     | ❌      | ❌    | ❌    | ❌     | ❌         | ❌         |
+| `opengl`[^3]          | ✅     | ✅     | ✅     | ✅     | ✅      | ❌    | ❌    | ❌     | ❌         | ✅         |
+| `opengl_core`[^2][^3] | ✅     | ✅     | ✅     | ✅     | ✅      | ❌    | ❌    | ❌     | ❌         | ✅         |
+| `gdi`                 | ❌     | ❌     | ❌     | ❌     | ✅      | ❌    | ❌    | ❌     | ❌         | ❌         |
+| `d3d9`                | ❌     | ❌     | ❌     | ❌     | ✅      | ❌    | ❌    | ❌     | ❌         | ❌         |
+| `citro2d`             | ❌     | ❌     | ❌     | ❌     | ❌      | ✅    | ❌    | ❌     | ❌         | ❌         |
+| `gl2d`                | ❌     | ❌     | ❌     | ❌     | ❌      | ❌    | ✅    | ❌     | ❌         | ❌         |
+| `xbox`                | ❌     | ✅     | ❌     | ❌     | ❌      | ❌    | ❌    | ❌     | ❌         | ❌         |
+| `gl2`                 | ❌     | ❌     | ❌     | ❌     | ❌      | ❌    | ❌    | ✅     | ❌         | ❌         |
+| `headless`            | ❌     | ❌     | ❌     | ❌     | ❌      | ❌    | ❌    | ❌     | ✅         | ❌         |
 
-[^2]: When using the OpengGL Core renderer on Switch or WASM, only the `sdl2`
+[^2]: When using the OpenGL Core renderer on Switch or WASM, only the `sdl2`
     windowing backend is supported.
 
+[^3]: When using the OpenGL and GL Core renderers on Libretro, only the
+    `libretro` windowing backend is supported.
+
 SE! prioritizes windowing backends in the following order: `glfw`, `sdl3`,
-`sdl2`, `sdl1`, `win32`, `3ds`, `nds`, `headless`, and finally `libretro`. It
-will pick the first backend in that order that is supported by the chosen
-renderer, unless the windowing backend is manually set. Libretro will always use
-the `libretro` windowing backend.
+`sdl2`, `sdl1`, `win32`, `3ds`, `nds`, `wiiu`, `headless`, and finally
+`libretro`. It will pick the first backend in that order that is supported by
+the chosen renderer, unless the windowing backend is manually set.
+
+Setting `SE_WINDOWING` to `all` will include all supported windowing backends in
+the build. This is always allowed regardless of renderer, and is the default.

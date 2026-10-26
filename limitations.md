@@ -18,7 +18,7 @@ crashes, and things that will just not work.
 <!-- deno-fmt-ignore -->
 - ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for
 `Ghost` and `Brightness`)
-  - All Looks effects are supported using the `gl-core` renderer. See the
+  - All Looks effects are supported using the `opengl_core`, `d3d9`, and `gx2` renderers. See the
   [compile flag documentation](/build.md#supported-renderers) to see which
   platforms support it.
 - ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
