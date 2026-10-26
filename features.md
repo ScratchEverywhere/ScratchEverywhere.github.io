@@ -1,6 +1,6 @@
 # Unique Features
 
-## 3DS Screen modes
+## 3DS/Wii U Screen Modes
 
 - Any project with an unmodified resolution setting will be displayed on the top
   screen only.
@@ -28,8 +28,8 @@
 
 ## Special Custom Blocks
 
-Like TurboWarp, we have special custom blocks that only work on SE! You can find
-a project containing and explaining them here:
+Like TurboWarp, we have special custom blocks that only work on SE!. You can
+find a project containing and explaining them here:
 https://scratchbox.dev/project/K26OtTN2WDJ9
 
 ## Project Settings
