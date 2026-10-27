@@ -9,7 +9,7 @@ crashes, and things that will just not work.
   you know of a block that's causing problems).
 - Performance is poor when running complex projects, specifically those with
   many clones or lots of blocks running at once.
-  - Some older platforms (NDS, GameCube, PSP, Original Xbox) especially struggle
+  - Some older platforms (NDS, GameCube, PSP, Original Xbox, PS2) especially struggle
     due to memory constraints. Try to keep projects small on these platforms.
 - Sounds may take time to load when playing them for the first time.
 
@@ -55,6 +55,7 @@ features support specific features.
 | Switch        | ❌              | ❌                | ✅             |
 | Vita          | ❌              | ❌                | ✅             |
 | PSP           | ❌              | ❌                | ❌             |
+| PS2           | ❌              | ❌                | ❌             |
 | PS4           | ✅              | ❌                | ❌             |
 | Libretro      | ✅              | ❌                | ❌             |
 | Original Xbox | ❌              | ❌                | ✅             |
@@ -74,6 +75,7 @@ features support specific features.
 | Switch        | ✅  | 🟡                 | ✅          | ❌        |
 | Vita          | ✅  | 🟡                 | ✅          | ❌        |
 | PSP           | ✅  | 🟡                 | ✅          | ❌        |
+| PS2           | ❌  | ❌                 | ✅          | ❌        |
 | PS4           | ✅  | ✅                 | ✅          | ✅        |
 | Libretro      | ✅  | ✅                 | ✅          | ✅        |
 | Original Xbox | ✅  | ✅                 | ✅          | ✅        |
@@ -85,7 +87,7 @@ features support specific features.
 
 ### Misc Notes
 
-- **[Wii, Wii U, GameCube, Switch, PS4, Original Xbox]** The first controller
+- **[Wii, Wii U, GameCube, Switch, PS4, PS2, Original Xbox]** The first controller
   connected will be the only one that will work.
 - **[Wii]** If you're using a PAL Wii, you must use 50Hz.
 - **[PSP]** Images cannot be over 512x512.

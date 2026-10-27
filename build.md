@@ -74,6 +74,7 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
   `/opt/ps4-homebrew-sdk/target/include/orbis`.
 - **For the PSP**, all you need is the [PSPSDK](https://pspdev.github.io)
   toolchain. It includes every SDL2 thing you might need.
+- **For the PS2**, you will need [ps2sdk](https://ps2dev.github.io/) and [ps2sdk-ports](https://github.com/ps2dev/ps2sdk-ports). It includes every SDL3 thing you might need.
 - **For webOS**, all you need is the webosbrew Native SDK installed to your home
   directory and ares-cli.
 - **For Original Xbox**, you'll need [nxdk](https://github.com/xboxDev/nxdk) and
@@ -125,6 +126,8 @@ done with `cmake`, though the exact commands differ between platforms:
   `/opt/ps4-homebrew-sdk/bin/orbis-cmake -B build-ps4 && cmake --build build-ps4`.
 - **For the PSP**, you need to run
   `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`.
+- **For the PS2**, you need to run
+  `cmake -B build-ps2 -S . -DCMAKE_TOOLCHAIN_FILE=$PS2SDK/ps2dev.cmake -DCMAKE_BUILD_TYPE=Release && make -C build-ps2 -j 2`.
 - **For webOS**, you need to run
   `cmake -B build/webos -S . -DCMAKE_TOOLCHAIN_FILE="~/arm-webos-linux-gnueabi_sdk-buildroot/share/buildroot/toolchainfile.cmake" -DSE_CLOUDVARS=OFF -DWEBOS=ON -DSE_RENDERER=sdl2 && make -C build/webos all package`.
   > [!NOTE]
@@ -206,6 +209,7 @@ The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
 | Switch        | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | Vita          | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | PSP           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| PS2           | ❌     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | PS4           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | webOS         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | Libretro      | ❌     | ❌     | ❌     | ❌         | ❌      | ❌    | ❌     | ✅         | ❌         |
@@ -296,6 +300,7 @@ The allowed modes depend on the platform you are building for:
 | Switch        | ❌       | ✅       | ✅         |
 | Vita          | ❌       | ✅       | ✅         |
 | PSP           | ❌       | ✅       | ✅         |
+| PS2           | ❌       | ❌       | ✅         |
 | PS4           | ❌       | ✅       | ✅         |
 | webOS         | ❌       | ❌       | ✅         |
 | Libretro      | ✅       | ✅       | ✅         |
@@ -360,6 +365,7 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 | Switch        | ❌     | ✅            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | Vita          | ❌     | ❌            | ❌     | ❌    | ✅     | ✅     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
 | PSP           | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| PS2           | ❌     | ❌            | ❌     | ❌    | ✅     | ✅     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | PS4           | ❌     | ✅            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | webOS         | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | Libretro      | ❌     | ✅            | ❌     | ❌    | ❌     | ❌     | ✅       | ❌    | ❌     | ❌        | ❌     | ❌         |
