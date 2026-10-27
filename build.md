@@ -189,28 +189,28 @@ Can be either `miniz` or `minizip`.
 ### `SE_AUDIO_ENGINE`
 
 The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
-`winmm`, `nds`, `libretro`, `headless`, or `all`.
+`winmm`, `nds`, `wiiu`, `libretro`, `headless`, or `all`.
 
 #### Supported Audio Engines
 
-| Platform      | `sdl1` | `sdl2` | `sdl3` | `libpulse` | `winmm` | `nds` | `libretro` | `headless` |
-| ------------- | ------ | ------ | ------ | ---------- | ------- | ----- | ---------- | ---------- |
-| Windows       | ✅     | ✅     | ✅     | ❌         | ✅      | ❌    | ❌         | ✅         |
-| macOS         | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| Linux/BSD     | ✅     | ✅     | ✅     | ✅         | ❌      | ❌    | ❌         | ✅         |
-| 3DS           | ❌     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| DS            | ❌     | ❌     | ❌     | ❌         | ❌      | ✅    | ❌         | ✅         |
-| Wii U         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| Wii           | ✅     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| GameCube      | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| Switch        | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| Vita          | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| PSP           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| PS4           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| webOS         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| Libretro      | ❌     | ❌     | ❌     | ❌         | ❌      | ❌    | ✅         | ❌         |
-| Original Xbox | ❌     | ❌     | ✅     | ❌         | ❌      | ❌    | ❌         | ✅         |
-| WASM          | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌         | ✅         |
+| Platform      | `sdl1` | `sdl2` | `sdl3` | `libpulse` | `winmm` | `nds` | `wiiu` | `libretro` | `headless` |
+| ------------- | ------ | ------ | ------ | ---------- | ------- | ----- | ------ | ---------- | ---------- |
+| Windows       | ✅     | ✅     | ✅     | ❌         | ✅      | ❌    | ❌     | ❌         | ✅         |
+| macOS         | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| Linux/BSD     | ✅     | ✅     | ✅     | ✅         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| 3DS           | ❌     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| DS            | ❌     | ❌     | ❌     | ❌         | ❌      | ✅    | ❌     | ❌         | ✅         |
+| Wii U         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ✅     | ❌         | ✅         |
+| Wii           | ✅     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| GameCube      | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| Switch        | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| Vita          | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| PSP           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| PS4           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| webOS         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| Libretro      | ❌     | ❌     | ❌     | ❌         | ❌      | ❌    | ❌     | ✅         | ❌         |
+| Original Xbox | ❌     | ❌     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| WASM          | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 
 Setting `SE_AUDIO_ENGINE` to `all` will include all supported audio engines in
 the build. This is always allowed regardless of platform.
@@ -227,7 +227,7 @@ The default value depends on the renderer being used[^1] (see below):
 - `citro2d`: `sdl3`
 - `gl2d`: `nds`
 - `xbox`: `sdl3`
-- `gx2`: `sdl2`
+- `gx2`: `wiiu`
 - `headless`: `headless`
 
 [^1]: Linux uses the `libpulse` audio engine by default.
