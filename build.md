@@ -127,7 +127,7 @@ done with `cmake`, though the exact commands differ between platforms:
 - **For the PSP**, you need to run
   `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`.
 - **For the PS2**, you need to run
-  `cmake -B build-ps2 -S . -DCMAKE_TOOLCHAIN_FILE=$PS2SDK/ps2dev.cmake -DCMAKE_BUILD_TYPE=Release -DPS2=ON && make -C build-ps2 -j 2`.
+  `cmake -B build-ps2 -S . -DCMAKE_TOOLCHAIN_FILE=$PS2SDK/ps2dev.cmake -DCMAKE_BUILD_TYPE=Release && make -C build-ps2 -j 2`.
 - **For webOS**, you need to run
   `cmake -B build/webos -S . -DCMAKE_TOOLCHAIN_FILE="~/arm-webos-linux-gnueabi_sdk-buildroot/share/buildroot/toolchainfile.cmake" -DSE_CLOUDVARS=OFF -DWEBOS=ON -DSE_RENDERER=sdl2 && make -C build/webos all package`.
   > [!NOTE]
@@ -209,6 +209,7 @@ The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
 | Switch        | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | Vita          | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | PSP           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
+| PS2           | ❌     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | PS4           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | webOS         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌         | ✅         |
 | Libretro      | ❌     | ❌     | ❌     | ❌         | ❌      | ❌    | ❌     | ✅         | ❌         |
@@ -299,6 +300,7 @@ The allowed modes depend on the platform you are building for:
 | Switch        | ❌       | ✅       | ✅         |
 | Vita          | ❌       | ✅       | ✅         |
 | PSP           | ❌       | ✅       | ✅         |
+| PS2           | ❌       | ❌       | ✅         |
 | PS4           | ❌       | ✅       | ✅         |
 | webOS         | ❌       | ❌       | ✅         |
 | Libretro      | ✅       | ✅       | ✅         |
@@ -363,6 +365,7 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 | Switch        | ❌     | ✅            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | Vita          | ❌     | ❌            | ❌     | ❌    | ✅     | ✅     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
 | PSP           | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| PS2           | ❌     | ❌            | ❌     | ❌    | ✅     | ✅     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | PS4           | ❌     | ✅            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | webOS         | ❌     | ❌            | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | Libretro      | ❌     | ✅            | ❌     | ❌    | ❌     | ❌     | ✅       | ❌    | ❌     | ❌        | ❌     | ❌         |
