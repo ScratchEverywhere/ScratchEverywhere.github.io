@@ -1,14 +1,17 @@
 # Unique Features
 
-## 3DS Screen modes
+## 3DS/Wii U Screen Modes
 
-- Any project with an unmodified resolution setting will be displayed on the top
-  screen only.
+- **[3DS]** Any project with an unmodified resolution setting will be displayed
+  on the top screen only.
+- **[Wii U]** Any project with an unmodified resolution setting will be
+  displayed on both the TV and GamePad screen.
 - If using a modded Scratch client like TurboWarp, you can go into the project's
   Advanced Settings and change the resolution.
-  - Setting it to `400x480` will enable both the top and bottom screen.
-  - Setting it to `320x240` will enable only the bottom screen.
-  - Setting it to `400x240` will make the project perfectly fit to the top
+  - Setting it to `400x480` will enable both the top (TV) and bottom (GamePad)
+    screen.
+  - Setting it to `320x240` will enable only the bottom (GamePad) screen.
+  - Setting it to `400x240` will make the project perfectly fit to the top (TV)
     screen.
   > [!NOTE]
   > Make sure to click `Store Settings In Project` on TurboWarp to properly
@@ -28,8 +31,8 @@
 
 ## Special Custom Blocks
 
-Like TurboWarp, we have special custom blocks that only work on SE! You can find
-a project containing and explaining them here:
+Like TurboWarp, we have special custom blocks that only work on SE!. You can
+find a project containing and explaining them here:
 https://scratchbox.dev/project/K26OtTN2WDJ9
 
 ## Project Settings

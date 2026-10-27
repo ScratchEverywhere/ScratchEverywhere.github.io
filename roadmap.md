@@ -11,15 +11,11 @@
 - Get all blocks working
 - Implement most TurboWarp extensions
 
-## Wii U
-
-- Dual screen support (may not happen due to SDL2 limitations)
-
 ## SDL2 Platforms
 
 - Support for multiple controllers
 
-## Vita
+## Vita / Original Xbox
 
 - Cloud variable support
 

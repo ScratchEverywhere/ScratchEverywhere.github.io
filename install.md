@@ -1,16 +1,19 @@
 # Installation
 
-Scratch Everywhere! on consoles is Homebrew software, and requires your console
-to be modded. There are two methods to install the runtime:
+Scratch Everywhere! on consoles is **homebrew** software, and requires your
+console to be modded. These installation instructions assume that your console
+has already been modded.
+
+There are two methods to install the runtime:
 
 - Download the release or nightly build (easy)
-- Build the file yourself (harder)
+- [Build](/build) the file yourself (harder)
 
 <!-- deno-fmt-ignore -->
 > [!WARNING] Disclaimer
-> Nightly builds may be more unstable than releases and should probably only be
-> used if you are instructed to do so in a bug report or you know exactly what
-> using nightlies implies.
+> While nightly builds can contain more features and improvements, they may be
+> more unstable than releases. You should only use them if you are instructed
+> to do so in a bug report or you know exactly what using nightlies implies.
 
 ## PC (Windows, Mac, Linux)
 
@@ -250,3 +253,29 @@ Directory -> Cores.
 > The `gl` driver is currently broken with the SE! core.
 
 Then it should be as simple as loading the core and opening a Scratch project!
+
+## Original Xbox
+
+Download the `scratch-xbox.zip` file from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-ps4/main/Scratch%20Everywhere!%20Original%20Xbox%20Nightly.zip).
+
+The `.zip` file contains two formats:
+
+### XISO (`scratch-xbox.iso`)
+
+This file is primarily used with Xemu. Place Scratch projects in
+`E:\ScratchEverywhere` on the emulated HDD following the
+[official Xemu documentation](https://xemu.app/docs/ftp/).
+
+Then it should be as simple as opening it in Xemu!
+
+### XBE (`default.xbe`)
+
+**This is the recommended format to use.**
+
+This file is used with real modded Xboxes. Copy it wherever you'd like, and
+place Scratch projects in `E:\ScratchEverywhere`.
+
+Then it should be as simple as running `default.xbe`!

@@ -9,8 +9,8 @@ crashes, and things that will just not work.
   you know of a block that's causing problems).
 - Performance is poor when running complex projects, specifically those with
   many clones or lots of blocks running at once.
-  - Some older platforms (NDS, GameCube, PSP, PS2) especially struggle due to memory
-    constraints. Try to keep projects small on these platforms.
+  - Some older platforms (NDS, GameCube, PSP, Original Xbox) especially struggle
+    due to memory constraints. Try to keep projects small on these platforms.
 - Sounds may take time to load when playing them for the first time.
 
 ## Unimplemented Blocks
@@ -18,7 +18,11 @@ crashes, and things that will just not work.
 <!-- deno-fmt-ignore -->
 - ::sb change [ v] effect by ():: and ::sb set [ v] effect to ():: (except for
 `Ghost` and `Brightness`)
-  - All Looks effects are supported using the `gl-core` renderer. This renderer is used on PC and Libretro by default.
+  - All Looks effects are supported using the `opengl_core`, `d3d9`, and `gx2` renderers. See the
+  [compile flag documentation](/build.md#supported-renderers) to see which
+  platforms support it.
+- ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
+  - Unimplemented only on **NDS/3DS**
 - ::sb loudness::
 
 ### Unimplemented Extensions
@@ -38,54 +42,59 @@ features support specific features.
 
 ### Features
 
-| Platform | Cloud Variables | Native Extensions | Lua Extensions |
-| -------- | --------------- | ----------------- | -------------- |
-| Windows  | ✅              | ❌                | ✅             |
-| macOS    | ✅              | ✅                | ✅             |
-| Linux    | ✅              | ✅                | ✅             |
-| 3DS      | ✅              | ❌                | ✅             |
-| DS       | ❌              | ❌                | ❌             |
-| Wii U    | ✅              | ❌                | ✅             |
-| Wii      | ❌              | ❌                | ✅             |
-| GameCube | ❌              | ❌                | ✅             |
-| Switch   | ❌              | ❌                | ✅             |
-| Vita     | ❌              | ❌                | ✅             |
-| PSP      | ❌              | ❌                | ❌             |
-| PS4      | ❌              | ❌                | ❌             |
-| PS2      | ❌              | ❌                | ❌             |
-| Libretro | ✅              | ❌                | ❌             |
+| Platform      | Cloud Variables | Native Extensions | Lua Extensions |
+| ------------- | --------------- | ----------------- | -------------- |
+| Windows       | ✅              | ❌                | ✅             |
+| macOS         | ✅              | ✅                | ✅             |
+| Linux         | ✅              | ✅                | ✅             |
+| 3DS           | ✅              | ❌                | ✅             |
+| DS            | ❌              | ❌                | ❌             |
+| Wii U         | ✅              | ❌                | ✅             |
+| Wii           | ❌              | ❌                | ✅             |
+| GameCube      | ❌              | ❌                | ✅             |
+| Switch        | ❌              | ❌                | ✅             |
+| Vita          | ❌              | ❌                | ✅             |
+| PSP           | ❌              | ❌                | ❌             |
+| PS4           | ✅              | ❌                | ❌             |
+| Libretro      | ✅              | ❌                | ❌             |
+| Original Xbox | ❌              | ❌                | ✅             |
 
 ### Extensions
 
-| Platform | Pen | Text to Speech | Makey Makey | Translate |
-| -------- | --- | -------------- | ----------- | --------- |
-| Windows  | ✅  | ✅            | ✅          | ✅       |
-| macOS    | ✅  | ✅            | ✅          | ✅       |
-| Linux    | ✅  | ✅            | ✅          | ✅       |
-| 3DS      | ✅  | ✅            | ✅          | ✅       |
-| DS       | ❌  | ❌            | ✅          | ❌       |
-| Wii U    | ✅  | ✅            | ✅          | ✅       |
-| Wii      | ✅  | 🟡            | ✅          | ❌       |
-| GameCube | ✅  | 🟡            | ✅          | ❌       |
-| Switch   | ✅  | 🟡            | ✅          | ❌       |
-| Vita     | ✅  | 🟡            | ✅          | ❌       |
-| PSP      | ✅  | 🟡            | ✅          | ❌       |
-| PS4      | ✅  | 🟡            | ✅          | ❌       |
-| PS2      | ❌  | 🟡            | ✅          | ❌       |
-| Libretro | ✅  | ✅            | ✅          | ✅       |
+| Platform      | Pen | Text to Speech[^1] | Makey Makey | Translate |
+| ------------- | --- | ------------------ | ----------- | --------- |
+| Windows       | ✅  | ✅                 | ✅          | ✅        |
+| macOS         | ✅  | ✅                 | ✅          | ✅        |
+| Linux         | ✅  | ✅                 | ✅          | ✅        |
+| 3DS           | ✅  | ✅                 | ✅          | ✅        |
+| DS            | ❌  | ❌                 | ✅          | ❌        |
+| Wii U         | ✅  | ✅                 | ✅          | ✅        |
+| Wii           | ✅  | 🟡                 | ✅          | ❌        |
+| GameCube      | ✅  | 🟡                 | ✅          | ❌        |
+| Switch        | ✅  | 🟡                 | ✅          | ❌        |
+| Vita          | ✅  | 🟡                 | ✅          | ❌        |
+| PSP           | ✅  | 🟡                 | ✅          | ❌        |
+| PS4           | ✅  | ✅                 | ✅          | ✅        |
+| Libretro      | ✅  | ✅                 | ✅          | ✅        |
+| Original Xbox | ✅  | ✅                 | ✅          | ✅        |
 
-Text-to-Speech can use either the official Scratch servers (if the platform
-supports it), or DECtalk, which runs locally but is not 100% accurate. Platforms
-marked with a 🟡 support DECtalk only, while those with a ✅ support both.
+[^1]: Text-to-Speech can use either the official Scratch servers (if the
+    platform supports it), or DECtalk, which runs locally but is not 100%
+    accurate. Platforms marked with a 🟡 support DECtalk only, while those with
+    a ✅ support both.
 
 ### Misc Notes
 
-- **[Wii, Wii U, GameCube, PS2, Switch, PS4]** The first controller connected will be the
-  only one that will work.
+- **[Wii, Wii U, GameCube, Switch, PS4, Original Xbox]** The first controller
+  connected will be the only one that will work.
+- **[Wii]** If you're using a PAL Wii, you must use 50Hz.
 - **[PSP]** Images cannot be over 512x512.
 - **[3DS]** If a project has a bunch of large images, some may not load.
 - **[3DS]** Some vector images will appear bigger than they should.
 - **[NDS]** Dual screen mode will not be supported.
 - **[Vita]** Back touch will not be supported.
-- **[PS4]** The software keyboard isn't currently supported.
 - **[DS]** Audio is currently broken.
+- **[Original Xbox]** UI and projects might fail to load graphical assets from
+  time to time. Rebooting your Xbox should fix this.
+- **[Original Xbox]** It is recommended to upgrade your hard drive to run at
+  7200 RPM, or upgrade to an SSD.
