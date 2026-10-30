@@ -90,10 +90,9 @@ features support specific features.
 - **[3DS]** Some vector images will appear bigger than they should.
 - **[NDS]** Dual screen mode will not be supported.
 - **[Vita]** Back touch will not be supported.
-- **[DS]** Audio is currently broken.
 - **[Original Xbox]** UI and projects might fail to load graphical assets from
   time to time. Rebooting your Xbox should fix this.
 - **[Original Xbox]** It is recommended to upgrade your hard drive to run at
   7200 RPM, or upgrade to an SSD.
 - **[NDS/3DS]** ::sb touching color [#754D75]?:: and <!-- deno-fmt-ignore -->
-      ::sb color [#754D75] is touching [#754D75]?:: are unimplemented.
+  ::sb color [#754D75] is touching [#754D75]?:: are unimplemented.
