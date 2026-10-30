@@ -23,7 +23,6 @@ crashes, and things that will just not work.
   platforms support it.
 - ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
   - Unimplemented only on **NDS/3DS**
-- ::sb loudness::
 
 ### Unimplemented Extensions
 
