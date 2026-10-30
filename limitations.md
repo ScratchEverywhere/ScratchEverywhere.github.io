@@ -20,9 +20,7 @@ crashes, and things that will just not work.
 `Ghost` and `Brightness`)
   - All Looks effects are supported using the `opengl_core`, `d3d9`, and `gx2` renderers. See the
   [compile flag documentation](/build.md#supported-renderers) to see which
-  platforms support it.
-- ::sb touching color [#754D75]?:: and ::sb color [#754D75] is touching [#754D75]?::
-  - Unimplemented only on **NDS/3DS**
+  platforms support these renderers.
 
 ### Unimplemented Extensions
 
@@ -97,3 +95,5 @@ features support specific features.
   time to time. Rebooting your Xbox should fix this.
 - **[Original Xbox]** It is recommended to upgrade your hard drive to run at
   7200 RPM, or upgrade to an SSD.
+- **[NDS/3DS]** ::sb touching color [#754D75]?:: and <!-- deno-fmt-ignore -->
+      ::sb color [#754D75] is touching [#754D75]?:: are unimplemented.
