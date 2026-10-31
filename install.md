@@ -37,6 +37,15 @@ or
 
 Place the executable file in a convenient location on your PC.
 
+The location of Scratch projects depends on where (or how) you installed Scratch
+Everywhere!.
+
+- **Windows:** `C:\Users\{username}\Documents\scratch-everywhere`
+- **macOS:** Next to the executable
+- **Linux/BSD (installed to `$PATH`):**
+  `/home/{username}/.local/share/scratch-everywhere`
+- **Linux/BSD (not installed to `$PATH`):** Next to the executable
+
 Then it should be as simple as running the executable file!
 
 ## 3DS
