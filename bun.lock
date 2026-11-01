@@ -5,6 +5,7 @@
     "": {
       "dependencies": {
         "@catppuccin/vitepress": "^0.1.2",
+        "@mdit/plugin-footnote": "^1.1.2",
         "sb-mdit": "^0.4.1",
         "vitepress": "^1.6.4",
       },
@@ -150,6 +151,10 @@
     "@iconify/types": ["@iconify/types@2.0.0", "", {}, "sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg=="],
 
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.5", "", {}, "sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og=="],
+
+    "@mdit/helper": ["@mdit/helper@1.1.2", "", { "peerDependencies": { "markdown-it": "^15.0.2" }, "optionalPeers": ["markdown-it"] }, "sha512-xZywQ7aXrmkRCuGvFXguXVKeiQ7kHCxPkjtR+nK/n31YiSPPi/Rmb/ll+CYt0LdyeXR0Y1I16da7gxDT4/VXWg=="],
+
+    "@mdit/plugin-footnote": ["@mdit/plugin-footnote@1.1.2", "", { "dependencies": { "@mdit/helper": "1.1.2" }, "peerDependencies": { "markdown-it": "^15.0.2" } }, "sha512-pFn0+6oqPaX/YUGR6ITwreFiFW5hyPPLj2vJCkuyEmo1kCjnOOWaRl48tD4O03Fq6Cl9YROaHzcyQIUrAthQ8A=="],
 
     "@rollup/rollup-android-arm-eabi": ["@rollup/rollup-android-arm-eabi@4.48.1", "", { "os": "android", "cpu": "arm" }, "sha512-rGmb8qoG/zdmKoYELCBwu7vt+9HxZ7Koos3pD0+sH5fR3u3Wb/jGcpnqxcnWsPEKDUyzeLSqksN8LJtgXjqBYw=="],
 

@@ -210,18 +210,19 @@ When finished, it should look something like this: ![image](pictures/result.png)
 After a successful build, your exported files will appear directly in the
 `ScratchEverywhere` folder.
 
-| Platform         | File Types                                    |
-| ---------------- | --------------------------------------------- |
-| **3DS**          | `.3dsx` and `.cia`                            |
-| **Wii U**        | `.rpx` and `.wuhb`                            |
-| **Vita**         | `.vpk`                                        |
-| **PS4**          | `.pkg`                                        |
-| **Switch**       | `.nro`                                        |
-| **PSP**          | `.zip`                                        |
-| **DS**           | `.nds`                                        |
-| **GameCube/Wii** | `.dol`                                        |
-| **webOS**        | `.ipk`                                        |
-| **PC**           | `scratch-*` (Unix/macOS) <br>`.exe` (Windows) |
+| Platform          | File Types                                    |
+| ----------------- | --------------------------------------------- |
+| **3DS**           | `.3dsx` and `.cia`                            |
+| **Wii U**         | `.rpx` and `.wuhb`                            |
+| **Vita**          | `.vpk`                                        |
+| **PS4**           | `.pkg`                                        |
+| **Switch**        | `.nro`                                        |
+| **PSP**           | `.zip`                                        |
+| **DS**            | `.nds`                                        |
+| **GameCube/Wii**  | `.dol`                                        |
+| **webOS**         | `.ipk`                                        |
+| **Original Xbox** | `.iso` and `.xbe`                             |
+| **PC**            | `scratch-*` (Unix/macOS) <br>`.exe` (Windows) |
 
 You can now copy these files to your console and install or launch them like any
 other homebrew app!

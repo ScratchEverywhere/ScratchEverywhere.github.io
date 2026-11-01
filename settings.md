@@ -23,7 +23,7 @@ they must be unpacked again if the original project file changes.
 
 Whether to show the project on the bottom screen instead of the top.
 
-**Exclusive to 3DS/DS.** Disabled by default.
+**Exclusive to 3DS/DS/Wii U.** Disabled by default.
 
 ### Pen Mode
 

@@ -5,6 +5,11 @@ This is the official **website** for Scratch Everywhere!.
 If you're looking for Scratch Everywhere! itself, this is the wrong repository.
 Use <https://github.com/ScratchEverywhere/ScratchEverywhere> instead.
 
+## Contributions
+
+All Markdown files are formatted with `deno fmt`. You should probably set up
+formatting on save for convenience.
+
 ## Building
 
 To build the site, use `bun`:
