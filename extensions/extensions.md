@@ -66,5 +66,4 @@ extension.
 
 ### `extensions.getInfo(id: string)`
 
-Gets info about a specific custom extension. Returns a [`extensions.info`]()
-table.
+Gets info about a specific custom extension. Returns a `extensions.info` table.
