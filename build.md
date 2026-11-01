@@ -366,6 +366,10 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 `opengl_core`, `gdi`, `d3d9`, `citro2d`, `gl2d`, `xbox`, `gx2`, `nv2a`,
 `headless`, or `all`.
 
+> [!IMPORTANT]
+> The `xbox` renderer is deprecated and will be removed in a future release of
+> SE!.
+
 #### Supported Renderers
 
 | Platform      | `d3d9` | `opengl_core` | `nv2a` | `xbox` | `gx2` | `sdl2` | `sdl3` | `opengl` | `gdi` | `sdl1` | `citro2d` | `gl2d` | `headless` |
