@@ -52,7 +52,7 @@ features support specific features.
 | Vita          | ❌              | ❌                | ✅             | ✅                    |
 | PS4           | ✅              | ❌                | ❌             | ✅                    |
 | webOS         | ❌              | ❌                | ✅             | ✅[^2]                |
-| Original Xbox | ❌              | ❌                | ✅             | ❌                    |
+| Original Xbox | ❌              | ❌                | ✅             | ✅                    |
 | Windows       | ✅              | ❌                | ✅             | ✅[^1]                |
 | macOS         | ✅              | ✅                | ✅             | ✅[^1]                |
 | Linux         | ✅              | ✅                | ✅             | ✅[^1]                |
