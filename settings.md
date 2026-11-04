@@ -23,7 +23,7 @@ they must be unpacked again if the original project file changes.
 
 Whether to show the project on the bottom screen instead of the top.
 
-**Exclusive to 3DS/DS/Wii U.** Disabled by default.
+**Exclusive to 3DS/DS(i)/Wii U.** Disabled by default.
 
 ### Pen Mode
 
@@ -55,7 +55,7 @@ Whether or not to display FPS info when running a project. Disabled by default.
 
 Whether or not to store the project in RAM. This can boost performance when
 loading a new costume or sound, but may cause problems on lower-end platforms.
-Enabled by default on all platforms except for DS, GameCube, and PSP.
+Enabled by default on all platforms except for DS(i), GameCube, and PSP.
 
 ### Warp Timer
 

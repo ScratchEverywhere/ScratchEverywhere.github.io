@@ -212,17 +212,18 @@ After a successful build, your exported files will appear directly in the
 
 | Platform          | File Types                                    |
 | ----------------- | --------------------------------------------- |
+| **GameCube/Wii**  | `.dol`                                        |
+| **DS(i)**         | `.nds`                                        |
 | **3DS**           | `.3dsx` and `.cia`                            |
 | **Wii U**         | `.rpx` and `.wuhb`                            |
-| **Vita**          | `.vpk`                                        |
-| **PS4**           | `.pkg`                                        |
 | **Switch**        | `.nro`                                        |
 | **PSP**           | `.zip`                                        |
-| **DS**            | `.nds`                                        |
-| **GameCube/Wii**  | `.dol`                                        |
+| **Vita**          | `.vpk`                                        |
+| **PS4**           | `.pkg`                                        |
 | **webOS**         | `.ipk`                                        |
 | **Original Xbox** | `.iso` and `.xbe`                             |
 | **PC**            | `scratch-*` (Unix/macOS) <br>`.exe` (Windows) |
+| **Libretro**      | `scratch-pc.so`                               |
 
 You can now copy these files to your console and install or launch them like any
 other homebrew app!

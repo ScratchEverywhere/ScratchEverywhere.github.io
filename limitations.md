@@ -9,8 +9,9 @@ crashes, and things that will just not work.
   you know of a block that's causing problems).
 - Performance is poor when running complex projects, specifically those with
   many clones or lots of blocks running at once.
-  - Some older platforms (NDS, GameCube, PSP, Original Xbox) especially struggle
-    due to memory constraints. Try to keep projects small on these platforms.
+  - Some older platforms (Original Xbox, DS(i), GameCube, PSP) especially
+    struggle due to memory constraints. Try to keep projects small on these
+    platforms.
 - Sounds may take time to load when playing them for the first time.
 
 ## Unimplemented Blocks
@@ -39,43 +40,52 @@ features support specific features.
 
 ### Features
 
-| Platform      | Cloud Variables | Native Extensions | Lua Extensions |
-| ------------- | --------------- | ----------------- | -------------- |
-| Windows       | ✅              | ❌                | ✅             |
-| macOS         | ✅              | ✅                | ✅             |
-| Linux         | ✅              | ✅                | ✅             |
-| 3DS           | ✅              | ❌                | ✅             |
-| DS            | ❌              | ❌                | ❌             |
-| Wii U         | ✅              | ❌                | ✅             |
-| Wii           | ❌              | ❌                | ✅             |
-| GameCube      | ❌              | ❌                | ✅             |
-| Switch        | ❌              | ❌                | ✅             |
-| Vita          | ❌              | ❌                | ✅             |
-| PSP           | ❌              | ❌                | ❌             |
-| PS4           | ✅              | ❌                | ❌             |
-| Libretro      | ✅              | ❌                | ❌             |
-| Original Xbox | ❌              | ❌                | ✅             |
+| Platform      | Cloud Variables | Native Extensions | Lua Extensions | Just-in-Time Compiler |
+| ------------- | --------------- | ----------------- | -------------- | --------------------- |
+| GameCube      | ❌              | ❌                | ✅             | ✅                    |
+| DS(i)         | ❌              | ❌                | ❌             | ❌                    |
+| Wii           | ❌              | ❌                | ✅             | ✅                    |
+| Wii U         | ✅              | ❌                | ✅             | ✅                    |
+| 3DS           | ✅              | ❌                | ✅             | ✅                    |
+| Switch        | ❌              | ❌                | ✅             | ✅                    |
+| PSP           | ❌              | ❌                | ❌             | ❌                    |
+| Vita          | ❌              | ❌                | ✅             | ✅                    |
+| PS4           | ✅              | ❌                | ❌             | ✅                    |
+| webOS         | ❌              | ❌                | ✅             | ✅[^2]                |
+| Original Xbox | ❌              | ❌                | ✅             | ❌                    |
+| Windows       | ✅              | ❌                | ✅             | ✅[^1]                |
+| macOS         | ✅              | ✅                | ✅             | ✅[^1]                |
+| Linux         | ✅              | ✅                | ✅             | ✅[^1]                |
+| Libretro      | ✅              | ❌                | ❌             | ✅[^1]                |
+| WASM          | ❌              | ❌                | ✅             | ❌                    |
+
+[^1]: PC and Libretro only support JIT on `x86_64` (`amd64`), `aarch64`
+    (`arm64`), `i386` and `i686` (`x86`), and `riscv64`.
+
+[^2]: webOS only supports JIT on `aarch64` (`arm64`).
 
 ### Extensions
 
-| Platform      | Pen | Text to Speech[^1] | Makey Makey | Translate |
+| Platform      | Pen | Text to Speech[^2] | Makey Makey | Translate |
 | ------------- | --- | ------------------ | ----------- | --------- |
+| GameCube      | ✅  | 🟡                 | ✅          | ❌        |
+| DS(i)         | ❌  | ❌                 | ✅          | ❌        |
+| Wii           | ✅  | 🟡                 | ✅          | ❌        |
+| 3DS           | ✅  | ✅                 | ✅          | ✅        |
+| Wii U         | ✅  | ✅                 | ✅          | ✅        |
+| Switch        | ✅  | 🟡                 | ✅          | ❌        |
+| PSP           | ✅  | 🟡                 | ✅          | ❌        |
+| Vita          | ✅  | 🟡                 | ✅          | ❌        |
+| PS4           | ✅  | ✅                 | ✅          | ✅        |
+| webOS         | ✅  | ✅                 | ✅          | ✅        |
+| Original Xbox | ✅  | ✅                 | ✅          | ✅        |
 | Windows       | ✅  | ✅                 | ✅          | ✅        |
 | macOS         | ✅  | ✅                 | ✅          | ✅        |
 | Linux         | ✅  | ✅                 | ✅          | ✅        |
-| 3DS           | ✅  | ✅                 | ✅          | ✅        |
-| DS            | ❌  | ❌                 | ✅          | ❌        |
-| Wii U         | ✅  | ✅                 | ✅          | ✅        |
-| Wii           | ✅  | 🟡                 | ✅          | ❌        |
-| GameCube      | ✅  | 🟡                 | ✅          | ❌        |
-| Switch        | ✅  | 🟡                 | ✅          | ❌        |
-| Vita          | ✅  | 🟡                 | ✅          | ❌        |
-| PSP           | ✅  | 🟡                 | ✅          | ❌        |
-| PS4           | ✅  | ✅                 | ✅          | ✅        |
 | Libretro      | ✅  | ✅                 | ✅          | ✅        |
-| Original Xbox | ✅  | ✅                 | ✅          | ✅        |
+| WASM          | ✅  | 🟡                 | ✅          | ❌        |
 
-[^1]: Text-to-Speech can use either the official Scratch servers (if the
+[^2]: Text-to-Speech can use either the official Scratch servers (if the
     platform supports it), or DECtalk, which runs locally but is not 100%
     accurate. Platforms marked with a 🟡 support DECtalk only, while those with
     a ✅ support both.
@@ -84,12 +94,14 @@ features support specific features.
 
 - **[Wii, Wii U, GameCube, Switch, PS4, Original Xbox]** The first controller
   connected will be the only one that will work.
+- **[DS(i)]** Dual screen mode will not be supported.
+- **[DS(i)]** Only WAV audio is supported at the moment.
+- **[DS(i)/3DS]** ::sb touching color [#754D75]?:: and <!-- deno-fmt-ignore -->
+  :sb color [#754D75] is touching [#754D75]?:: are unimplemented.
 - **[Wii]** If you're using a PAL Wii, you must use 50Hz.
-- **[PSP]** Images cannot be over 512x512.
 - **[3DS]** If a project has a bunch of large images, some may not load.
 - **[3DS]** Some vector images will appear bigger than they should.
-- **[NDS]** Dual screen mode will not be supported.
-- **[NDS]** Only WAV audio is supported at the moment.
+- **[PSP]** Images cannot be over 512x512.
 - **[Vita]** Back touch will not be supported.
 - **[Original Xbox]** UI and projects might fail to load graphical assets from
   time to time. Rebooting your Xbox should fix this.
@@ -98,5 +110,3 @@ features support specific features.
 - **[Original Xbox]** Not all projects will look correct upon launch. "Fuzzy"
   assets is a known quirk of the renderer, and will be addressed in future
   releases.
-- **[NDS/3DS]** ::sb touching color [#754D75]?:: and <!-- deno-fmt-ignore -->
-  ::sb color [#754D75] is touching [#754D75]?:: are unimplemented.
