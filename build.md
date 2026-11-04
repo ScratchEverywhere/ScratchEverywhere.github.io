@@ -47,12 +47,12 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
     version of SDL3. See the
     [Nightly Build commands](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/.github/workflows/nightly-3ds.yml)
     for a reference on how to compile SDL3 3DS for yourself.
-- **For the Wii U**, you will need the DevkitPPC toolchain, WUT, and the
-  following SDL2-wiiu libraries:
-  - SDL2
-  - sdl2_ttf
 - **For the Wii**, you need the DevkitPPC toolchain, libogc, and the following
   SDL2-wii libraries:
+  - SDL2
+  - sdl2_ttf
+- **For the Wii U**, you will need the DevkitPPC toolchain, WUT, and the
+  following SDL2-wiiu libraries:
   - SDL2
   - sdl2_ttf
 - **For the Switch**, you need the DevkitA64 toolchain, libnx, and the following
