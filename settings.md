@@ -23,7 +23,7 @@ they must be unpacked again if the original project file changes.
 
 Whether to show the project on the bottom screen instead of the top.
 
-**Exclusive to 3DS/DS/Wii U.** Disabled by default.
+**Exclusive to 3DS/DS(i)/Wii U.** Disabled by default.
 
 ### Pen Mode
 
@@ -55,7 +55,7 @@ Whether or not to display FPS info when running a project. Disabled by default.
 
 Whether or not to store the project in RAM. This can boost performance when
 loading a new costume or sound, but may cause problems on lower-end platforms.
-Enabled by default on all platforms except for DS, GameCube, and PSP.
+Enabled by default on all platforms except for DS(i), GameCube, and PSP.
 
 ### Warp Timer
 
@@ -65,6 +65,18 @@ finishes.
 
 This can fix crashes/freezes related to infinite loops, but it may also cause a
 performance impact. It is enabled by default.
+
+### Runtime
+
+The runtime to use while running the project. Can be either `JIT`, `Bytecode`,
+or `Interpreter`.
+
+JIT has the highest performance, but isn't supported for all platforms.
+Interpreter should only be used for troubleshooting or if the platform doesn't
+support anything else, as it is much slower than the other runtimes.
+
+Defaults to Interpreter on PSP, GameCube, and DS(i), JIT for platforms that
+support it, and Bytecode for everything else.
 
 ## Global Settings
 
@@ -97,6 +109,18 @@ effect. Enabled by default.
 ### Use DECtalk
 
 Enables DECtalk for text-to-speech if the platform supports it.
+
+### Renderer
+
+Select a different renderer to use. Can help with troubleshooting.
+
+### Window Backend
+
+Select a different windowing backend to use. Can help with troubleshooting.
+
+### Audio Backend
+
+Select a different audio backend to use. Can help with troubleshooting.
 
 ## Pause Menu Settings
 

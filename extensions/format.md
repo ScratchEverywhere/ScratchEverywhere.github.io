@@ -78,7 +78,7 @@ support all platforms.
 - 5th bit: Switch
 - 6th bit: PC
 - 7th bit: Vita
-- 8th bit: NDS
+- 8th bit: DS(i)
 - 9th bit: PS4
 - 10th bit: PSP
 - 11th bit: webOS

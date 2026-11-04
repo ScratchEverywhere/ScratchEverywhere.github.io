@@ -34,14 +34,12 @@ Images for the various banners and icons can be found in `gfx/`.
 If you are compiling with cloud variables, you will need to have DevkitPro's
 SDKs and [Mist++](https://github.grady.link/mistpp) installed.
 
-- **For PC**, the only thing you need is `cmake`, as all other dependencies will
-  be automatically downloaded. However, if you'd like to manually install them,
-  you'll need `SDL2`, `SDL2_ttf`, `SDL2_gfx`, `lunasvg`, `stb_image` (`stb`),
-  and `libcurl` (`curl`) from your package manager.
-
-  > [!NOTE]
-  > On Arch Linux, `lunasvg` is not in the official package repos. You will need
-  > to use the AUR or let SE! automatically download and build it from source.
+- **For the GameCube**, you need the DevkitPPC toolchain, libogc, and the
+  following SDL2-gamecube libraries:
+  - SDL2
+  - sdl2_ttf
+- **For DS(i)**, you'll need [BlocksDS](https://blocksds.skylyrac.net/) (which
+  uses the [Wonderful Toolchain](https://wonderful.asie.pl/)).
 - **For the 3DS**, you will need the DevkitARM toolchain, libctru,
   [bannertool](https://github.com/carstene1ns/3ds-bannertool), and
   [makerom](https://github.com/3DSGuy/Project_CTR).
@@ -49,22 +47,20 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
     version of SDL3. See the
     [Nightly Build commands](https://github.com/ScratchEverywhere/ScratchEverywhere/blob/main/.github/workflows/nightly-3ds.yml)
     for a reference on how to compile SDL3 3DS for yourself.
-- **For the Wii U**, you will need the DevkitPPC toolchain, WUT, and the
-  following SDL2-wiiu libraries:
-  - SDL2
-  - sdl2_ttf
 - **For the Wii**, you need the DevkitPPC toolchain, libogc, and the following
   SDL2-wii libraries:
   - SDL2
   - sdl2_ttf
-- **For the GameCube**, you need the DevkitPPC toolchain, libogc, and the
-  following SDL2-gamecube libraries:
+- **For the Wii U**, you will need the DevkitPPC toolchain, WUT, and the
+  following SDL2-wiiu libraries:
   - SDL2
   - sdl2_ttf
 - **For the Switch**, you need the DevkitA64 toolchain, libnx, and the following
   SDL2-switch libraries:
   - SDL2
   - sdl2_ttf
+- **For the PSP**, all you need is the [PSPSDK](https://pspdev.github.io)
+  toolchain. It includes every SDL2 thing you might need.
 - **For the Vita**, all you need is the [vitasdk](https://vitasdk.org)
   toolchain. It includes every SDL2 thing you might need.
 - **For the PS4**, you'll need
@@ -72,12 +68,19 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
   [OpenOrbis toolchain](https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain).
   For the latter, you only need the headers (`include/orbis/`) copied to
   `/opt/ps4-homebrew-sdk/target/include/orbis`.
-- **For the PSP**, all you need is the [PSPSDK](https://pspdev.github.io)
-  toolchain. It includes every SDL2 thing you might need.
 - **For webOS**, all you need is the webosbrew Native SDK installed to your home
   directory and ares-cli.
 - **For Original Xbox**, you'll need [nxdk](https://github.com/xboxDev/nxdk) and
   [nxdk-sdl3_audio](https://github.com/Ryzee119/nxdk-sdl3/tree/nxaudio).
+- **For PC and Libretro**, the only thing you need is `cmake`, as all other
+  dependencies will be automatically downloaded. However, if you'd like to
+  manually install them, you'll need `SDL2`, `SDL2_ttf`, `SDL2_gfx`, `lunasvg`,
+  `stb_image` (`stb`), and `libcurl` (`curl`) from your package manager.
+
+  > [!NOTE]
+  > The version of `lunasvg` packaged in the AUR is outdated and has many
+  > issues. You will need to have SE! automatically download and build it from
+  > source.
 
 > [!NOTE]
 > DevkitPro's install instructions are available at:
@@ -101,43 +104,45 @@ project inside of that.
 Then you need to compile the projects into proper Homebrew packages. This is
 done with `cmake`, though the exact commands differ between platforms:
 
-- **For Windows**, you need to run
-  `cmake -B build-windows && cmake --build build-windows`.
-- **For macOS**, you need to run
-  `cmake -B build-macOS && cmake --build build-macOS`.
-- **For Linux**, you need to run
-  `cmake -B build-linux && cmake --build build-linux`.
+- **For the GameCube**, you need to run
+  `$DEVKITPRO/libogc2/gamecube/bin/powerpc-eabi-cmake -B build-gamecube && cmake --build build-gamecube`.
+- **For the DS(i)**, you need to run
+  `cmake -B build-nds -DCMAKE_TOOLCHAIN_FILE=$BLOCKSDS/cmake/BlocksDS.cmake && cmake --build build-nds`.
+- **For the Wii**, you need to run
+  `$DEVKITPRO/portlibs/wii/bin/powerpc-eabi-cmake -B build-wii && cmake --build build-wii`.
 - **For the 3DS**, you need to run
   `$DEVKITPRO/portlibs/3ds/bin/arm-none-eabi-cmake -B build-3ds -DSE_MAKEROM=/path/to/makerom -DSE_BANNERTOOL=/path/to/bannertool && cmake --build build-3ds`.
   Replace `/path/to/makerom` and `/path/to/bannertool` with the actual paths to
   the executables.
 - **For the Wii U**, you need to run
   `$DEVKITPRO/portlibs/wiiu/bin/powerpc-eabi-cmake -B build-wiiu && cmake --build build-wiiu && cmake --build build-wiiu --target package_wiiu`.
-- **For the Wii**, you need to run
-  `$DEVKITPRO/portlibs/wii/bin/powerpc-eabi-cmake -B build-wii && cmake --build build-wii`.
-- **For the GameCube**, you need to run
-  `$DEVKITPRO/libogc2/gamecube/bin/powerpc-eabi-cmake -B build-gamecube && cmake --build build-gamecube`.
 - **For the Switch**, you need to run
   `cmake -DCMAKE_TOOLCHAIN_FILE=$DEVKITPRO/cmake/Switch.cmake -B build/switch && cmake --build build/switch`.
+- **For the PSP**, you need to run
+  `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`.
 - **For the Vita**, you need to run
   `cmake -DCMAKE_TOOLCHAIN_FILE=$VITASDK/share/vita.toolchain.cmake -B build/vita && cmake --build build/vita`.
 - **For the PS4**, you need to run
   `/opt/ps4-homebrew-sdk/bin/orbis-cmake -B build-ps4 && cmake --build build-ps4`.
-- **For the PSP**, you need to run
-  `psp-cmake -B build/psp -S . -DSE_SYSTEM=ON -DSE_CLOUDVARS=OFF && make -C build/psp`.
 - **For webOS**, you need to run
   `cmake -B build/webos -S . -DCMAKE_TOOLCHAIN_FILE="~/arm-webos-linux-gnueabi_sdk-buildroot/share/buildroot/toolchainfile.cmake" -DSE_CLOUDVARS=OFF -DWEBOS=ON -DSE_RENDERER=sdl2 && make -C build/webos all package`.
   > [!NOTE]
   > webOS **requires** the `WEBOS=ON` flag. It will not compile without it.
+- **For the Original Xbox**, you need to run
+  `cmake -B build/xbox -DCMAKE_TOOLCHAIN_FILE="$NXDK_DIR/share/toolchain-nxdk.cmake" -DXBOX=ON && cmake --build build/xbox`.
+  > [!NOTE]
+  > Original Xbox requires the `XBOX=ON` flag.
+- **For Windows**, you need to run
+  `cmake -B build-windows && cmake --build build-windows`.
+- **For macOS**, you need to run
+  `cmake -B build-macOS && cmake --build build-macOS`.
+- **For Linux**, you need to run
+  `cmake -B build-linux && cmake --build build-linux`.
 - **For libretro**, you need to run
   `mkdir build && cd build && cmake .. -DLIBRETRO=ON && cmake --build .`.
   > [!NOTE]
   > Creating the `build` directory and using the `LIBRETRO=ON` flag is required
   > for libretro builds.
-- **For the Original Xbox**, you need to run
-  `cmake -B build/xbox -DCMAKE_TOOLCHAIN_FILE="$NXDK_DIR/share/toolchain-nxdk.cmake" -DXBOX=ON && cmake --build build/xbox`.
-  > [!NOTE]
-  > Original Xbox requires the `XBOX=ON` flag.
 - **For WASM**, you need to run
   `emcmake cmake -B build/wasm && cmake --build build/wasm`
 
@@ -195,21 +200,21 @@ The audio backend to be used. Can be one of `sdl2`, `sdl1`, `sdl3`, `libpulse`,
 
 | Platform      | `sdl1` | `sdl2` | `sdl3` | `libpulse` | `winmm` | `nds` | `wiiu` | `xbox` | `libretro` | `headless` |
 | ------------- | ------ | ------ | ------ | ---------- | ------- | ----- | ------ | ------ | ---------- | ---------- |
+| GameCube      | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| DS(i)         | ❌     | ❌     | ❌     | ❌         | ❌      | ✅    | ❌     | ❌     | ❌         | ✅         |
+| Wii           | ✅     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| 3DS           | ❌     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| Wii U         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ✅     | ❌     | ❌         | ✅         |
+| Switch        | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| PSP           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| Vita          | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| PS4           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| webOS         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
+| Original Xbox | ❌     | ❌     | ✅     | ❌         | ❌      | ❌    | ❌     | ✅     | ❌         | ✅         |
 | Windows       | ✅     | ✅     | ✅     | ❌         | ✅      | ❌    | ❌     | ❌     | ❌         | ✅         |
 | macOS         | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
 | Linux/BSD     | ✅     | ✅     | ✅     | ✅         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| 3DS           | ❌     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| DS            | ❌     | ❌     | ❌     | ❌         | ❌      | ✅    | ❌     | ❌     | ❌         | ✅         |
-| Wii U         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ✅     | ❌     | ❌         | ✅         |
-| Wii           | ✅     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| GameCube      | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| Switch        | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| Vita          | ✅     | ✅     | ✅     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| PSP           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| PS4           | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
-| webOS         | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
 | Libretro      | ❌     | ❌     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ✅         | ❌         |
-| Original Xbox | ❌     | ❌     | ✅     | ❌         | ❌      | ❌    | ❌     | ✅     | ❌         | ✅         |
 | WASM          | ❌     | ✅     | ❌     | ❌         | ❌      | ❌    | ❌     | ❌     | ❌         | ✅         |
 
 Setting `SE_AUDIO_ENGINE` to `all` will include all supported audio engines in
@@ -220,21 +225,21 @@ not have a preference, then the preference of the renderer will be used instead.
 
 #### Default by Platform
 
+- **GameCube:** No preference
+- **DS(i):** No preference
+- **Wii:** No preference
+- **3DS:** `3ds`
+- **Wii U:** No preference
+- **Switch:** No preference
+- **PSP:** No preference
+- **Vita:** No preference
+- **PS4:** No preference
+- **webOS:** No preference
+- **Original Xbox:** `xbox`
 - **Windows:** `winmm`
 - **macOS:** No preference
 - **Linux/BSD:** `libpulse`
-- **3DS:** `3ds`
-- **DS:** No preference
-- **Wii U:** No preference
-- **Wii:** No preference
-- **GameCube:** No preference
-- **Switch:** No preference
-- **Vita:** No preference
-- **PSP:** No preference
-- **PS4:** No preference
-- **webOS:** No preference
 - **Libretro:** `libretro`
-- **Original Xbox:** `xbox`
 - **WASM:** No preference
 
 #### Default by Renderer
@@ -306,21 +311,21 @@ The allowed modes depend on the platform you are building for:
 
 | Platform      | `source` | `system` | `fallback` |
 | ------------- | -------- | -------- | ---------- |
+| GameCube      | ❌       | ✅       | ✅         |
+| DS(i)         | ❌       | ✅       | ✅         |
+| Wii           | ✅       | ✅       | ✅         |
+| 3DS           | ❌       | ✅       | ✅         |
+| Wii U         | ❌       | ✅       | ✅         |
+| Switch        | ❌       | ✅       | ✅         |
+| PSP           | ❌       | ✅       | ✅         |
+| Vita          | ❌       | ✅       | ✅         |
+| PS4           | ❌       | ✅       | ✅         |
+| webOS         | ❌       | ❌       | ✅         |
+| Original Xbox | ❌       | ✅       | ✅         |
 | Windows       | ✅       | ✅       | ✅         |
 | macOS         | ✅       | ✅       | ✅         |
 | Linux/BSD     | ✅       | ✅       | ✅         |
-| 3DS           | ❌       | ✅       | ✅         |
-| DS            | ❌       | ✅       | ✅         |
-| Wii U         | ❌       | ✅       | ✅         |
-| Wii           | ✅       | ✅       | ✅         |
-| GameCube      | ❌       | ✅       | ✅         |
-| Switch        | ❌       | ✅       | ✅         |
-| Vita          | ❌       | ✅       | ✅         |
-| PSP           | ❌       | ✅       | ✅         |
-| PS4           | ❌       | ✅       | ✅         |
-| webOS         | ❌       | ❌       | ✅         |
 | Libretro      | ✅       | ✅       | ✅         |
-| Original Xbox | ❌       | ✅       | ✅         |
 | WASM          | ✅       | ✅       | ✅         |
 
 ### `SE_DOWNLOAD`
@@ -331,6 +336,12 @@ Text-to-Speech blocks. Defaults to `ON` on all supported platforms.
 ### `SE_INSPECTOR`
 
 Whether or not the runtime inspector is enabled. Defaults to `ON`.
+
+### `SE_JIT`
+
+Whether or not to use the just-in-time compiler to compile bytecode into machine
+code, massively improving performance. Defaults to `ON` for all supported
+platforms.
 
 ### `SE_LOADSCREEN`
 
@@ -374,21 +385,21 @@ The renderer backend to be used. Can be one of `sdl1`, `sdl2`, `sdl3`, `opengl`,
 
 | Platform      | `d3d9` | `opengl_core` | `nv2a` | `xbox` | `gx2` | `sdl2` | `sdl3` | `opengl` | `gdi` | `sdl1` | `citro2d` | `gl2d` | `headless` |
 | ------------- | ------ | ------------- | ------ | ------ | ----- | ------ | ------ | -------- | ----- | ------ | --------- | ------ | ---------- |
+| GameCube      | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| DS(i)         | ❌     | ❌            | ❌     | ❌     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ❌        | ✅     | ✅         |
+| Wii           | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
+| 3DS           | ❌     | ❌            | ❌     | ❌     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ✅        | ❌     | ✅         |
+| Wii U         | ❌     | ❌            | ❌     | ❌     | ✅    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| Switch        | ❌     | ✅            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| PSP           | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| Vita          | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ✅     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
+| PS4           | ❌     | ✅            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| webOS         | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
+| Original Xbox | ❌     | ❌            | ✅     | ✅     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ❌         |
 | Windows       | ✅     | ✅            | ❌     | ❌     | ❌    | ✅     | ✅     | ✅       | ✅    | ✅     | ❌        | ❌     | ✅         |
 | macOS         | ❌     | ✅            | ❌     | ❌     | ❌    | ✅     | ✅     | ✅       | ❌    | ✅     | ❌        | ❌     | ✅         |
 | Linux/BSD     | ❌     | ✅            | ❌     | ❌     | ❌    | ✅     | ✅     | ✅       | ❌    | ✅     | ❌        | ❌     | ✅         |
-| 3DS           | ❌     | ❌            | ❌     | ❌     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ✅        | ❌     | ✅         |
-| DS            | ❌     | ❌            | ❌     | ❌     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ❌        | ✅     | ✅         |
-| Wii U         | ❌     | ❌            | ❌     | ❌     | ✅    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
-| Wii           | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
-| GameCube      | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
-| Switch        | ❌     | ✅            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
-| Vita          | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ✅     | ❌       | ❌    | ✅     | ❌        | ❌     | ✅         |
-| PSP           | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
-| PS4           | ❌     | ✅            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
-| webOS         | ❌     | ❌            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ✅         |
 | Libretro      | ❌     | ✅            | ❌     | ❌     | ❌    | ❌     | ❌     | ✅       | ❌    | ❌     | ❌        | ❌     | ❌         |
-| Original Xbox | ❌     | ❌            | ✅     | ✅     | ❌    | ❌     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ❌         |
 | WASM          | ❌     | ✅            | ❌     | ❌     | ❌    | ✅     | ❌     | ❌       | ❌    | ❌     | ❌        | ❌     | ❌         |
 
 SE! prioritizes renderers in the following order: `d3d9`, `opengl_core`, `nv2a`,

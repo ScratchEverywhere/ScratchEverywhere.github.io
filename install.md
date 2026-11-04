@@ -15,38 +15,47 @@ There are two methods to install the runtime:
 > more unstable than releases. You should only use them if you are instructed
 > to do so in a bug report or you know exactly what using nightlies implies.
 
-## PC (Windows, Mac, Linux)
+## GameCube
 
-Download the respective executable file for your operating system from the
+Download the `scratch-gamecube.zip` file in the
 [Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
 or
-[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-pc/main):
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-gamecube/main/Scratch%20Everywhere!%20GameCube%20Nightly.zip).
 
-- Windows: `scratch-windows.exe`
-- Mac: `scratch-macOS`
-- Linux: `scratch-linux`
+Unzip the file. Put your Scratch projects in the same place you put your `.dol`
+file.
+
+Then it should be as simple as opening the app on your GameCube!
+
+## DS(i)
+
+Download the `.nds` file in the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-nds/main/Scratch%20Everywhere!%20DS%20Nightly.zip).
+
+Place the `.nds` file in your SD card, and put Scratch projects in
+`sd:/scratch-ds/`.
+
+Then it should be as simple as running the app!
+
+## Wii
+
+Download the `scratch-wii.zip` file in the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-wii/main/Scratch%20Everywhere!%20Wii%20Nightly.zip).
 
 > [!NOTE]
-> If you're using Arch Linux or a distribution based on it, Scratch Everywhere!
-> is also available on the
-> [AUR](https://aur.archlinux.org/packages/scratch-everywhere) (There are
-> [`-git`](https://aur.archlinux.org/packages/scratch-everywhere-git) and
-> [`-bin`](https://aur.archlinux.org/packages/scratch-everywhere-bin) packages
-> available as well), so you can just install it from there and keep it updated
-> that way!
+> Scratch Everywhere! is also on the
+> [Open Shop Channel](https://oscwii.org/library/app/scratch-wii), so you can
+> just download it there and keep it updated that way!
 
-Place the executable file in a convenient location on your PC.
+Unzip the file and put the `apps` folder inside of the root of your SD card.
 
-The location of Scratch projects depends on where (or how) you installed Scratch
-Everywhere!.
+Place the Scratch projects you want in `sdcard:/apps/scratch-wii/`
 
-- **Windows:** `C:\Users\{username}\Documents\scratch-everywhere`
-- **macOS:** Next to the executable
-- **Linux/BSD (installed to `$PATH`):**
-  `/home/{username}/.local/share/scratch-everywhere`
-- **Linux/BSD (not installed to `$PATH`):** Next to the executable
-
-Then it should be as simple as running the executable file!
+Then it should be as simple as opening the app in the Homebrew Menu on your Wii!
 
 ## 3DS
 
@@ -92,18 +101,6 @@ UniStores, find and select "ScratchBox".
 You can now switch between ScratchBox and the default Universal-DB UniStore
 using this menu!
 
-## NDS
-
-Download the `.nds` file in the
-[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
-or
-[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-nds/main/Scratch%20Everywhere!%20DS%20Nightly.zip).
-
-Place the `.nds` file in your SD card, and put Scratch projects in
-`sd:/scratch-ds/`.
-
-Then it should be as simple as running the app!
-
 ## Wii U
 
 Download the `scratch-wiiu.zip` file in the
@@ -123,36 +120,6 @@ Place the Scratch projects you want in `sdcard:/wiiu/scratch-wiiu/`.
 Then it should be as simple as opening the app on the Wii U Menu or in the
 Homebrew Launcher on your Wii U!
 
-## Wii
-
-Download the `scratch-wii.zip` file in the
-[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
-or
-[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-wii/main/Scratch%20Everywhere!%20Wii%20Nightly.zip).
-
-> [!NOTE]
-> Scratch Everywhere! is also on the
-> [Open Shop Channel](https://oscwii.org/library/app/scratch-wii), so you can
-> just download it there and keep it updated that way!
-
-Unzip the file and put the `apps` folder inside of the root of your SD card.
-
-Place the Scratch projects you want in `sdcard:/apps/scratch-wii/`
-
-Then it should be as simple as opening the app in the Homebrew Menu on your Wii!
-
-## GameCube
-
-Download the `scratch-gamecube.zip` file in the
-[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
-or
-[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-gamecube/main/Scratch%20Everywhere!%20GameCube%20Nightly.zip).
-
-Unzip the file. Put your Scratch projects in the same place you put your `.dol`
-file.
-
-Then it should be as simple as opening the app on your GameCube!
-
 ## Nintendo Switch
 
 Download the `scratch-nx.nro` file in the
@@ -168,6 +135,19 @@ or
 Put your Scratch projects in the same place you put your `.nro` file.
 
 Then it should be as simple as opening the app on your Nintendo Switch!
+
+## PSP
+
+Download the `scratch-psp.zip` file from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-psp/main/Scratch%20Everywhere!%20PSP%20Nightly.zip),
+and put it in your PSP's memory card in `PSP/GAME`.
+
+Put your Scratch Projects in `PSP/GAME/scratch-psp/scratch-everywhere/` (you
+will need to create the folder yourself).
+
+Then it should be as simple as opening the app on your PSP!
 
 ## Vita
 
@@ -189,19 +169,6 @@ the folder yourself).
 
 Then it should be as simple as opening and starting the app from your Vita's
 LiveArea homescreen!
-
-## PSP
-
-Download the `scratch-psp.zip` file from the
-[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
-or
-[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-psp/main/Scratch%20Everywhere!%20PSP%20Nightly.zip),
-and put it in your PSP's memory card in `PSP/GAME`.
-
-Put your Scratch Projects in `PSP/GAME/scratch-psp/scratch-everywhere/` (you
-will need to create the folder yourself).
-
-Then it should be as simple as opening the app on your PSP!
 
 ## PS4
 
@@ -237,22 +204,6 @@ folder doesn't exist, create it.
 
 Then it should be as simple as opening the app on your TV from the home menu!
 
-## Libretro (RetroArch)
-
-Download the `scratch-everywhere.so` file from the
-[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
-or
-[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-ps4/main/Scratch%20Everywhere!%20Libretro%20Nightly.zip).
-
-Place it in the RetroArch cores directory, which you can find in Settings ->
-Directory -> Cores.
-
-> [!IMPORTANT]
-> In Settings -> Drivers -> Video, ensure your video driver is not set to `gl`.
-> The `gl` driver is currently broken with the SE! core.
-
-Then it should be as simple as loading the core and opening a Scratch project!
-
 ## Original Xbox
 
 Download the `scratch-xbox.zip` file from the
@@ -278,3 +229,57 @@ This file is used with real modded Xboxes. Copy it wherever you'd like, and
 place Scratch projects in `E:\ScratchEverywhere`.
 
 Then it should be as simple as running `default.xbe`!
+
+## PC (Windows, Mac, Linux)
+
+Download the respective executable file for your operating system from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-pc/main):
+
+- Windows: `scratch-windows.exe`
+- Mac: `scratch-macOS`
+- Linux: `scratch-linux`
+
+> [!NOTE]
+> If you're using Arch Linux or a distribution based on it, Scratch Everywhere!
+> is also available on the
+> [AUR](https://aur.archlinux.org/packages/scratch-everywhere) (There are
+> [`-git`](https://aur.archlinux.org/packages/scratch-everywhere-git) and
+> [`-bin`](https://aur.archlinux.org/packages/scratch-everywhere-bin) packages
+> available as well), so you can just install it from there and keep it updated
+> that way!
+
+Place the executable file in a convenient location on your PC.
+
+The location of Scratch projects depends on where (or how) you installed Scratch
+Everywhere!.
+
+- **Windows:** `C:\Users\{username}\Documents\scratch-everywhere`
+- **macOS:** Next to the executable
+- **Linux/BSD (installed to `$PATH`):**
+  `/home/{username}/.local/share/scratch-everywhere`
+- **Linux/BSD (not installed to `$PATH`):** Next to the executable
+
+Then it should be as simple as running the executable file!
+
+## Libretro (RetroArch)
+
+Download the `scratch-everywhere.so` file from the
+[Releases tab](https://github.com/ScratchEverywhere/ScratchEverywhere/releases)
+or
+[nightly build](https://nightly.link/ScratchEverywhere/ScratchEverywhere/workflows/nightly-ps4/main/Scratch%20Everywhere!%20Libretro%20Nightly.zip).
+
+Place it in the RetroArch cores directory, which you can find in Settings ->
+Directory -> Cores.
+
+> [!IMPORTANT]
+> In Settings -> Drivers -> Video, ensure your video driver is not set to `gl`.
+> The `gl` driver is currently broken with the SE! core.
+
+Then it should be as simple as loading the core and opening a Scratch project!
+
+## WebAssembly
+
+It's as simple as going to
+<https://scratcheverywhere.github.io/ScratchEverywhere>!
