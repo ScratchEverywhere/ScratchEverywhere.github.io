@@ -68,9 +68,12 @@ performance impact. It is enabled by default.
 
 ### Runtime
 
-The runtime to use while running the project. JIT has the highest performance,
-but isn't supported for all platforms. Interpreter should only be used for
-troubleshooting or if the platform doesn't support anything else.
+The runtime to use while running the project. Can be either `JIT`, `Bytecode`,
+or `Interpreter`.
+
+JIT has the highest performance, but isn't supported for all platforms.
+Interpreter should only be used for troubleshooting or if the platform doesn't
+support anything else, as it is much slower than the other runtimes.
 
 Defaults to Interpreter on PSP, GameCube, and DS(i), JIT for platforms that
 support it, and Bytecode for everything else.
