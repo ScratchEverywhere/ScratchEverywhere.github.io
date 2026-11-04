@@ -78,8 +78,9 @@ SDKs and [Mist++](https://github.grady.link/mistpp) installed.
   `stb_image` (`stb`), and `libcurl` (`curl`) from your package manager.
 
   > [!NOTE]
-  > On Arch Linux, `lunasvg` is not in the official package repos. You will need
-  > to use the AUR or let SE! automatically download and build it from source.
+  > The version of `lunasvg` packaged in the AUR is outdated and has many
+  > issues. You will need to have SE! automatically download and build it from
+  > source.
 
 > [!NOTE]
 > DevkitPro's install instructions are available at:
