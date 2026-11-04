@@ -42,7 +42,7 @@ features support specific features.
 
 | Platform      | Cloud Variables | Native Extensions | Lua Extensions | Just-in-Time Compiler |
 | ------------- | --------------- | ----------------- | -------------- | --------------------- |
-| GameCube      | ❌              | ❌                | ✅             | ✅                    |
+| GameCube      | ❌              | ❌                | ✅             | ✅[^3]                |
 | DS(i)         | ❌              | ❌                | ❌             | ❌                    |
 | Wii           | ❌              | ❌                | ✅             | ✅                    |
 | Wii U         | ✅              | ❌                | ✅             | ✅                    |
@@ -64,9 +64,12 @@ features support specific features.
 
 [^2]: webOS only supports JIT on `aarch64` (`arm64`).
 
+[^3]: GameCube currently has the JIT compiler disabled by default. You will need
+    to manually enable it in the project settings.
+
 ### Extensions
 
-| Platform      | Pen | Text to Speech[^2] | Makey Makey | Translate |
+| Platform      | Pen | Text to Speech[^4] | Makey Makey | Translate |
 | ------------- | --- | ------------------ | ----------- | --------- |
 | GameCube      | ✅  | 🟡                 | ✅          | ❌        |
 | DS(i)         | ❌  | ❌                 | ✅          | ❌        |
@@ -85,7 +88,7 @@ features support specific features.
 | Libretro      | ✅  | ✅                 | ✅          | ✅        |
 | WASM          | ✅  | 🟡                 | ✅          | ❌        |
 
-[^2]: Text-to-Speech can use either the official Scratch servers (if the
+[^4]: Text-to-Speech can use either the official Scratch servers (if the
     platform supports it), or DECtalk, which runs locally but is not 100%
     accurate. Platforms marked with a 🟡 support DECtalk only, while those with
     a ✅ support both.
