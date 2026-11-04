@@ -66,6 +66,12 @@ finishes.
 This can fix crashes/freezes related to infinite loops, but it may also cause a
 performance impact. It is enabled by default.
 
+### Runtime
+
+The runtime to use while running the project. JIT has the highest performance,
+but isn't supported for all platforms. Interpreter should only be used for
+troubleshooting or if the platform doesn't support anything else.
+
 ## Global Settings
 
 These settings can be found on the main menu. They apply to all projects.
@@ -97,6 +103,18 @@ effect. Enabled by default.
 ### Use DECtalk
 
 Enables DECtalk for text-to-speech if the platform supports it.
+
+### Renderer
+
+Select a different renderer to use. Can help with troubleshooting.
+
+### Window Backend
+
+Select a different windowing backend to use. Can help with troubleshooting.
+
+### Audio Backend
+
+Select a different audio backend to use. Can help with troubleshooting.
 
 ## Pause Menu Settings
 
