@@ -72,6 +72,9 @@ The runtime to use while running the project. JIT has the highest performance,
 but isn't supported for all platforms. Interpreter should only be used for
 troubleshooting or if the platform doesn't support anything else.
 
+Defaults to Interpreter on PSP, GameCube, and DS(i), JIT for platforms that
+support it, and Bytecode for everything else.
+
 ## Global Settings
 
 These settings can be found on the main menu. They apply to all projects.
