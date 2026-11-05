@@ -35,6 +35,8 @@ import AppIcon from "./AppIcon.vue";
 
 <style scoped>
 .hero {
+  --float-distance: 40px;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -53,7 +55,7 @@ import AppIcon from "./AppIcon.vue";
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
+  padding: calc(1rem + var(--float-distance)) 0 1rem;
 }
 
 .hero::after {
@@ -205,11 +207,10 @@ import AppIcon from "./AppIcon.vue";
 
 .scroll-arrow {
   margin-bottom: 1.5rem;
-  color: black;
+  color: rgba(0, 0, 0, 0.25);
   font-size: 4rem;
   line-height: 1;
   text-decoration: none;
-  opacity: 0.25;
   transition:
     opacity 0.2s,
     scale 0.2s;
@@ -217,13 +218,13 @@ import AppIcon from "./AppIcon.vue";
 
 .scroll-arrow:hover,
 .scroll-arrow:focus-visible {
-  opacity: 1;
+  color: var(--ctp-mocha-text);
   scale: 1.2;
 }
 
 @keyframes float {
   50% {
-    transform: translateY(-40px);
+    transform: translateY(calc(var(--float-distance) * -1));
   }
 }
 
