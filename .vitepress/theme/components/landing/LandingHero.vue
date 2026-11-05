@@ -41,7 +41,7 @@ import AppIcon from "./AppIcon.vue";
   min-height: 100svh;
   background: rgb(136, 86, 134);
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   z-index: 1;
 }
 

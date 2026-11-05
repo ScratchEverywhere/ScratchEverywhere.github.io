@@ -113,5 +113,4 @@ export default defineConfig({
     },
   },
   cleanUrls: true,
-  mpa: true,
 });
