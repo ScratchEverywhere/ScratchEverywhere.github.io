@@ -113,6 +113,15 @@ export default defineConfig({
     config: (md) => {
       md.use(footnote);
       md.use(scratchblocksPlugin);
+
+      const render = md.renderer.render.bind(md.renderer);
+      md.renderer.render = (tokens, options, env) =>
+        render(tokens, options, env)
+          .replace(
+            /^\s*<html[^>]*>\s*<head[^>]*>[\s\S]*?<\/head>\s*<body[^>]*>/,
+            "",
+          )
+          .replace(/<\/body>\s*<\/html>\s*$/, "");
     },
   },
   cleanUrls: true,
