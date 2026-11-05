@@ -21,6 +21,7 @@ import AppIcon from "./AppIcon.vue";
           class="hero-button"
           :href="withBase(action.link)"
           :data-title="action.text"
+          :target="action.link.startsWith('https') ? '_blank' : '_self'"
         >
           <AppIcon :name="action.icon" />
           <span class="sr-only">{{ action.text }}</span>
