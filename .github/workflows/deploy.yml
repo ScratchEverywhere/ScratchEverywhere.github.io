@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [release]
+    branches: [release, nightly]
   workflow_dispatch:
 
 permissions:
@@ -18,19 +18,49 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout release
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
+        with:
+          ref: release
+          path: release
+
+      - name: Checkout nightly
+        uses: actions/checkout@v4
+        with:
+          ref: nightly
+          path: nightly
+
+      - uses: oven-sh/setup-bun@v2
+
       - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Install Dependencies
-        run: bun install
-      - name: Build
-        run: bun run docs:build
+        uses: actions/configure-pages@v5
+
+      - name: Build release (/)
+        working-directory: release
+        env:
+          BASE_PATH: /
+        run: |
+          bun install --frozen-lockfile
+          bun run docs:build
+
+      - name: Build nightly (/nightly/)
+        working-directory: nightly
+        env:
+          BASE_PATH: /nightly/
+        run: |
+          bun install --frozen-lockfile
+          bun run docs:build
+
+      - name: Combine sites
+        run: |
+          mkdir -p _site/nightly
+          cp -r release/.vitepress/dist/. _site/
+          cp -r nightly/.vitepress/dist/. _site/nightly/
+
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: _site
 
   deploy:
     environment:

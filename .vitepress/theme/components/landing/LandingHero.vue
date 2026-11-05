@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { withBase } from "vitepress";
 import { heroActions, logo, tagline } from "../../landing";
 import AppIcon from "./AppIcon.vue";
 </script>
@@ -18,7 +19,7 @@ import AppIcon from "./AppIcon.vue";
           v-for="action in heroActions"
           :key="action.link"
           class="hero-button"
-          :href="action.link"
+          :href="withBase(action.link)"
           :data-title="action.text"
         >
           <AppIcon :name="action.icon" />
