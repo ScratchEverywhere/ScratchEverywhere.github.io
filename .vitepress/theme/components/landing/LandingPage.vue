@@ -37,6 +37,7 @@ const { theme } = useData();
 
 <style scoped>
 .landing {
+  overflow-x: clip;
   min-height: 100vh;
   background: var(--ctp-mocha-base);
   color: var(--ctp-mocha-text);

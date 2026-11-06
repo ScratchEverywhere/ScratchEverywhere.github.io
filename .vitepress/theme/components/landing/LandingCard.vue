@@ -30,6 +30,7 @@ const tag = computed(() => (props.href ? "a" : "div"));
   border-radius: 1em;
   background: var(--ctp-mocha-mantle);
   overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 .card-title {

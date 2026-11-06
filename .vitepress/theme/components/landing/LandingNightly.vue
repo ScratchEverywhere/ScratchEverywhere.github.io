@@ -31,7 +31,7 @@ const nightlyUrl = (workflow: string) => {
 <style scoped>
 .builds {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   gap: 0.75rem;
   margin: 0;
   padding: 0;

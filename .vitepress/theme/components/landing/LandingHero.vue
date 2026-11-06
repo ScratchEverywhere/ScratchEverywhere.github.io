@@ -107,6 +107,7 @@ import AppIcon from "./AppIcon.vue";
   font-size: 1.5em;
   font-weight: 700;
   color: #BAA6BA;
+  padding: 0 2rem;
 }
 
 .hero-actions {
@@ -121,8 +122,8 @@ import AppIcon from "./AppIcon.vue";
   position: relative;
   box-sizing: border-box;
   display: block;
-  width: 192px;
-  height: 192px;
+  width: min(192px, calc(100vw - 3rem));
+  aspect-ratio: 1;
   margin: 0.5em;
   border: 10px solid #fff;
   border-radius: 1em;
