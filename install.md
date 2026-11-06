@@ -188,7 +188,7 @@ create it.
 
 Then it should be as simple as opening the app on your PS4 from the XMB!
 
-### webOS
+## webOS
 
 Get your TV into [dev mode](https://www.webosbrew.org/devmode/) or
 [root it](https://www.webosbrew.org/rooting/) and download the
